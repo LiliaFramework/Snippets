@@ -1,0 +1,1065 @@
+{
+    "Character:AddBoost": {
+        "prefix": "AddBoost",
+        "body": [
+            "AddBoost(${1:boostID}, ${2:attribID}, ${3:boostAmount})$0"
+        ],
+        "description": "Temporarily increments one of this character's attributes. Useful for things like consumable items."
+    },
+
+    "Character:Ban": {
+        "prefix": "Ban",
+        "body": [
+            "Ban(${1:time})$0"
+        ],
+        "description": "Forces a player off their current character, and prevents them from using the character for the specified amount of time."
+    },
+
+    "Character:getAttribute": {
+        "prefix": "GetAttribute",
+        "body": [
+            "GetAttribute(${1:key}, ${2:default})$0"
+        ],
+        "description": "Returns the current value of an attribute. This is only valid on the server and owning client."
+    },
+
+    "Character:getBoost": {
+        "prefix": "GetBoost",
+        "body": [
+            "GetBoost(${1:attribID})$0"
+        ],
+        "description": "Returns all boosts that this character has for the given attribute. This is only valid on the server and owning client."
+    },
+
+    "Character:getBoosts": {
+        "prefix": "GetBoosts",
+        "body": [
+            "GetBoosts()$0"
+        ],
+        "description": "Returns all boosts that this character has. This is only valid on the server and owning client."
+    },
+
+    "Character:getClass": {
+        "prefix": "GetClass",
+        "body": [
+            "GetClass()$0"
+        ],
+        "description": "Returns this character's current class."
+    },
+
+    "Character:getCreateTime": {
+        "prefix": "GetCreateTime",
+        "body": [
+            "GetCreateTime()$0"
+        ],
+        "description": "Returns the Unix timestamp of when this character was created (i.e the value of os.time() at the time of creation)."
+    },
+
+    "Character:getData": {
+        "prefix": "GetData",
+        "body": [
+            "GetData(${1:key}, ${2:default})$0"
+        ],
+        "description": "Returns a data field set on this character. If it doesn't exist, it will return the given default or nil. This is only valid on the server and the owning client."
+    },
+
+    "Character:getDesc": {
+        "prefix": "getDesc",
+        "body": [
+            "getDesc()$0"
+        ],
+        "description": "Returns this character's physical description."
+    },
+
+    "Character:getFaction": {
+        "prefix": "GetFaction",
+        "body": [
+            "GetFaction()$0"
+        ],
+        "description": "Returns this character's faction."
+    },
+
+    "Character:getFlags": {
+        "prefix": "GetFlags",
+        "body": [
+            "GetFlags()$0"
+        ],
+        "description": "Returns all of the flags this character has."
+    },
+
+    "Character:getID": {
+        "prefix": "GetID",
+        "body": [
+            "GetID()$0"
+        ],
+        "description": "Returns this character's database ID. This is guaranteed to be unique."
+    },
+
+    "Character:getInventory": {
+        "prefix": "GetInventory",
+        "body": [
+            "GetInventory()$0"
+        ],
+        "description": "Returns this character's associated Inventory object."
+    },
+
+    "Character:getLastJoinTime": {
+        "prefix": "GetLastJoinTime",
+        "body": [
+            "GetLastJoinTime()$0"
+        ],
+        "description": "Returns the Unix timestamp of when this character was last used by its owning player."
+    },
+
+    "Character:getModel": {
+        "prefix": "GetModel",
+        "body": [
+            "GetModel()$0"
+        ],
+        "description": "Returns this character's model."
+    },
+
+    "Character:getMoney": {
+        "prefix": "GetMoney",
+        "body": [
+            "GetMoney()$0"
+        ],
+        "description": "Returns this character's money. This is only valid on the server and the owning client."
+    },
+
+    "Character:getName": {
+        "prefix": "GetMoney",
+        "body": [
+            "GetMoney()$0"
+        ],
+        "description": "Returns this character's name."
+    },
+
+    "Character:getPlayer": {
+        "prefix": "GetPlayer",
+        "body": [
+            "GetPlayer()$0"
+        ],
+        "description": "Returns the player that owns this character."
+    },
+
+    "Character:getSchema": {
+        "prefix": "GetSchema",
+        "body": [
+            "GetSchema()$0"
+        ],
+        "description": "Returns the schema that this character belongs to. This is useful if you are running multiple schemas off of the same database, and need to differentiate between them."
+    },
+
+    "Character:getSteamID": {
+        "prefix": "GetSteamID",
+        "body": [
+            "GetSteamID()$0"
+        ],
+        "description": "Returns the 64-bit Steam ID of the player that owns this character."
+    },
+
+    "Character:GiveFlags": {
+        "prefix": "GiveFlags",
+        "body": [
+            "GiveFlags(${1:flags})$0"
+        ],
+        "description": "Adds a flag to the list of this character's accessible flags. This does not overwrite existing flags."
+    },
+
+    "Character:HasFlags": {
+        "prefix": "HasFlags",
+        "body": [
+            "HasFlags(${1:flags})$0"
+        ],
+        "description": "Returns true if the character has the given flag(s)."
+    },
+
+    "Character:JoinClass": {
+        "prefix": "JoinClass",
+        "body": [
+            "JoinClass(${1:class})$0"
+        ],
+        "description": "Makes this character join a class. This automatically calls KickClass for you."
+    },
+
+    "Character:Kick": {
+        "prefix": "Kick",
+        "body": [
+            "Kick()$0"
+        ],
+        "description": "Forces a player off their current character, and sends them to the character menu to select a character."
+    },
+
+    "Character:KickClass": {
+        "prefix": "KickClass",
+        "body": [
+            "KickClass()$0"
+        ],
+        "description": "Kicks this character out of the class they are currently in."
+    },
+
+    "Character:RemoveBoost": {
+        "prefix": "RemoveBoost",
+        "body": [
+            "RemoveBoost(${1:boostID}, ${2:attribID})$0"
+        ],
+        "description": "Removes a temporary boost from this character."
+    },
+
+    "Character:Save": {
+        "prefix": "Save",
+        "body": [
+            "Save(${1:callback})$0"
+        ],
+        "description": "Saves this character's info to the database."
+    },
+
+    "Character:SetAttrib": {
+        "prefix": "SetAttrib",
+        "body": [
+            "SetAttrib(${1:key}, ${2:value})$0"
+        ],
+        "description": "Sets the value of an attribute for this character."
+    },
+
+    "Character:SetData": {
+        "prefix": "SetData",
+        "body": [
+            "SetData(${1:key}, ${2:value})$0"
+        ],
+        "description": "Sets a data field on this character. This is useful for storing small bits of data that you need persisted on this character. This is networked only to the owning client. If you are going to be accessing this data field frequently with a getter/setter, consider using lia.char.RegisterVar instead."
+    },
+
+    "Character:SetDescription": {
+        "prefix": "SetDescription",
+        "body": [
+            "SetDescription(${1:description})$0"
+        ],
+        "description": "Sets this character's physical description. This is automatically networked."
+    },
+
+    "Character:SetFaction": {
+        "prefix": "SetFaction",
+        "body": [
+            "SetFaction(${1:SetFaction})$0"
+        ],
+        "description": "Sets this character's faction. Note that this doesn't do the initial setup for the player after the faction has been changed, so you'll have to update some character vars manually."
+    },
+
+    "Character:SetFlags": {
+        "prefix": "SetFlags",
+        "body": [
+            "SetFlags(${1:flags})$0"
+        ],
+        "description": "Sets this character's accessible flags. Note that this method overwrites all flags instead of adding them."
+    },
+
+    "Character:SetModel": {
+        "prefix": "SetModel",
+        "body": [
+            "SetModel(${1:model})$0"
+        ],
+        "description": "Sets this character's model. This sets the player's current model to the given one, and saves it to the character. It is automatically networked."
+    },
+
+    "Character:SetMoney": {
+        "prefix": "SetMoney",
+        "body": [
+            "SetMoney(${1:money})$0"
+        ],
+        "description": "Sets this character's current money. Money is only networked to the player that owns this character."
+    },
+
+    "Character:SetName": {
+        "prefix": "SetName",
+        "body": [
+            "SetName(${1:name})$0"
+        ],
+        "description": "Sets this character's name. This is automatically networked."
+    },
+
+    "Character:Sync": {
+        "prefix": "Sync",
+        "body": [
+            "Sync(${1:receiver})$0"
+        ],
+        "description": "Networks this character's information to make the given player aware of this character's existence. If the receiver is not the owner of this character, it will only be sent a limited amount of data (as it does not need anything else). This is done automatically by the framework."
+    },
+
+    "Character:TakeFlags": {
+        "prefix": "TakeFlags",
+        "body": [
+            "TakeFlags(${1:flags})$0"
+        ],
+        "description": "Removes this character's access to the given flags."
+    },
+
+    "Character:UpdateAttrib": {
+        "prefix": "UpdateAttrib",
+        "body": [
+            "UpdateAttrib(${1:key}, ${2:value})$0"
+        ],
+        "description": "Increments one of this character's attributes by the given amount."
+    },
+
+    "Character:__eq": {
+        "prefix": "__eq",
+        "body": [
+            "__eq(${1:other})$0"
+        ],
+        "description": "Returns true if this character is equal to another character. Internally, this checks character IDs."
+    },
+
+    "Character:__tostring": {
+        "prefix": "__tostring",
+        "body": [
+            "__tostring()$0"
+        ],
+        "description": "Returns a string representation of this character"
+    },
+
+    "Entity:BlastDoor": {
+        "prefix": "BlastDoor",
+        "body": [
+            "BlastDoor(${1:velocity}, ${2:lifeTime}, ${3:bIgnorePartner})$0"
+        ],
+        "description": "Blasts a door off its hinges. Internally, this hides the door entity, spawns a physics prop with the same model, and applies force to the prop."
+    },
+
+    "Entity:ClearNetVars": {
+        "prefix": "ClearNetVars",
+        "body": [
+            "ClearNetVars(${1:receiver})$0"
+        ],
+        "description": "Clears all of the networked variables."
+    },
+
+    "Entity:getBlocker": {
+        "prefix": "GetBlocker",
+        "body": [
+            "GetBlocker()$0"
+        ],
+        "description": "Returns the entity that is blocking this door from opening."
+    },
+
+    "Entity:getDoorPartner": {
+        "prefix": "GetDoorPartner",
+        "body": [
+            "GetDoorPartner()$0"
+        ],
+        "description": "Returns the neighbouring door entity for double doors."
+    },
+
+    "Entity:getNetVar": {
+        "prefix": "GetNetVar",
+        "body": [
+            "GetNetVar(${1:key}, ${2:default})$0"
+        ],
+        "description": "Retrieves a networked variable. If it is not set, it'll return the default that you've specified."
+    },
+
+    "Entity:IsChair": {
+        "prefix": "IsChair",
+        "body": [
+            "IsChair()$0"
+        ],
+        "description": "Returns true if this entity is a chair."
+    },
+
+    "Entity:IsDoor": {
+        "prefix": "IsDoor",
+        "body": [
+            "IsDoor()$0"
+        ],
+        "description": "Returns true if this entity is a door. Internally, this checks to see if the entity's class has door in its name."
+    },
+
+    "Entity:IsLocked": {
+        "prefix": "IsLocked",
+        "body": [
+            "IsLocked()$0"
+        ],
+        "description": "Returns true if the given entity is a button or door and is locked."
+    },
+
+    "Entity:SendNetVar": {
+        "prefix": "SendNetVar",
+        "body": [
+            "SendNetVar(${1:key}, ${2:receiver})$0"
+        ],
+        "description": "Sends a networked variable."
+    },
+
+    "Entity:SetNetVar": {
+        "prefix": "SetNetVar",
+        "body": [
+            "SetNetVar(${1:key}, ${2:value}, ${3:receiver})$0"
+        ],
+        "description": "Sets the value of a networked variable."
+    },
+
+    "Inventory:Add": {
+        "prefix": "Add",
+        "body": [
+            "Add(${1:uniqueID}, ${2:quantity}, ${3:data}, ${4:x}, ${5:y}, ${6:noReplication})$0"
+        ],
+        "description": "Add an item to the inventory."
+    },
+
+    "Inventory:AddReceiver": {
+        "prefix": "AddReceiver",
+        "body": [
+            "AddReceiver(${1:client})$0"
+        ],
+        "description": "Adds a player as a receiver on this Inventory Receivers are players who will be networked the items inside the inventory.\nCalling this will not automatically sync it's current contents to the client. All future contents will be synced, but not anything that was not synced before this is called.\nThis function does not check the validity of client, therefore if client doesn't exist, it will error."
+    },
+
+    "Inventory:CanItemFit": {
+        "prefix": "CanItemFit",
+        "body": [
+            "CanItemFit(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:item2})$0"
+        ],
+        "description": "Checks whether or not an Item can fit into the Inventory starting from x and y. Internally used by FindEmptySlot, in most cases you are better off using that. This function will search if all of the slots within x + width and y + width are empty, ignoring any space the Item itself already occupies."
+    },
+
+    "Inventory:FindEmptySlot": {
+        "prefix": "FindEmptySlot",
+        "body": [
+            "FindEmptySlot(${1:w}, ${2:h}, ${3:onlyMain})$0"
+        ],
+        "description": "Finds an empty slot of a specified width and height. In most cases, to check if an Item can actually fit in the Inventory, as if it can't, it will just return nil.\nFindEmptySlot will loop through all the slots for you, as opposed to CanItemFit which you specify an x and y for. this will call CanItemFit anyway. If you need to check if an item will fit exactly at a position, you want CanItemFit instead."
+    },
+
+    "Inventory:FindError": {
+        "prefix": "FindError",
+        "body": [
+            "FindError()$0"
+        ],
+        "description": "Searches the inventory to find any stacked items. A common problem with developing, is that items will sometimes error out, or get corrupt. Sometimes, the server knows things you don't while developing live This function can be helpful for getting rid of those pesky errors."
+    },
+
+    "Inventory:getFilledSlotCount": {
+        "prefix": "GetFilledSlotCount",
+        "body": [
+            "GetFilledSlotCount()$0"
+        ],
+        "description": "Returns the amount of slots currently filled in the Inventory."
+    },
+
+    "Inventory:getID": {
+        "prefix": "GetID",
+        "body": [
+            "GetID()$0"
+        ],
+        "description": "Returns this inventory's database ID. This is guaranteed to be unique."
+    },
+
+    "Inventory:getItemAt": {
+        "prefix": "GetItemAt",
+        "body": [
+            "GetItemAt(${1:x}, ${2:y})$0"
+        ],
+        "description": "Returns the item that currently exists within x and y in the Inventory. Items that have a width or height greater than 0 occupy more than 1 x and y."
+    },
+
+    "Inventory:getItemByID": {
+        "prefix": "GetItemByID",
+        "body": [
+            "GetItemByID(${1:id}, ${2:onlyMain})$0"
+        ],
+        "description": "Get an item by it's specific Database ID."
+    },
+
+    "Inventory:getItemCount": {
+        "prefix": "GetItemCount",
+        "body": [
+            "GetItemCount(${1:uniqueID}, ${2:onlyMain})$0"
+        ],
+        "description": "Returns a count of a specific Items in the Inventory."
+    },
+
+    "Inventory:getItems": {
+        "prefix": "GetItems",
+        "body": [
+            "GetItems(${1:onlyMain})$0"
+        ],
+        "description": "Returns a table of all the items that an Inventory has."
+    },
+
+    "Inventory:getItemsByBase": {
+        "prefix": "GetItemsByBase",
+        "body": [
+            "GetItemsByBase(${1:baseID}, ${2:onlyMain})$0"
+        ],
+        "description": "Returns a table of Items by their base."
+    },
+
+    "Inventory:getItemsByID": {
+        "prefix": "GetItemsByID",
+        "body": [
+            "GetItemsByID(${1:id}, ${2:onlyMain})$0"
+        ],
+        "description": "Get a table of Items by their specific Database ID. It's important to note that while in 99% of cases, items will have a unique Database ID, developers or random GMod weirdness could cause a second item with the same ID to appear, even though, lia.item.instances will only store one of those. The inventory only stores a reference to the lia.item.instance ID, not the memory reference itself."
+    },
+
+    "Inventory:getItemsByUniqueID": {
+        "prefix": "GetItemsByUniqueID",
+        "body": [
+            "GetItemsByUniqueID(${1:uniqueID}, ${2:onlyMain})$0"
+        ],
+        "description": "Returns a table of all Items in the Inventory by their Unique ID. Not to be confused with GetItemsByID or GetItemByID which take in an Item Instance's ID instead."
+    },
+
+    "Inventory:getOwner": {
+        "prefix": "GetOwner",
+        "body": [
+            "GetOwner()$0"
+        ],
+        "description": "Returns the player that owns this inventory."
+    },
+
+    "Inventory:getReceivers": {
+        "prefix": "GetReceivers",
+        "body": [
+            "GetReceivers()$0"
+        ],
+        "description": "Get all of the receivers this Inventory has. Receivers are players who will be networked the items inside the inventory.\nThis function will automatically sort out invalid players for you."
+    },
+
+    "Inventory:getShouldSave": {
+        "prefix": "GetShouldSave",
+        "body": [
+            "GetShouldSave()$0"
+        ],
+        "description": "Gets whether or not an Inventory should save. Inventories that are marked to not save will not update in the Database, if they inventory is already saved, it will not be deleted when unloaded."
+    },
+
+    "Inventory:getSize": {
+        "prefix": "GetSize",
+        "body": [
+            "GetSize()$0"
+        ],
+        "description": "Returns the grid size of this inventory."
+    },
+
+    "Inventory:HasItem": {
+        "prefix": "HasItem",
+        "body": [
+            "HasItem(${1:targetID}, ${2:data})$0"
+        ],
+        "description": "Returns the item with the given unique ID (e.g \"handheld_radio\") if it exists in this inventory. This method checks both this inventory, and any bags that this inventory has inside of it."
+    },
+
+    "Inventory:HasItemOfBase": {
+        "prefix": "HasItemOfBase",
+        "body": [
+            "HasItemOfBase(${1:baseID}, ${2:data})$0"
+        ],
+        "description": "Whether or not an Inventory has an item of a base, optionally with specified data. This function has an optional data argument, which will take a table. it will match if the data of the item is correct or not.\nItems which are a base will automatically have base_ prefixed to their Unique ID, if you are having trouble finding your base, that is probably why."
+    },
+
+    "Inventory:HasItems": {
+        "prefix": "HasItems",
+        "body": [
+            "HasItems(${1:targetIDs})$0"
+        ],
+        "description": "Checks whether or not the Inventory has a table of items. This function takes a table with no keys and runs in order of first item > last item, this is due to the usage of the # operator in the function."
+    },
+
+    "Inventory:Initialize": {
+        "prefix": "Initialize",
+        "body": [
+            "Initialize(${1:id}, ${2:width}, ${3:height})$0"
+        ],
+        "description": "Initializes the inventory with the provided arguments."
+    },
+
+    "Inventory:Iter": {
+        "prefix": "Iter",
+        "body": [
+            "Iter()$0"
+        ],
+        "description": "Returns an iterator that returns all contained items, a better way to iterate items than pairs(inventory:getItems())."
+    },
+
+    "Inventory:OnCheckAccess": {
+        "prefix": "OnCheckAccess",
+        "body": [
+            "OnCheckAccess(${1:client})$0"
+        ],
+        "description": "Checks whether a player has access to an inventory."
+    },
+
+    "Inventory:PrintAll": {
+        "prefix": "PrintAll",
+        "body": [
+            "PrintAll()$0"
+        ],
+        "description": "Prints out the id, width, height, slots and each item in each slot of an Inventory, used for debugging."
+    },
+
+    "Inventory:Remove": {
+        "prefix": "Remove",
+        "body": [
+            "Remove(${1:id}, ${2:bNoReplication}, ${3:bNoDelete}, ${4:bTransferring})$0"
+        ],
+        "description": "Removes an item from the inventory."
+    },
+
+    "Inventory:RemoveReceiver": {
+        "prefix": "RemoveReceiver",
+        "body": [
+            "RemoveReceiver(${1:client})$0"
+        ],
+        "description": "The opposite of AddReceiver. This function does not check the validity of client, therefore if client doesn't exist, it will error."
+    },
+
+    "Inventory:SendSlot": {
+        "prefix": "SendSlot",
+        "body": [
+            "SendSlot(${1:x}, ${2:y}, ${3:item})$0"
+        ],
+        "description": "Sends a specific slot to a character. This will not send all of the slots of the Item to the character, items can occupy multiple slots.\nThis will call OnSendData on the Item using all of the Inventory's receivers.\nThis function should not be used to sync an entire inventory, if you need to do that, use AddReceiver and Sync."
+    },
+
+    "Inventory:SetOwner": {
+        "prefix": "SetOwner",
+        "body": [
+            "SetOwner(${1:owner}, ${2:fullUpdate})$0"
+        ],
+        "description": "Sets the player that owns this inventory."
+    },
+
+    "Inventory:SetShouldSave": {
+        "prefix": "SetShouldSave",
+        "body": [
+            "SetShouldSave(${1:bNoSave})$0"
+        ],
+        "description": "Sets whether or not an Inventory should save. This will prevent an Inventory from updating in the Database, if the inventory is already saved, it will not be deleted when unloaded."
+    },
+
+    "Inventory:SetSize": {
+        "prefix": "SetSize",
+        "body": [
+            "SetSize(${1:width}, ${2:height})$0"
+        ],
+        "description": "Sets the grid size of this inventory."
+    },
+
+    "Inventory:Sync": {
+        "prefix": "Sync",
+        "body": [
+            "Sync(${1:receiver})$0"
+        ],
+        "description": "Syncs the Inventory to the receiver. This will call Item.OnSendData on every item in the Inventory."
+    },
+
+    "Inventory:__tostring": {
+        "prefix": "__tostring",
+        "body": [
+            "__tostring()$0"
+        ],
+        "description": "Returns a string representation of this inventory"
+    },
+
+    "Item:Call": {
+        "prefix": "Call",
+        "body": [
+            "Call(${1:method}, ${2:client}, ${3:entity}, ${4:args})$0"
+        ],
+        "description": "Calls one of the item's methods."
+    },
+
+    "Item:getCharacterID": {
+        "prefix": "GetCharacterID",
+        "body": [
+            "GetCharacterID()$0"
+        ],
+        "description": "Returns the ID of the owning character, if one exists."
+    },
+
+    "Item:getData": {
+        "prefix": "GetData",
+        "body": [
+            "GetData(${1:key}, ${2:default})$0"
+        ],
+        "description": "Returns the value stored on a key within the item's data."
+    },
+
+    "Item:getDesc": {
+        "prefix": "getDesc",
+        "body": [
+            "getDesc()$0"
+        ],
+        "description": "Returns the description of the item."
+    },
+
+    "Item:getEntity": {
+        "prefix": "GetEntity",
+        "body": [
+            "GetEntity()$0"
+        ],
+        "description": "Returns the item's entity."
+    },
+
+    "Item:getID": {
+        "prefix": "GetID",
+        "body": [
+            "GetID()$0"
+        ],
+        "description": "Returns this item's database ID. This is guaranteed to be unique."
+    },
+
+    "Item:getModel": {
+        "prefix": "GetModel",
+        "body": [
+            "GetModel()$0"
+        ],
+        "description": "Returns the model of the item."
+    },
+
+    "Item:getName": {
+        "prefix": "getName",
+        "body": [
+            "getName()$0"
+        ],
+        "description": "Returns the name of the item."
+    },
+
+    "Item:getOwner": {
+        "prefix": "GetOwner",
+        "body": [
+            "GetOwner()$0"
+        ],
+        "description": "Returns the player that owns this item."
+    },
+
+    "Item:getPlayerID": {
+        "prefix": "GetPlayerID",
+        "body": [
+            "GetPlayerID()$0"
+        ],
+        "description": "Returns the SteamID64 of the owning player, if one exists."
+    },
+
+    "Item:getSkin": {
+        "prefix": "GetSkin",
+        "body": [
+            "GetSkin()$0"
+        ],
+        "description": "Returns the skin of the item."
+    },
+
+    "Item:Hook": {
+        "prefix": "Hook",
+        "body": [
+            "Hook(${1:name}, ${2:func})$0"
+        ],
+        "description": "Changes the function called on specific events for the item."
+    },
+
+    "Item:PostHook": {
+        "prefix": "PostHook",
+        "body": [
+            "PostHook(${1:name}, ${2:func})$0"
+        ],
+        "description": "Changes the function called after hooks for specific events for the item."
+    },
+
+    "Item:Print": {
+        "prefix": "Print",
+        "body": [
+            "Print(${1:detail})$0"
+        ],
+        "description": "A utility function which prints the item's details."
+    },
+
+    "Item:PrintData": {
+        "prefix": "PrintData",
+        "body": [
+            "PrintData()$0"
+        ],
+        "description": "A utility function printing the item's stored data."
+    },
+
+    "Item:Remove": {
+        "prefix": "Remove",
+        "body": [
+            "Remove(${1:bNoReplication}, ${2:bNoDelete})$0"
+        ],
+        "description": "Removes the item."
+    },
+
+    "Item:SetData": {
+        "prefix": "SetData",
+        "body": [
+            "SetData(${1:key}, ${2:value}, ${3:receivers}, ${4:noSave}, ${5:noCheckEntity})$0"
+        ],
+        "description": "Sets a key within the item's data."
+    },
+
+    "Item:Spawn": {
+        "prefix": "Spawn",
+        "body": [
+            "Spawn(${1:position}, ${2:angles})$0"
+        ],
+        "description": "Spawn an item entity based off the item table."
+    },
+
+    "Item:Transfer": {
+        "prefix": "Transfer",
+        "body": [
+            "Transfer(${1:invID}, ${2:x}, ${3:y}, ${4:client}, ${5:noReplication}, ${6:isLogical})$0"
+        ],
+        "description": "Transfers an item to a specific inventory."
+    },
+
+    "Item:__eq": {
+        "prefix": "__eq",
+        "body": [
+            "__eq(${1:other})$0"
+        ],
+        "description": "Returns true if this item is equal to another item. Internally, this checks item IDs."
+    },
+
+    "Item:__tostring": {
+        "prefix": "__tostring",
+        "body": [
+            "__tostring()$0"
+        ],
+        "description": "Returns a string representation of this item."
+    },
+
+    "Player:CanShootWeapon": {
+        "prefix": "CanShootWeapon",
+        "body": [
+            "CanShootWeapon()$0"
+        ],
+        "description": "Returns true if the player is able to shoot their weapon."
+    },
+
+    "Player:ChatNotify": {
+        "prefix": "ChatNotify",
+        "body": [
+            "ChatNotify(${1:message})$0"
+        ],
+        "description": "Displays a notification for this player in the chatbox."
+    },
+
+    "Player:ChatNotifyLocalized": {
+        "prefix": "ChatNotifyLocalized",
+        "body": [
+            "ChatNotifyLocalized(${1:message}, ${2:args})$0"
+        ],
+        "description": "Displays a notification for this player in the chatbox with the given language phrase."
+    },
+
+    "Player:CreateServerRagdoll": {
+        "prefix": "CreateServerRagdoll",
+        "body": [
+            "CreateServerRagdoll(${1:bDontSetPlayer})$0"
+        ],
+        "description": "Creates a ragdoll entity of this player that will be synced with clients. This does not affect the player like SetRagdolled does."
+    },
+
+    "Player:DoStaredAction": {
+        "prefix": "DoStaredAction",
+        "body": [
+            "DoStaredAction(${1:entity}, ${2:callback}, ${3:time}, ${4:onCancel}, ${5:distance})$0"
+        ],
+        "description": "Performs a time-delay action that requires this player to look at an entity. If this player looks away from the entity before the action timer completes, the action is cancelled. This is usually used in conjunction with SetAction to display progress to the player."
+    },
+
+    "Player:ForceSequence": {
+        "prefix": "ForceSequence",
+        "body": [
+            "ForceSequence(${1:sequence}, ${2:callback}, ${3:time}, ${4:bNoFreeze})$0"
+        ],
+        "description": "Forces this player's model to play an animation sequence. It also prevents the player from firing their weapon while the animation is playing."
+    },
+
+    "Player:getCharacter": {
+        "prefix": "GetCharacter",
+        "body": [
+            "GetCharacter()$0"
+        ],
+        "description": "Returns this player's currently possessed Character object if it exists."
+    },
+
+    "Player:getItemDropPos": {
+        "prefix": "GetItemDropPos",
+        "body": [
+            "GetItemDropPos(${1:entity})$0"
+        ],
+        "description": "Returns a good position in front of the player for an entity to be placed. This is usually used for item entities."
+    },
+
+    "Player:getLocalVar": {
+        "prefix": "GetLocalVar",
+        "body": [
+            "GetLocalVar(${1:key}, ${2:default})$0"
+        ],
+        "description": "Retrieves a local networked variable. If it is not set, it'll return the default that you've specified. Locally networked variables can only be retrieved from the owning player when used from the client."
+    },
+
+    "Player:getName": {
+        "prefix": "getName",
+        "body": [
+            "getName()$0"
+        ],
+        "description": "Returns this player's current name."
+    },
+
+    "Player:getPlayTime": {
+        "prefix": "GetPlayTime",
+        "body": [
+            "GetPlayTime()$0"
+        ],
+        "description": "Returns the amount of time the player has played on the server."
+    },
+
+    "Player:IsFemale": {
+        "prefix": "IsFemale",
+        "body": [
+            "IsFemale()$0"
+        ],
+        "description": "Returns true if the player currently has a female model. This checks if the model has female, alyx or mossman in its name, or if the player's model class is citizen_female."
+    },
+
+    "Player:IsRestricted": {
+        "prefix": "IsRestricted",
+        "body": [
+            "IsRestricted()$0"
+        ],
+        "description": "Returns true if the player is restricted - that is to say that they are considered \"bound\" and cannot interact with objects normally (e.g hold weapons, use items, etc). An example of this would be a player in handcuffs."
+    },
+
+    "Player:IsRunning": {
+        "prefix": "IsRunning",
+        "body": [
+            "IsRunning()$0"
+        ],
+        "description": "Returns true if the player is running. Running in this case means that their current speed is greater than their regularly set walk speed."
+    },
+
+    "Player:IsStuck": {
+        "prefix": "IsStuck",
+        "body": [
+            "IsStuck()$0"
+        ],
+        "description": "Whether or not this player is stuck and cannot move."
+    },
+
+    "Player:IsWepRaised": {
+        "prefix": "IsWepRaised",
+        "body": [
+            "IsWepRaised()$0"
+        ],
+        "description": "Returns true if the player has their weapon raised."
+    },
+
+    "Player:LeaveSequence": {
+        "prefix": "LeaveSequence",
+        "body": [
+            "LeaveSequence()$0"
+        ],
+        "description": "Forcefully stops this player's model from playing an animation that was started by ForceSequence."
+    },
+
+    "Player:Notify": {
+        "prefix": "Notify",
+        "body": [
+            "Notify(${1:message})$0"
+        ],
+        "description": "Displays a prominent notification in the top-right of this player's screen."
+    },
+
+    "Player:NotifyLocalized": {
+        "prefix": "NotifyLocalized",
+        "body": [
+            "NotifyLocalized(${1:message}, ${2:args})$0"
+        ],
+        "description": "Displays a notification for this player with the given language phrase."
+    },
+
+    "Player:PerformInteraction": {
+        "prefix": "PerformInteraction",
+        "body": [
+            "PerformInteraction(${1:time}, ${2:entity}, ${3:callback})$0"
+        ],
+        "description": "Performs a delayed action that requires this player to hold use on an entity. This is displayed to this player as a closing ring over their crosshair."
+    },
+
+    "Player:RequestString": {
+        "prefix": "RequestString",
+        "body": [
+            "RequestString(${1:title}, ${2:subTitle}, ${3:callback}, ${4:default})$0"
+        ],
+        "description": "Opens up a text box on this player's screen for input and returns the result. Remember to sanitize the user's input if it's needed!"
+    },
+
+    "Player:ResetBodygroups": {
+        "prefix": "ResetBodygroups",
+        "body": [
+            "ResetBodygroups()$0"
+        ],
+        "description": "Resets all bodygroups this player's model has to their defaults (0)."
+    },
+
+    "Player:SetAction": {
+        "prefix": "SetAction",
+        "body": [
+            "SetAction(${1:text}, ${2:time}, ${3:callback}, ${4:startTime}, ${5:finishTime})$0"
+        ],
+        "description": "Displays a progress bar for this player that takes the given amount of time to complete."
+    },
+
+    "Player:SetLocalVar": {
+        "prefix": "SetLocalVar",
+        "body": [
+            "SetLocalVar(${1:key}, ${2:value})$0"
+        ],
+        "description": "Sets the value of a local networked variable."
+    },
+
+    "Player:SetRagdolled": {
+        "prefix": "SetRagdolled",
+        "body": [
+            "SetRagdolled(${1:bState}, ${2:time}, ${3:getUpGrace})$0"
+        ],
+        "description": "Sets this player's ragdoll status."
+    },
+
+    "Player:SetRestricted": {
+        "prefix": "SetRestricted",
+        "body": [
+            "SetRestricted(${1:bState}, ${2:bNoMessage})$0"
+        ],
+        "description": "Sets this player's restricted status."
+    },
+
+    "Player:SetWepRaised": {
+        "prefix": "SetWepRaised",
+        "body": [
+            "SetWepRaised(${1:bState}, ${2:weapon})$0"
+        ],
+        "description": "Sets whether or not this player's current weapon is raised."
+    },
+
+    "Player:SyncVars": {
+        "prefix": "SyncVars",
+        "body": [
+            "SyncVars()$0"
+        ],
+        "description": "Synchronizes networked variables to the client."
+    },
+
+    "Player:ToggleWepRaised": {
+        "prefix": "ToggleWepRaised",
+        "body": [
+            "ToggleWepRaised()$0"
+        ],
+        "description": "Inverts this player's weapon raised state. You should use SetWepRaised instead of this if you already have a reference to this player's current weapon."
+    }
+}

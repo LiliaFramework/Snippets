@@ -1,0 +1,94 @@
+{
+  "name": "Lilia-snippets",
+  "displayName": "Lilia Snippets",
+  "description": "Snippets for the Lilia gamemode in garrys mod.",
+  "version": "1.0.7",
+  "publisher": "Leonheart",
+  "icon": "logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lilia-Framework/Lilia-Snippets.git"
+  },
+  "keywords": [
+    "Lilia",
+    "GMOD Lilia",
+    "Lilia Snippets"
+  ],
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "main": "./out/src/extension",
+  "browser": "./out/src/extension",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "glua",
+        "path": "./snippets/blanks.json"
+      },
+      {
+        "language": "lua",
+        "path": "./snippets/blanks.json"
+      },
+      {
+        "language": "glua",
+        "path": "./snippets/classes.json"
+      },
+      {
+        "language": "lua",
+        "path": "./snippets/classes.json"
+      },
+      {
+        "language": "glua",
+        "path": "./snippets/hooks.json"
+      },
+      {
+        "language": "lua",
+        "path": "./snippets/hooks.json"
+      },
+      {
+        "language": "glua",
+        "path": "./snippets/libraries.json"
+      },
+      {
+        "language": "lua",
+        "path": "./snippets/libraries.json"
+      },
+      {
+        "language": "glua",
+        "path": "./snippets/panels.json"
+      },
+      {
+        "language": "lua",
+        "path": "./snippets/panels.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "extension.stayClassy",
+        "title": "GLUA: class to className"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onCommand:extension.stayClassy"
+  ],
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "test": "node ./node_modules/@vscode/test-electron/out/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.40",
+    "@vscode/test-electron": "^1.6.1",
+    "mocha": "^8.0.1",
+    "typescript": "^4.1.6",
+    "@types/ws": "8.5.3"
+  },
+  "dependencies": {
+    "@types/vscode": "^1.85.0"
+  }
+}

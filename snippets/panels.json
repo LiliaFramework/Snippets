@@ -1,0 +1,289 @@
+{
+    "ixLabel:CalculateAlignment": {
+        "prefix": "CalculateAlignment",
+        "body": [
+            "CalculateAlignment(${1:width}, ${2:height}, ${3:textWidth}, ${4:textHeight})$0"
+        ],
+        "description": "Returns the X and Y location of the text taking into account the text alignment and padding."
+    },
+
+    "ixLabel:DrawKernedText": {
+        "prefix": "DrawKernedText",
+        "body": [
+            "DrawKernedText(${1:width}, ${2:height})$0"
+        ],
+        "description": "Draws the current text with the current kerning."
+    },
+
+    "ixLabel:DrawText": {
+        "prefix": "DrawText",
+        "body": [
+            "DrawText(${1:width}, ${2:height})$0"
+        ],
+        "description": "Draws the current text."
+    },
+
+    "ixLabel:getBackgroundColor": {
+        "prefix": "GetBackgroundColor",
+        "body": [
+            "GetBackgroundColor()"
+        ],
+        "description": "Returns the current background color for this panel."
+    },
+
+    "ixLabel:getContentAlignment": {
+        "prefix": "GetContentAlignment",
+        "body": [
+            "GetContentAlignment()"
+        ],
+        "description": "Returns the current content alignment for this panel."
+    },
+
+    "ixLabel:getContentSize": {
+        "prefix": "GetContentSize",
+        "body": [
+            "GetContentSize(${1:bCalculate})$0"
+        ],
+        "description": "Returns the size of the text, taking into account the current kerning."
+    },
+
+    "ixLabel:getFont": {
+        "prefix": "GetFont",
+        "body": [
+            "GetFont()"
+        ],
+        "description": "Returns the current font for this panel."
+    },
+
+    "ixLabel:getKerning": {
+        "prefix": "GetKerning",
+        "body": [
+            "GetKerning()"
+        ],
+        "description": "Returns the current kerning for this panel."
+    },
+
+    "ixLabel:getPadding": {
+        "prefix": "GetPadding",
+        "body": [
+            "GetPadding()"
+        ],
+        "description": "Returns how much padding this panel has around its text."
+    },
+
+    "ixLabel:getScaleWidth": {
+        "prefix": "GetScaleWidth",
+        "body": [
+            "GetScaleWidth()"
+        ],
+        "description": "Returns whether or not this panel will scale its text down to fit its width."
+    },
+
+    "ixLabel:getText": {
+        "prefix": "GetText",
+        "body": [
+            "GetText()"
+        ],
+        "description": "Returns the current text for this panel."
+    },
+
+    "ixLabel:getTextColor": {
+        "prefix": "GetTextColor",
+        "body": [
+            "GetTextColor()"
+        ],
+        "description": "Returns the current text color for this panel."
+    },
+
+    "ixLabel:SetBackgroundColor": {
+        "prefix": "SetBackgroundColor",
+        "body": [
+            "SetBackgroundColor(${1:color})$0"
+        ],
+        "description": "Sets the color of the background to draw behind the text."
+    },
+
+    "ixLabel:SetContentAlignment": {
+        "prefix": "SetContentAlignment",
+        "body": [
+            "SetContentAlignment(${1:alignment})$0"
+        ],
+        "description": "Changes how the text is aligned when drawing. Valid content alignment values include numbers 1 through 9. Each number's corresponding alignment is based on its position on a numpad. For example, 1 is bottom-left, 5 is centered, 9 is top-right, etc."
+    },
+
+    "ixLabel:SetDropShadow": {
+        "prefix": "SetDropShadow",
+        "body": [
+            "SetDropShadow(${1:distance}, ${2:color})$0"
+        ],
+        "description": "Sets the drop shadow to draw behind the text."
+    },
+
+    "ixLabel:SetFont": {
+        "prefix": "SetFont",
+        "body": [
+            "SetFont(${1:font})$0"
+        ],
+        "description": "Sets the font used to draw the text."
+    },
+
+    "ixLabel:SetKerning": {
+        "prefix": "SetKerning",
+        "body": [
+            "SetKerning(${1:kerning})$0"
+        ],
+        "description": "Sets the spacing between each character of the text in pixels. Set to 0 to disable. Kerning is disabled by default."
+    },
+
+    "ixLabel:SetPadding": {
+        "prefix": "SetPadding",
+        "body": [
+            "SetPadding(${1:padding})$0"
+        ],
+        "description": "How much spacing to use around the text when its drawn. This uses uniform padding on the top, left, right, and bottom of this panel."
+    },
+
+    "ixLabel:SetScaleWidth": {
+        "prefix": "SetScaleWidth",
+        "body": [
+            "SetScaleWidth(${1:bScale})$0"
+        ],
+        "description": "Whether or not to scale the width of the text down to fit the width of this panel, if needed."
+    },
+
+    "ixLabel:SetText": {
+        "prefix": "SetText",
+        "body": [
+            "SetText(${1:text})$0"
+        ],
+        "description": "Sets the text for this label to display."
+    },
+
+    "ixLabel:SetTextColor": {
+        "prefix": "SetTextColor",
+        "body": [
+            "SetTextColor(${1:color})$0"
+        ],
+        "description": "Sets the color of the text to use when drawing."
+    },
+
+    "ixLabel:SizeToContents": {
+        "prefix": "SizeToContents",
+        "body": [
+            "SizeToContents()"
+        ],
+        "description": "Sets the size of the panel to fit the content size with the current padding. The content size is recalculated when this method is called."
+    },
+
+    "ixTooltip:AddRow": {
+        "prefix": "AddRow",
+        "body": [
+            "AddRow(${1:id})$0"
+        ],
+        "description": "Creates a new ixTooltipRow panel and adds it to the bottom of this tooltip."
+    },
+
+    "ixTooltip:AddRowAfter": {
+        "prefix": "AddRowAfter",
+        "body": [
+            "AddRowAfter(${1:after}, ${2:id})$0"
+        ],
+        "description": "Creates a new ixTooltipRow and adds it after the row with the given id. The order of the rows is set via setting the Z position of the panels, as this is how VGUI handles ordering with docked panels."
+    },
+
+    "ixTooltip:getCursorPosition": {
+        "prefix": "GetCursorPosition",
+        "body": [
+            "GetCursorPosition()"
+        ],
+        "description": "Returns the current position of the mouse cursor on the screen."
+    },
+
+    "ixTooltip:getRow": {
+        "prefix": "GetRow",
+        "body": [
+            "GetRow(${1:id})$0"
+        ],
+        "description": "Returns an ixTooltipRow corresponding to the given name."
+    },
+
+    "ixTooltip:IsMinimal": {
+        "prefix": "IsMinimal",
+        "body": [
+            "IsMinimal()"
+        ],
+        "description": "Whether or not this tooltip should be displayed in a minimal format."
+    },
+
+    "ixTooltip:SetEntity": {
+        "prefix": "SetEntity",
+        "body": [
+            "SetEntity(${1:entity})$0"
+        ],
+        "description": "Sets the entity associated with this tooltip. Note that this function is not how you get entities to show tooltips."
+    },
+
+    "ixTooltip:SizeToContents": {
+        "prefix": "SizeToContents",
+        "body": [
+            "SizeToContents()"
+        ],
+        "description": "Resizes the tooltip to fit all of the child panels. You should always call this after you are done adding all of your rows."
+    },
+
+    "ixTooltipRow:IsMinimal": {
+        "prefix": "IsMinimal",
+        "body": [
+            "IsMinimal()"
+        ],
+        "description": "Whether or not this tooltip row should be displayed in a minimal format. This usually means no background and/or smaller font. You probably won't need this if you're using regular ixTooltipRow panels, but you should take into account if you're creating your own panels that derive from ixTooltipRow."
+    },
+
+    "ixTooltipRow:Paint": {
+        "prefix": "Paint",
+        "body": [
+            "Paint(${1:width}, ${2:height})$0"
+        ],
+        "description": "Called when the foreground of this row should be painted. If you are overriding this in a subclassed panel, make sure you call ixTooltipRow:PaintBackground at the beginning of your function to make its style consistent with the rest of the framework."
+    },
+
+    "ixTooltipRow:PaintBackground": {
+        "prefix": "PaintBackground",
+        "body": [
+            "PaintBackground(${1:width}, ${2:height})$0"
+        ],
+        "description": "Called when the background of this row should be painted. This will paint the background with the DrawImportantBackground function set in the skin by default."
+    },
+
+    "ixTooltipRow:SetBackgroundColor": {
+        "prefix": "SetBackgroundColor",
+        "body": [
+            "SetBackgroundColor(${1:color})$0"
+        ],
+        "description": "Sets the background color of this row. This should be used sparingly to avoid overwhelming players with a bunch of different colors that could convey different meanings."
+    },
+
+    "ixTooltipRow:SetImportant": {
+        "prefix": "SetImportant",
+        "body": [
+            "SetImportant()"
+        ],
+        "description": "Sets this row to be more prominent with a larger font and more noticable background color. This should usually be used once per tooltip as a title row. For example, item tooltips have one \"important\" row consisting of the item's name. Note that this function is a fire-and-forget function; you cannot revert a row back to it's regular state unless you set the font/colors manually."
+    },
+
+    "ixTooltipRow:SizeToContents": {
+        "prefix": "SizeToContents",
+        "body": [
+            "SizeToContents()"
+        ],
+        "description": "Resizes this panel to fit its contents. This should be called after setting the text."
+    },
+
+    "ixTooltipRow:SizeToContentsY": {
+        "prefix": "SizeToContentsY",
+        "body": [
+            "SizeToContentsY()"
+        ],
+        "description": "Resizes the height of this panel to fit its contents."
+    }
+}

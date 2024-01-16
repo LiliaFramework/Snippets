@@ -1,0 +1,4042 @@
+{
+    "CLASS:CanSwitchTo": {
+        "prefix": "CLASS:CanSwitchTo",
+        "body": [
+            "function CLASS:CanSwitchTo(client)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can switch to this class."
+    },
+
+    "CLASS:onLeave": {
+        "prefix": "CLASS:onLeave",
+        "body": [
+            "function CLASS:onLeave(client)\n\t$0\nend"
+        ],
+        "description": "Called when a character has left this class and has joined a different one. You can get the class the character has just joined by calling character:getClass()."
+    },
+
+    "CLASS:onSet": {
+        "prefix": "CLASS:onSet",
+        "body": [
+            "function CLASS:onSet(client)\n\t$0\nend"
+        ],
+        "description": "Called when a character has joined this class."
+    },
+
+    "CLASS:onSpawn": {
+        "prefix": "CLASS:onSpawn",
+        "body": [
+            "function CLASS:onSpawn(client)\n\t$0\nend"
+        ],
+        "description": "Called when a character in this class has spawned in the world."
+    },
+
+    "FACTION:onGetDefaultName": {
+        "prefix": "FACTION:onGetDefaultName",
+        "body": [
+            "function FACTION:onGetDefaultName(client)\n\t$0\nend"
+        ],
+        "description": "Called when the default name for a character needs to be retrieved (i.e upon initial creation)."
+    },
+
+    "FACTION:onCharCreated": {
+        "prefix": "FACTION:onCharCreated",
+        "body": [
+            "function FACTION:onCharCreated(client, character)\n\t$0\nend"
+        ],
+        "description": "Called when a character has been initially created and assigned to this faction."
+    },
+
+    "FACTION:onSpawn": {
+        "prefix": "FACTION:onSpawn",
+        "body": [
+            "function FACTION:onSpawn(client)\n\t$0\nend"
+        ],
+        "description": "Called when a character in this faction has spawned in the world."
+    },
+
+
+    "MODULE:AdjustCreationPayload": {
+        "prefix": "MODULE:AdjustCreationPayload",
+        "body": [
+            "function MODULE:AdjustCreationPayload(client, payload, newPayload)\n\t$0\nend"
+        ],
+        "description": "Adjusts the data used just before creating a new character."
+    },
+
+    "MODULE:AdjustStaminaOffset": {
+        "prefix": "MODULE:AdjustStaminaOffset",
+        "body": [
+            "function MODULE:AdjustStaminaOffset(client, baseOffset)\n\t$0\nend"
+        ],
+        "description": "Adjusts a player's current stamina offset amount. This is called when the player's stamina is about to be changed; every 0.25 seconds on the server, and every frame on the client."
+    },
+
+    "MODULE:BuildBusinessMenu": {
+        "prefix": "MODULE:BuildBusinessMenu",
+        "body": [
+            "function MODULE:BuildBusinessMenu()\n\t$0\nend"
+        ],
+        "description": "Creates the business panel in the tab menu."
+    },
+
+    "MODULE:CanAutoFormatMessage": {
+        "prefix": "MODULE:CanAutoFormatMessage",
+        "body": [
+            "function MODULE:CanAutoFormatMessage(speaker, chatType, text)\n\t$0\nend"
+        ],
+        "description": "Whether or not a message can be auto formatted with punctuation and capitalization."
+    },
+
+    "MODULE:CanCreateCharacterInfo": {
+        "prefix": "MODULE:CanCreateCharacterInfo",
+        "body": [
+            "function MODULE:CanCreateCharacterInfo(suppress)\n\t$0\nend"
+        ],
+        "description": "Whether or not certain information can be displayed in the character info panel in the tab menu."
+    },
+
+    "MODULE:CanDrawAmmoHUD": {
+        "prefix": "MODULE:CanDrawAmmoHUD",
+        "body": [
+            "function MODULE:CanDrawAmmoHUD(weapon)\n\t$0\nend"
+        ],
+        "description": "Whether or not the ammo HUD should be drawn."
+    },
+
+    "MODULE:CanPlayerAccessDoor": {
+        "prefix": "MODULE:CanPlayerAccessDoor",
+        "body": [
+            "function MODULE:CanPlayerAccessDoor(client, door, access)\n\t$0\nend"
+        ],
+        "description": "Called when a player tries to use abilities on the door, such as locking."
+    },
+
+    "MODULE:CanPlayerCombineItem": {
+        "prefix": "MODULE:CanPlayerCombineItem",
+        "body": [
+            "function MODULE:CanPlayerCombineItem(client, item, other)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to combine an item other into the given item."
+    },
+
+    "MODULE:CanPlayerCreateCharacter": {
+        "prefix": "MODULE:CanPlayerCreateCharacter",
+        "body": [
+            "function MODULE:CanPlayerCreateCharacter(client, payload)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to create a new character with the given payload."
+    },
+
+    "MODULE:CanPlayerDropItem": {
+        "prefix": "MODULE:CanPlayerDropItem",
+        "body": [
+            "function MODULE:CanPlayerDropItem(client, item)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to drop the given item."
+    },
+
+    "MODULE:CanPlayerEarnSalary": {
+        "prefix": "MODULE:CanPlayerEarnSalary",
+        "body": [
+            "function MODULE:CanPlayerEarnSalary(client, faction)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can earn money at regular intervals. This hook runs only if the player's character faction has a salary set - i.e FACTION.pay is set to something other than 0 for their faction."
+    },
+
+    "MODULE:CanPlayerEnterObserver": {
+        "prefix": "MODULE:CanPlayerEnterObserver",
+        "body": [
+            "function MODULE:CanPlayerEnterObserver(client)\n\t$0\nend"
+        ],
+        "description": "Whether or not the player is allowed to enter observer mode. This is allowed only for admins by default and can be customized by server owners if the server is using a CAMI-compliant admin mod."
+    },
+
+    "MODULE:CanPlayerEquipItem": {
+        "prefix": "MODULE:CanPlayerEquipItem",
+        "body": [
+            "function MODULE:CanPlayerEquipItem(client, item)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can equip the given item. This is called for items with outfit, pacoutfit, or weapons as their base. Schemas/modules can utilize this hook for their items."
+    },
+
+    "MODULE:CanPlayerHoldObject": {
+        "prefix": "MODULE:CanPlayerHoldObject",
+        "body": [
+            "function MODULE:CanPlayerHoldObject(client, entity)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to hold an entity with the hands SWEP."
+    },
+
+    "MODULE:CanPlayerInteractEntity": {
+        "prefix": "MODULE:CanPlayerInteractEntity",
+        "body": [
+            "function MODULE:CanPlayerInteractEntity(client, entity, option, data)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to interact with an entity's interaction menu if it has one."
+    },
+
+    "MODULE:CanPlayerInteractItem": {
+        "prefix": "MODULE:CanPlayerInteractItem",
+        "body": [
+            "function MODULE:CanPlayerInteractItem(client, action, item, data)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to interact with an item via an inventory action (e.g picking up, dropping, transferring inventories, etc). Note that this is for an item table, not an item entity. This is called after CanPlayerDropItem and CanPlayerTakeItem."
+    },
+
+    "MODULE:CanPlayerJoinClass": {
+        "prefix": "MODULE:CanPlayerJoinClass",
+        "body": [
+            "function MODULE:CanPlayerJoinClass(client, class, info)\n\t$0\nend"
+        ],
+        "description": "Whether or not a plyer is allowed to join a class."
+    },
+
+    "MODULE:CanPlayerKnock": {
+        "prefix": "MODULE:CanPlayerKnock",
+        "body": [
+            "function MODULE:CanPlayerKnock(client, entity)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can knock on the door with the hands SWEP."
+    },
+
+    "MODULE:CanPlayerOpenShipment": {
+        "prefix": "MODULE:CanPlayerOpenShipment",
+        "body": [
+            "function MODULE:CanPlayerOpenShipment(client, entity)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can open a shipment spawned from the business menu."
+    },
+
+    "MODULE:CanPlayerSpawnContainer": {
+        "prefix": "MODULE:CanPlayerSpawnContainer",
+        "body": [
+            "function MODULE:CanPlayerSpawnContainer(client, model, entity)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to spawn a container entity."
+    },
+
+    "MODULE:CanPlayerTakeItem": {
+        "prefix": "MODULE:CanPlayerTakeItem",
+        "body": [
+            "function MODULE:CanPlayerTakeItem(client, item)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to take an item and put it in their inventory."
+    },
+
+    "MODULE:CanPlayerThrowPunch": {
+        "prefix": "MODULE:CanPlayerThrowPunch",
+        "body": [
+            "function MODULE:CanPlayerThrowPunch(client)\n\t$0\nend"
+        ],
+        "description": "Whether or not the player is allowed to punch with the hands SWEP."
+    },
+
+    "MODULE:CanPlayerTradeWithVendor": {
+        "prefix": "MODULE:CanPlayerTradeWithVendor",
+        "body": [
+            "function MODULE:CanPlayerTradeWithVendor(client, entity, uniqueID, isSellingToVendor)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can trade with a vendor."
+    },
+
+    "MODULE:CanPlayerUnequipItem": {
+        "prefix": "MODULE:CanPlayerUnequipItem",
+        "body": [
+            "function MODULE:CanPlayerUnequipItem(client, item)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can unequip an item."
+    },
+
+    "MODULE:CanPlayerUseBusiness": {
+        "prefix": "MODULE:CanPlayerUseBusiness",
+        "body": [
+            "function MODULE:CanPlayerUseBusiness(client, uniqueID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CanPlayerUseCharacter": {
+        "prefix": "MODULE:CanPlayerUseCharacter",
+        "body": [
+            "function MODULE:CanPlayerUseCharacter(client, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CanPlayerUseDoor": {
+        "prefix": "MODULE:CanPlayerUseDoor",
+        "body": [
+            "function MODULE:CanPlayerUseDoor(client, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CanPlayerUseVendor": {
+        "prefix": "MODULE:CanPlayerUseVendor",
+        "body": [
+            "function MODULE:CanPlayerUseVendor(activator)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CanPlayerViewInventory": {
+        "prefix": "MODULE:CanPlayerViewInventory",
+        "body": [
+            "function MODULE:CanPlayerViewInventory()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CanSaveContainer": {
+        "prefix": "MODULE:CanSaveContainer",
+        "body": [
+            "function MODULE:CanSaveContainer(entity, inventory)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CanTransferItem": {
+        "prefix": "MODULE:CanTransferItem",
+        "body": [
+            "function MODULE:CanTransferItem(item, currentInv, oldInv)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CharacterAttributeBoosted": {
+        "prefix": "MODULE:CharacterAttributeBoosted",
+        "body": [
+            "function MODULE:CharacterAttributeBoosted(client, character, attribID, boostID, boostAmount)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CharacterAttributeUpdated": {
+        "prefix": "MODULE:CharacterAttributeUpdated",
+        "body": [
+            "function MODULE:CharacterAttributeUpdated(client, self, key, value)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CharacterDeleted": {
+        "prefix": "MODULE:CharacterDeleted",
+        "body": [
+            "function MODULE:CharacterDeleted(client, id, isCurrentChar)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CharacterHasFlags": {
+        "prefix": "MODULE:CharacterHasFlags",
+        "body": [
+            "function MODULE:CharacterHasFlags(self, flags)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CharacterLoaded": {
+        "prefix": "MODULE:CharacterLoaded",
+        "body": [
+            "function MODULE:CharacterLoaded(character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CharacterPostSave": {
+        "prefix": "MODULE:CharacterPostSave",
+        "body": [
+            "function MODULE:CharacterPostSave(character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CharacterPreSave": {
+        "prefix": "MODULE:CharacterPreSave",
+        "body": [
+            "function MODULE:CharacterPreSave(character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CharacterRecognized": {
+        "prefix": "MODULE:CharacterRecognized",
+        "body": [
+            "function MODULE:CharacterRecognized()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CharacterRestored": {
+        "prefix": "MODULE:CharacterRestored",
+        "body": [
+            "function MODULE:CharacterRestored(character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CharacterVarChanged": {
+        "prefix": "MODULE:CharacterVarChanged",
+        "body": [
+            "function MODULE:CharacterVarChanged(character, key, oldVar, value)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CharacterVendorTraded": {
+        "prefix": "MODULE:CharacterVendorTraded",
+        "body": [
+            "function MODULE:CharacterVendorTraded(client, entity, uniqueID, isSellingToVendor)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ChatboxCreated": {
+        "prefix": "MODULE:ChatboxCreated",
+        "body": [
+            "function MODULE:ChatboxCreated()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ChatboxPositionChanged": {
+        "prefix": "MODULE:ChatboxPositionChanged",
+        "body": [
+            "function MODULE:ChatboxPositionChanged(x, y, width, height)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ColorSchemeChanged": {
+        "prefix": "MODULE:ColorSchemeChanged",
+        "body": [
+            "function MODULE:ColorSchemeChanged(color)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ContainerRemoved": {
+        "prefix": "MODULE:ContainerRemoved",
+        "body": [
+            "function MODULE:ContainerRemoved(container, inventory)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CreateCharacterInfo": {
+        "prefix": "MODULE:CreateCharacterInfo",
+        "body": [
+            "function MODULE:CreateCharacterInfo(panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CreateCharacterInfoCategory": {
+        "prefix": "MODULE:CreateCharacterInfoCategory",
+        "body": [
+            "function MODULE:CreateCharacterInfoCategory(panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CreateItemInteractionMenu": {
+        "prefix": "MODULE:CreateItemInteractionMenu",
+        "body": [
+            "function MODULE:CreateItemInteractionMenu(icon, menu, itemTable)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CreateMenuButtons": {
+        "prefix": "MODULE:CreateMenuButtons",
+        "body": [
+            "function MODULE:CreateMenuButtons(tabs)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:CreateShipment": {
+        "prefix": "MODULE:CreateShipment",
+        "body": [
+            "function MODULE:CreateShipment(client, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:DatabaseConnected": {
+        "prefix": "MODULE:DatabaseConnected",
+        "body": [
+            "function MODULE:DatabaseConnected()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:DatabaseConnectionFailed": {
+        "prefix": "MODULE:DatabaseConnectionFailed",
+        "body": [
+            "function MODULE:DatabaseConnectionFailed(error)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:DoModuleIncludes": {
+        "prefix": "MODULE:DoModuleIncludes",
+        "body": [
+            "function MODULE:DoModuleIncludes(path, moduleTable)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:DrawCharacterOverview": {
+        "prefix": "MODULE:DrawCharacterOverview",
+        "body": [
+            "function MODULE:DrawCharacterOverview()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:DrawLiliaModelView": {
+        "prefix": "MODULE:DrawLiliaModelView",
+        "body": [
+            "function MODULE:DrawLiliaModelView(panel, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:DrawPlayerRagdoll": {
+        "prefix": "MODULE:DrawPlayerRagdoll",
+        "body": [
+            "function MODULE:DrawPlayerRagdoll(entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:getCharacterDescription": {
+        "prefix": "MODULE:getCharacterDescription",
+        "body": [
+            "function MODULE:getCharacterDescription(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:getCharacterName": {
+        "prefix": "MODULE:getCharacterName",
+        "body": [
+            "function MODULE:getCharacterName(speaker, chatType)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:getChatPrefixInfo": {
+        "prefix": "MODULE:getChatPrefixInfo",
+        "body": [
+            "function MODULE:getChatPrefixInfo(text)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:getCrosshairAlpha": {
+        "prefix": "MODULE:getCrosshairAlpha",
+        "body": [
+            "function MODULE:getCrosshairAlpha(curAlpha)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:getDefaultAttributePoints": {
+        "prefix": "MODULE:getDefaultAttributePoints",
+        "body": [
+            "function MODULE:getDefaultAttributePoints(client, count)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:getDefaultCharacterName": {
+        "prefix": "MODULE:getDefaultCharacterName",
+        "body": [
+            "function MODULE:getDefaultCharacterName(client, faction)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:getMaxPlayerCharacter": {
+        "prefix": "MODULE:getMaxPlayerCharacter",
+        "body": [
+            "function MODULE:getMaxPlayerCharacter(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:getPlayerDeathSound": {
+        "prefix": "MODULE:getPlayerDeathSound",
+        "body": [
+            "function MODULE:getPlayerDeathSound(client)\n\t$0\nend"
+        ],
+        "description": "Returns the sound to emit from the player upon death. If nothing is returned then it will use the default male/female death sounds."
+    },
+
+    "MODULE:getPlayerEntityMenu": {
+        "prefix": "MODULE:getPlayerEntityMenu",
+        "body": [
+            "function MODULE:getPlayerEntityMenu(client, options)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:getPlayerIcon": {
+        "prefix": "MODULE:getPlayerIcon",
+        "body": [
+            "function MODULE:getPlayerIcon(speaker)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:getPlayerPainSound": {
+        "prefix": "MODULE:getPlayerPainSound",
+        "body": [
+            "function MODULE:getPlayerPainSound(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:getPlayerPunchDamage": {
+        "prefix": "MODULE:getPlayerPunchDamage",
+        "body": [
+            "function MODULE:getPlayerPunchDamage(client, damage, context)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:getSalaryAmount": {
+        "prefix": "MODULE:getSalaryAmount",
+        "body": [
+            "function MODULE:getSalaryAmount(client, faction)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:getTypingIndicator": {
+        "prefix": "MODULE:getTypingIndicator",
+        "body": [
+            "function MODULE:getTypingIndicator(character, text)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:InitializedChatClasses": {
+        "prefix": "MODULE:InitializedChatClasses",
+        "body": [
+            "function MODULE:InitializedChatClasses()\n\t$0\nend"
+        ],
+        "description": "Registers chat classes after the core framework chat classes have been registered. You should usually create your chat classes in this hook - especially if you want to reference the properties of a framework chat class."
+    },
+
+    "MODULE:InitializedConfig": {
+        "prefix": "MODULE:InitializedConfig",
+        "body": [
+            "function MODULE:InitializedConfig()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:InitializedModules": {
+        "prefix": "MODULE:InitializedModules",
+        "body": [
+            "function MODULE:InitializedModules()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:InitializedSchema": {
+        "prefix": "MODULE:InitializedSchema",
+        "body": [
+            "function MODULE:InitializedSchema()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:InventoryItemAdded": {
+        "prefix": "MODULE:InventoryItemAdded",
+        "body": [
+            "function MODULE:InventoryItemAdded(oldInv, inventory, item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:InventoryItemRemoved": {
+        "prefix": "MODULE:InventoryItemRemoved",
+        "body": [
+            "function MODULE:InventoryItemRemoved(inventory, item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:IsCharacterRecognized": {
+        "prefix": "MODULE:IsCharacterRecognized",
+        "body": [
+            "function MODULE:IsCharacterRecognized(character, id)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:IsPlayerRecognized": {
+        "prefix": "MODULE:IsPlayerRecognized",
+        "body": [
+            "function MODULE:IsPlayerRecognized(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:IsRecognizedChatType": {
+        "prefix": "MODULE:IsRecognizedChatType",
+        "body": [
+            "function MODULE:IsRecognizedChatType(chatType)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:LoadData": {
+        "prefix": "MODULE:LoadData",
+        "body": [
+            "function MODULE:LoadData()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:LoadFonts": {
+        "prefix": "MODULE:LoadFonts",
+        "body": [
+            "function MODULE:LoadFonts(font, genericFont)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:LoadIntro": {
+        "prefix": "MODULE:LoadIntro",
+        "body": [
+            "function MODULE:LoadIntro()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:MenuSubpanelCreated": {
+        "prefix": "MODULE:MenuSubpanelCreated",
+        "body": [
+            "function MODULE:MenuSubpanelCreated(subpanelName, panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:MessageReceived": {
+        "prefix": "MODULE:MessageReceived",
+        "body": [
+            "function MODULE:MessageReceived(client, info)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnAreaChanged": {
+        "prefix": "MODULE:OnAreaChanged",
+        "body": [
+            "function MODULE:OnAreaChanged(oldID, newID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:onCharCreated": {
+        "prefix": "MODULE:onCharCreated",
+        "body": [
+            "function MODULE:onCharCreated(client, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnCharacterDisconnect": {
+        "prefix": "MODULE:OnCharacterDisconnect",
+        "body": [
+            "function MODULE:OnCharacterDisconnect(client, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnCharacterFallover": {
+        "prefix": "MODULE:OnCharacterFallover",
+        "body": [
+            "function MODULE:OnCharacterFallover(client, entity, bFallenOver)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnCharacterGetup": {
+        "prefix": "MODULE:OnCharacterGetup",
+        "body": [
+            "function MODULE:OnCharacterGetup(client, ragdoll)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnCharacterMenuCreated": {
+        "prefix": "MODULE:OnCharacterMenuCreated",
+        "body": [
+            "function MODULE:OnCharacterMenuCreated(panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnItemSpawned": {
+        "prefix": "MODULE:OnItemSpawned",
+        "body": [
+            "function MODULE:OnItemSpawned(entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnItemTransferred": {
+        "prefix": "MODULE:OnItemTransferred",
+        "body": [
+            "function MODULE:OnItemTransferred(item, curInv, inventory)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnLocalVarSet": {
+        "prefix": "MODULE:OnLocalVarSet",
+        "body": [
+            "function MODULE:OnLocalVarSet(key, var)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnPAC3PartTransferred": {
+        "prefix": "MODULE:OnPAC3PartTransferred",
+        "body": [
+            "function MODULE:OnPAC3PartTransferred(part)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnPickupMoney": {
+        "prefix": "MODULE:OnPickupMoney",
+        "body": [
+            "function MODULE:OnPickupMoney(client, self)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnPlayerAreaChanged": {
+        "prefix": "MODULE:OnPlayerAreaChanged",
+        "body": [
+            "function MODULE:OnPlayerAreaChanged(client, oldID, newID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnPlayerObserve": {
+        "prefix": "MODULE:OnPlayerObserve",
+        "body": [
+            "function MODULE:OnPlayerObserve(client, state)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnPlayerOptionSelected": {
+        "prefix": "MODULE:OnPlayerOptionSelected",
+        "body": [
+            "function MODULE:OnPlayerOptionSelected(client, callingClient, option)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnPlayerPurchaseDoor": {
+        "prefix": "MODULE:OnPlayerPurchaseDoor",
+        "body": [
+            "function MODULE:OnPlayerPurchaseDoor(client, entity, bBuying, bCallOnDoorChild)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnPlayerRestricted": {
+        "prefix": "MODULE:OnPlayerRestricted",
+        "body": [
+            "function MODULE:OnPlayerRestricted(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnPlayerUnRestricted": {
+        "prefix": "MODULE:OnPlayerUnRestricted",
+        "body": [
+            "function MODULE:OnPlayerUnRestricted(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnSavedItemLoaded": {
+        "prefix": "MODULE:OnSavedItemLoaded",
+        "body": [
+            "function MODULE:OnSavedItemLoaded(loadedItems)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:OnWipeTables": {
+        "prefix": "MODULE:OnWipeTables",
+        "body": [
+            "function MODULE:OnWipeTables()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerEnterSequence": {
+        "prefix": "MODULE:PlayerEnterSequence",
+        "body": [
+            "function MODULE:PlayerEnterSequence(client, sequence, callback, time, bNoFreeze)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerInteractEntity": {
+        "prefix": "MODULE:PlayerInteractEntity",
+        "body": [
+            "function MODULE:PlayerInteractEntity(client, entity, option, data)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerInteractItem": {
+        "prefix": "MODULE:PlayerInteractItem",
+        "body": [
+            "function MODULE:PlayerInteractItem(client, action, item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerJoinedClass": {
+        "prefix": "MODULE:PlayerJoinedClass",
+        "body": [
+            "function MODULE:PlayerJoinedClass(client, class, oldClass)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerLeaveSequence": {
+        "prefix": "MODULE:PlayerLeaveSequence",
+        "body": [
+            "function MODULE:PlayerLeaveSequence(entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerLoadedCharacter": {
+        "prefix": "MODULE:PlayerLoadedCharacter",
+        "body": [
+            "function MODULE:PlayerLoadedCharacter(client, character, currentChar)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerLockedDoor": {
+        "prefix": "MODULE:PlayerLockedDoor",
+        "body": [
+            "function MODULE:PlayerLockedDoor(client, door, partner)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerLockedVehicle": {
+        "prefix": "MODULE:PlayerLockedVehicle",
+        "body": [
+            "function MODULE:PlayerLockedVehicle(client, vehicle)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerMessageSend": {
+        "prefix": "MODULE:PlayerMessageSend",
+        "body": [
+            "function MODULE:PlayerMessageSend(speaker, chatType, text, anonymous, receivers, rawText)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerModelChanged": {
+        "prefix": "MODULE:PlayerModelChanged",
+        "body": [
+            "function MODULE:PlayerModelChanged(client, model)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerStaminaGained": {
+        "prefix": "MODULE:PlayerStaminaGained",
+        "body": [
+            "function MODULE:PlayerStaminaGained(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerStaminaLost": {
+        "prefix": "MODULE:PlayerStaminaLost",
+        "body": [
+            "function MODULE:PlayerStaminaLost(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerThrowPunch": {
+        "prefix": "MODULE:PlayerThrowPunch",
+        "body": [
+            "function MODULE:PlayerThrowPunch(client, trace)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerUnlockedDoor": {
+        "prefix": "MODULE:PlayerUnlockedDoor",
+        "body": [
+            "function MODULE:PlayerUnlockedDoor(client, door, partner)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerUnlockedVehicle": {
+        "prefix": "MODULE:PlayerUnlockedVehicle",
+        "body": [
+            "function MODULE:PlayerUnlockedVehicle(client, door)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerUse": {
+        "prefix": "MODULE:PlayerUse",
+        "body": [
+            "function MODULE:PlayerUse(client, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerUseDoor": {
+        "prefix": "MODULE:PlayerUseDoor",
+        "body": [
+            "function MODULE:PlayerUseDoor(client, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PlayerWeaponChanged": {
+        "prefix": "MODULE:PlayerWeaponChanged",
+        "body": [
+            "function MODULE:PlayerWeaponChanged(client, weapon)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ModuleLoaded": {
+        "prefix": "MODULE:ModuleLoaded",
+        "body": [
+            "function MODULE:ModuleLoaded(uniqueID, moduleTable)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ModuleShouldLoad": {
+        "prefix": "MODULE:ModuleShouldLoad",
+        "body": [
+            "function MODULE:ModuleShouldLoad(uniqueID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ModuleUnloaded": {
+        "prefix": "MODULE:ModuleUnloaded",
+        "body": [
+            "function MODULE:ModuleUnloaded(uniqueID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PopulateCharacterInfo": {
+        "prefix": "MODULE:PopulateCharacterInfo",
+        "body": [
+            "function MODULE:PopulateCharacterInfo(client, character, tooltip)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PopulateEntityInfo": {
+        "prefix": "MODULE:PopulateEntityInfo",
+        "body": [
+            "function MODULE:PopulateEntityInfo(entity, tooltip)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PopulateHelpMenu": {
+        "prefix": "MODULE:PopulateHelpMenu",
+        "body": [
+            "function MODULE:PopulateHelpMenu(categories)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PopulateImportantCharacterInfo": {
+        "prefix": "MODULE:PopulateImportantCharacterInfo",
+        "body": [
+            "function MODULE:PopulateImportantCharacterInfo(entity, character, tooltip)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PopulateItemTooltip": {
+        "prefix": "MODULE:PopulateItemTooltip",
+        "body": [
+            "function MODULE:PopulateItemTooltip(tooltip, item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PopulatePlayerTooltip": {
+        "prefix": "MODULE:PopulatePlayerTooltip",
+        "body": [
+            "function MODULE:PopulatePlayerTooltip(client, tooltip)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PopulateScoreboardPlayerMenu": {
+        "prefix": "MODULE:PopulateScoreboardPlayerMenu",
+        "body": [
+            "function MODULE:PopulateScoreboardPlayerMenu(client, menu)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PostChatboxDraw": {
+        "prefix": "MODULE:PostChatboxDraw",
+        "body": [
+            "function MODULE:PostChatboxDraw(width, height, alpha)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PostDrawLiliaModelView": {
+        "prefix": "MODULE:PostDrawLiliaModelView",
+        "body": [
+            "function MODULE:PostDrawLiliaModelView(panel, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PostDrawInventory": {
+        "prefix": "MODULE:PostDrawInventory",
+        "body": [
+            "function MODULE:PostDrawInventory(panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PostLoadData": {
+        "prefix": "MODULE:PostLoadData",
+        "body": [
+            "function MODULE:PostLoadData()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PostPlayerLoadout": {
+        "prefix": "MODULE:PostPlayerLoadout",
+        "body": [
+            "function MODULE:PostPlayerLoadout(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PostPlayerSay": {
+        "prefix": "MODULE:PostPlayerSay",
+        "body": [
+            "function MODULE:PostPlayerSay(client, chatType, message, anonymous)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PostSetupActs": {
+        "prefix": "MODULE:PostSetupActs",
+        "body": [
+            "function MODULE:PostSetupActs()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PreCharacterDeleted": {
+        "prefix": "MODULE:PreCharacterDeleted",
+        "body": [
+            "function MODULE:PreCharacterDeleted(client, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PrePlayerLoadedCharacter": {
+        "prefix": "MODULE:PrePlayerLoadedCharacter",
+        "body": [
+            "function MODULE:PrePlayerLoadedCharacter(client, character, currentChar)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:PrePlayerMessageSend": {
+        "prefix": "MODULE:PrePlayerMessageSend",
+        "body": [
+            "function MODULE:PrePlayerMessageSend(client, chatType, message, bAnonymous)\n\t$0\nend"
+        ],
+        "description": "Called before a message sent by a player is processed to be sent to other players - i.e this is ran as early as possible and before things like the auto chat formatting. Can be used to prevent the message from being sent at all."
+    },
+
+    "MODULE:SaveData": {
+        "prefix": "MODULE:SaveData",
+        "body": [
+            "function MODULE:SaveData()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ScreenResolutionChanged": {
+        "prefix": "MODULE:ScreenResolutionChanged",
+        "body": [
+            "function MODULE:ScreenResolutionChanged(width, height)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:SetupActs": {
+        "prefix": "MODULE:SetupActs",
+        "body": [
+            "function MODULE:SetupActs()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:SetupAreaProperties": {
+        "prefix": "MODULE:SetupAreaProperties",
+        "body": [
+            "function MODULE:SetupAreaProperties()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ShipmentItemTaken": {
+        "prefix": "MODULE:ShipmentItemTaken",
+        "body": [
+            "function MODULE:ShipmentItemTaken(client, uniqueID, amount)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ShouldBarDraw": {
+        "prefix": "MODULE:ShouldBarDraw",
+        "body": [
+            "function MODULE:ShouldBarDraw(bar)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ShouldDeleteSavedItems": {
+        "prefix": "MODULE:ShouldDeleteSavedItems",
+        "body": [
+            "function MODULE:ShouldDeleteSavedItems()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ShouldDisplayArea": {
+        "prefix": "MODULE:ShouldDisplayArea",
+        "body": [
+            "function MODULE:ShouldDisplayArea(newID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ShouldDrawCrosshair": {
+        "prefix": "MODULE:ShouldDrawCrosshair",
+        "body": [
+            "function MODULE:ShouldDrawCrosshair(client, weapon)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ShouldDrawItemSize": {
+        "prefix": "MODULE:ShouldDrawItemSize",
+        "body": [
+            "function MODULE:ShouldDrawItemSize(item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ShouldHideBars": {
+        "prefix": "MODULE:ShouldHideBars",
+        "body": [
+            "function MODULE:ShouldHideBars()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ShouldPermakillCharacter": {
+        "prefix": "MODULE:ShouldPermakillCharacter",
+        "body": [
+            "function MODULE:ShouldPermakillCharacter(client, character, inflictor, attacker)\n\t$0\nend"
+        ],
+        "description": "Whether or not a character should be permakilled upon death. This is only called if the permakill server config is enabled."
+    },
+
+    "MODULE:ShouldPlayerDrowned": {
+        "prefix": "MODULE:ShouldPlayerDrowned",
+        "body": [
+            "function MODULE:ShouldPlayerDrowned(v)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ShouldRemoveRagdollOnDeath": {
+        "prefix": "MODULE:ShouldRemoveRagdollOnDeath",
+        "body": [
+            "function MODULE:ShouldRemoveRagdollOnDeath(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ShouldRestoreInventory": {
+        "prefix": "MODULE:ShouldRestoreInventory",
+        "body": [
+            "function MODULE:ShouldRestoreInventory(characterID, inventoryID, inventoryType)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ShouldShowPlayerOnScoreboard": {
+        "prefix": "MODULE:ShouldShowPlayerOnScoreboard",
+        "body": [
+            "function MODULE:ShouldShowPlayerOnScoreboard(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ShouldSpawnClientRagdoll": {
+        "prefix": "MODULE:ShouldSpawnClientRagdoll",
+        "body": [
+            "function MODULE:ShouldSpawnClientRagdoll(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ShowEntityMenu": {
+        "prefix": "MODULE:ShowEntityMenu",
+        "body": [
+            "function MODULE:ShowEntityMenu(entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:ThirdPersonToggled": {
+        "prefix": "MODULE:ThirdPersonToggled",
+        "body": [
+            "function MODULE:ThirdPersonToggled(oldValue, value)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:UpdateCharacterInfo": {
+        "prefix": "MODULE:UpdateCharacterInfo",
+        "body": [
+            "function MODULE:UpdateCharacterInfo(panel, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:UpdateCharacterInfoCategory": {
+        "prefix": "MODULE:UpdateCharacterInfoCategory",
+        "body": [
+            "function MODULE:UpdateCharacterInfoCategory(panel, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:VoiceDistanceChanged": {
+        "prefix": "MODULE:VoiceDistanceChanged",
+        "body": [
+            "function MODULE:VoiceDistanceChanged(newValue)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:WeaponCycleSound": {
+        "prefix": "MODULE:WeaponCycleSound",
+        "body": [
+            "function MODULE:WeaponCycleSound()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MODULE:WeaponSelectSound": {
+        "prefix": "MODULE:WeaponSelectSound",
+        "body": [
+            "function MODULE:WeaponSelectSound(weapon)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:AdjustCreationPayload": {
+        "prefix": "SCHEMA:AdjustCreationPayload",
+        "body": [
+            "function SCHEMA:AdjustCreationPayload(client, payload, newPayload)\n\t$0\nend"
+        ],
+        "description": "Adjusts the data used just before creating a new character."
+    },
+
+    "SCHEMA:AdjustStaminaOffset": {
+        "prefix": "SCHEMA:AdjustStaminaOffset",
+        "body": [
+            "function SCHEMA:AdjustStaminaOffset(client, baseOffset)\n\t$0\nend"
+        ],
+        "description": "Adjusts a player's current stamina offset amount. This is called when the player's stamina is about to be changed; every 0.25 seconds on the server, and every frame on the client."
+    },
+
+    "SCHEMA:BuildBusinessMenu": {
+        "prefix": "SCHEMA:BuildBusinessMenu",
+        "body": [
+            "function SCHEMA:BuildBusinessMenu()\n\t$0\nend"
+        ],
+        "description": "Creates the business panel in the tab menu."
+    },
+
+    "SCHEMA:CanAutoFormatMessage": {
+        "prefix": "SCHEMA:CanAutoFormatMessage",
+        "body": [
+            "function SCHEMA:CanAutoFormatMessage(speaker, chatType, text)\n\t$0\nend"
+        ],
+        "description": "Whether or not a message can be auto formatted with punctuation and capitalization."
+    },
+
+    "SCHEMA:CanCreateCharacterInfo": {
+        "prefix": "SCHEMA:CanCreateCharacterInfo",
+        "body": [
+            "function SCHEMA:CanCreateCharacterInfo(suppress)\n\t$0\nend"
+        ],
+        "description": "Whether or not certain information can be displayed in the character info panel in the tab menu."
+    },
+
+    "SCHEMA:CanDrawAmmoHUD": {
+        "prefix": "SCHEMA:CanDrawAmmoHUD",
+        "body": [
+            "function SCHEMA:CanDrawAmmoHUD(weapon)\n\t$0\nend"
+        ],
+        "description": "Whether or not the ammo HUD should be drawn."
+    },
+
+    "SCHEMA:CanPlayerAccessDoor": {
+        "prefix": "SCHEMA:CanPlayerAccessDoor",
+        "body": [
+            "function SCHEMA:CanPlayerAccessDoor(client, door, access)\n\t$0\nend"
+        ],
+        "description": "Called when a player tries to use abilities on the door, such as locking."
+    },
+
+    "SCHEMA:CanPlayerCombineItem": {
+        "prefix": "SCHEMA:CanPlayerCombineItem",
+        "body": [
+            "function SCHEMA:CanPlayerCombineItem(client, item, other)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to combine an item other into the given item."
+    },
+
+    "SCHEMA:CanPlayerCreateCharacter": {
+        "prefix": "SCHEMA:CanPlayerCreateCharacter",
+        "body": [
+            "function SCHEMA:CanPlayerCreateCharacter(client, payload)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to create a new character with the given payload."
+    },
+
+    "SCHEMA:CanPlayerDropItem": {
+        "prefix": "SCHEMA:CanPlayerDropItem",
+        "body": [
+            "function SCHEMA:CanPlayerDropItem(client, item)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to drop the given item."
+    },
+
+    "SCHEMA:CanPlayerEarnSalary": {
+        "prefix": "SCHEMA:CanPlayerEarnSalary",
+        "body": [
+            "function SCHEMA:CanPlayerEarnSalary(client, faction)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can earn money at regular intervals. This hook runs only if the player's character faction has a salary set - i.e FACTION.pay is set to something other than 0 for their faction."
+    },
+
+    "SCHEMA:CanPlayerEnterObserver": {
+        "prefix": "SCHEMA:CanPlayerEnterObserver",
+        "body": [
+            "function SCHEMA:CanPlayerEnterObserver(client)\n\t$0\nend"
+        ],
+        "description": "Whether or not the player is allowed to enter observer mode. This is allowed only for admins by default and can be customized by server owners if the server is using a CAMI-compliant admin mod."
+    },
+
+    "SCHEMA:CanPlayerEquipItem": {
+        "prefix": "SCHEMA:CanPlayerEquipItem",
+        "body": [
+            "function SCHEMA:CanPlayerEquipItem(client, item)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can equip the given item. This is called for items with outfit, pacoutfit, or weapons as their base. Schemas/modules can utilize this hook for their items."
+    },
+
+    "SCHEMA:CanPlayerHoldObject": {
+        "prefix": "SCHEMA:CanPlayerHoldObject",
+        "body": [
+            "function SCHEMA:CanPlayerHoldObject(client, entity)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to hold an entity with the hands SWEP."
+    },
+
+    "SCHEMA:CanPlayerInteractEntity": {
+        "prefix": "SCHEMA:CanPlayerInteractEntity",
+        "body": [
+            "function SCHEMA:CanPlayerInteractEntity(client, entity, option, data)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to interact with an entity's interaction menu if it has one."
+    },
+
+    "SCHEMA:CanPlayerInteractItem": {
+        "prefix": "SCHEMA:CanPlayerInteractItem",
+        "body": [
+            "function SCHEMA:CanPlayerInteractItem(client, action, item, data)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to interact with an item via an inventory action (e.g picking up, dropping, transferring inventories, etc). Note that this is for an item table, not an item entity. This is called after CanPlayerDropItem and CanPlayerTakeItem."
+    },
+
+    "SCHEMA:CanPlayerJoinClass": {
+        "prefix": "SCHEMA:CanPlayerJoinClass",
+        "body": [
+            "function SCHEMA:CanPlayerJoinClass(client, class, info)\n\t$0\nend"
+        ],
+        "description": "Whether or not a plyer is allowed to join a class."
+    },
+
+    "SCHEMA:CanPlayerKnock": {
+        "prefix": "SCHEMA:CanPlayerKnock",
+        "body": [
+            "function SCHEMA:CanPlayerKnock(client, entity)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can knock on the door with the hands SWEP."
+    },
+
+    "SCHEMA:CanPlayerOpenShipment": {
+        "prefix": "SCHEMA:CanPlayerOpenShipment",
+        "body": [
+            "function SCHEMA:CanPlayerOpenShipment(client, entity)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can open a shipment spawned from the business menu."
+    },
+
+    "SCHEMA:CanPlayerSpawnContainer": {
+        "prefix": "SCHEMA:CanPlayerSpawnContainer",
+        "body": [
+            "function SCHEMA:CanPlayerSpawnContainer(client, model, entity)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to spawn a container entity."
+    },
+
+    "SCHEMA:CanPlayerTakeItem": {
+        "prefix": "SCHEMA:CanPlayerTakeItem",
+        "body": [
+            "function SCHEMA:CanPlayerTakeItem(client, item)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to take an item and put it in their inventory."
+    },
+
+    "SCHEMA:CanPlayerThrowPunch": {
+        "prefix": "SCHEMA:CanPlayerThrowPunch",
+        "body": [
+            "function SCHEMA:CanPlayerThrowPunch(client)\n\t$0\nend"
+        ],
+        "description": "Whether or not the player is allowed to punch with the hands SWEP."
+    },
+
+    "SCHEMA:CanPlayerTradeWithVendor": {
+        "prefix": "SCHEMA:CanPlayerTradeWithVendor",
+        "body": [
+            "function SCHEMA:CanPlayerTradeWithVendor(client, entity, uniqueID, isSellingToVendor)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can trade with a vendor."
+    },
+
+    "SCHEMA:CanPlayerUnequipItem": {
+        "prefix": "SCHEMA:CanPlayerUnequipItem",
+        "body": [
+            "function SCHEMA:CanPlayerUnequipItem(client, item)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can unequip an item."
+    },
+
+    "SCHEMA:CanPlayerUseBusiness": {
+        "prefix": "SCHEMA:CanPlayerUseBusiness",
+        "body": [
+            "function SCHEMA:CanPlayerUseBusiness(client, uniqueID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CanPlayerUseCharacter": {
+        "prefix": "SCHEMA:CanPlayerUseCharacter",
+        "body": [
+            "function SCHEMA:CanPlayerUseCharacter(client, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CanPlayerUseDoor": {
+        "prefix": "SCHEMA:CanPlayerUseDoor",
+        "body": [
+            "function SCHEMA:CanPlayerUseDoor(client, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CanPlayerUseVendor": {
+        "prefix": "SCHEMA:CanPlayerUseVendor",
+        "body": [
+            "function SCHEMA:CanPlayerUseVendor(activator)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CanPlayerViewInventory": {
+        "prefix": "SCHEMA:CanPlayerViewInventory",
+        "body": [
+            "function SCHEMA:CanPlayerViewInventory()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CanSaveContainer": {
+        "prefix": "SCHEMA:CanSaveContainer",
+        "body": [
+            "function SCHEMA:CanSaveContainer(entity, inventory)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CanTransferItem": {
+        "prefix": "SCHEMA:CanTransferItem",
+        "body": [
+            "function SCHEMA:CanTransferItem(item, currentInv, oldInv)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CharacterAttributeBoosted": {
+        "prefix": "SCHEMA:CharacterAttributeBoosted",
+        "body": [
+            "function SCHEMA:CharacterAttributeBoosted(client, character, attribID, boostID, boostAmount)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CharacterAttributeUpdated": {
+        "prefix": "SCHEMA:CharacterAttributeUpdated",
+        "body": [
+            "function SCHEMA:CharacterAttributeUpdated(client, self, key, value)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CharacterDeleted": {
+        "prefix": "SCHEMA:CharacterDeleted",
+        "body": [
+            "function SCHEMA:CharacterDeleted(client, id, isCurrentChar)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CharacterHasFlags": {
+        "prefix": "SCHEMA:CharacterHasFlags",
+        "body": [
+            "function SCHEMA:CharacterHasFlags(self, flags)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CharacterLoaded": {
+        "prefix": "SCHEMA:CharacterLoaded",
+        "body": [
+            "function SCHEMA:CharacterLoaded(character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CharacterPostSave": {
+        "prefix": "SCHEMA:CharacterPostSave",
+        "body": [
+            "function SCHEMA:CharacterPostSave(character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CharacterPreSave": {
+        "prefix": "SCHEMA:CharacterPreSave",
+        "body": [
+            "function SCHEMA:CharacterPreSave(character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CharacterRecognized": {
+        "prefix": "SCHEMA:CharacterRecognized",
+        "body": [
+            "function SCHEMA:CharacterRecognized()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CharacterRestored": {
+        "prefix": "SCHEMA:CharacterRestored",
+        "body": [
+            "function SCHEMA:CharacterRestored(character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CharacterVarChanged": {
+        "prefix": "SCHEMA:CharacterVarChanged",
+        "body": [
+            "function SCHEMA:CharacterVarChanged(character, key, oldVar, value)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CharacterVendorTraded": {
+        "prefix": "SCHEMA:CharacterVendorTraded",
+        "body": [
+            "function SCHEMA:CharacterVendorTraded(client, entity, uniqueID, isSellingToVendor)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ChatboxCreated": {
+        "prefix": "SCHEMA:ChatboxCreated",
+        "body": [
+            "function SCHEMA:ChatboxCreated()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ChatboxPositionChanged": {
+        "prefix": "SCHEMA:ChatboxPositionChanged",
+        "body": [
+            "function SCHEMA:ChatboxPositionChanged(x, y, width, height)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ColorSchemeChanged": {
+        "prefix": "SCHEMA:ColorSchemeChanged",
+        "body": [
+            "function SCHEMA:ColorSchemeChanged(color)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ContainerRemoved": {
+        "prefix": "SCHEMA:ContainerRemoved",
+        "body": [
+            "function SCHEMA:ContainerRemoved(container, inventory)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CreateCharacterInfo": {
+        "prefix": "SCHEMA:CreateCharacterInfo",
+        "body": [
+            "function SCHEMA:CreateCharacterInfo(panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CreateCharacterInfoCategory": {
+        "prefix": "SCHEMA:CreateCharacterInfoCategory",
+        "body": [
+            "function SCHEMA:CreateCharacterInfoCategory(panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CreateItemInteractionMenu": {
+        "prefix": "SCHEMA:CreateItemInteractionMenu",
+        "body": [
+            "function SCHEMA:CreateItemInteractionMenu(icon, menu, itemTable)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CreateMenuButtons": {
+        "prefix": "SCHEMA:CreateMenuButtons",
+        "body": [
+            "function SCHEMA:CreateMenuButtons(tabs)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:CreateShipment": {
+        "prefix": "SCHEMA:CreateShipment",
+        "body": [
+            "function SCHEMA:CreateShipment(client, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:DatabaseConnected": {
+        "prefix": "SCHEMA:DatabaseConnected",
+        "body": [
+            "function SCHEMA:DatabaseConnected()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:DatabaseConnectionFailed": {
+        "prefix": "SCHEMA:DatabaseConnectionFailed",
+        "body": [
+            "function SCHEMA:DatabaseConnectionFailed(error)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:DoModuleIncludes": {
+        "prefix": "SCHEMA:DoModuleIncludes",
+        "body": [
+            "function SCHEMA:DoModuleIncludes(path, moduleTable)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:DrawCharacterOverview": {
+        "prefix": "SCHEMA:DrawCharacterOverview",
+        "body": [
+            "function SCHEMA:DrawCharacterOverview()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:DrawLiliaModelView": {
+        "prefix": "SCHEMA:DrawLiliaModelView",
+        "body": [
+            "function SCHEMA:DrawLiliaModelView(panel, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:DrawPlayerRagdoll": {
+        "prefix": "SCHEMA:DrawPlayerRagdoll",
+        "body": [
+            "function SCHEMA:DrawPlayerRagdoll(entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:getCharacterDescription": {
+        "prefix": "SCHEMA:getCharacterDescription",
+        "body": [
+            "function SCHEMA:getCharacterDescription(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:getCharacterName": {
+        "prefix": "SCHEMA:getCharacterName",
+        "body": [
+            "function SCHEMA:getCharacterName(speaker, chatType)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:getChatPrefixInfo": {
+        "prefix": "SCHEMA:getChatPrefixInfo",
+        "body": [
+            "function SCHEMA:getChatPrefixInfo(text)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:getCrosshairAlpha": {
+        "prefix": "SCHEMA:getCrosshairAlpha",
+        "body": [
+            "function SCHEMA:getCrosshairAlpha(curAlpha)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:getDefaultAttributePoints": {
+        "prefix": "SCHEMA:getDefaultAttributePoints",
+        "body": [
+            "function SCHEMA:getDefaultAttributePoints(client, count)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:getDefaultCharacterName": {
+        "prefix": "SCHEMA:getDefaultCharacterName",
+        "body": [
+            "function SCHEMA:getDefaultCharacterName(client, faction)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:getMaxPlayerCharacter": {
+        "prefix": "SCHEMA:getMaxPlayerCharacter",
+        "body": [
+            "function SCHEMA:getMaxPlayerCharacter(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:getPlayerDeathSound": {
+        "prefix": "SCHEMA:getPlayerDeathSound",
+        "body": [
+            "function SCHEMA:getPlayerDeathSound(client)\n\t$0\nend"
+        ],
+        "description": "Returns the sound to emit from the player upon death. If nothing is returned then it will use the default male/female death sounds."
+    },
+
+    "SCHEMA:getPlayerEntityMenu": {
+        "prefix": "SCHEMA:getPlayerEntityMenu",
+        "body": [
+            "function SCHEMA:getPlayerEntityMenu(client, options)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:getPlayerIcon": {
+        "prefix": "SCHEMA:getPlayerIcon",
+        "body": [
+            "function SCHEMA:getPlayerIcon(speaker)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:getPlayerPainSound": {
+        "prefix": "SCHEMA:getPlayerPainSound",
+        "body": [
+            "function SCHEMA:getPlayerPainSound(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:getPlayerPunchDamage": {
+        "prefix": "SCHEMA:getPlayerPunchDamage",
+        "body": [
+            "function SCHEMA:getPlayerPunchDamage(client, damage, context)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:getSalaryAmount": {
+        "prefix": "SCHEMA:getSalaryAmount",
+        "body": [
+            "function SCHEMA:getSalaryAmount(client, faction)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:getTypingIndicator": {
+        "prefix": "SCHEMA:getTypingIndicator",
+        "body": [
+            "function SCHEMA:getTypingIndicator(character, text)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:InitializedChatClasses": {
+        "prefix": "SCHEMA:InitializedChatClasses",
+        "body": [
+            "function SCHEMA:InitializedChatClasses()\n\t$0\nend"
+        ],
+        "description": "Registers chat classes after the core framework chat classes have been registered. You should usually create your chat classes in this hook - especially if you want to reference the properties of a framework chat class."
+    },
+
+    "SCHEMA:InitializedConfig": {
+        "prefix": "SCHEMA:InitializedConfig",
+        "body": [
+            "function SCHEMA:InitializedConfig()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:InitializedModules": {
+        "prefix": "SCHEMA:InitializedModules",
+        "body": [
+            "function SCHEMA:InitializedModules()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:InitializedSchema": {
+        "prefix": "SCHEMA:InitializedSchema",
+        "body": [
+            "function SCHEMA:InitializedSchema()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:InventoryItemAdded": {
+        "prefix": "SCHEMA:InventoryItemAdded",
+        "body": [
+            "function SCHEMA:InventoryItemAdded(oldInv, inventory, item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:InventoryItemRemoved": {
+        "prefix": "SCHEMA:InventoryItemRemoved",
+        "body": [
+            "function SCHEMA:InventoryItemRemoved(inventory, item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:IsCharacterRecognized": {
+        "prefix": "SCHEMA:IsCharacterRecognized",
+        "body": [
+            "function SCHEMA:IsCharacterRecognized(character, id)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:IsPlayerRecognized": {
+        "prefix": "SCHEMA:IsPlayerRecognized",
+        "body": [
+            "function SCHEMA:IsPlayerRecognized(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:IsRecognizedChatType": {
+        "prefix": "SCHEMA:IsRecognizedChatType",
+        "body": [
+            "function SCHEMA:IsRecognizedChatType(chatType)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:LoadData": {
+        "prefix": "SCHEMA:LoadData",
+        "body": [
+            "function SCHEMA:LoadData()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:LoadFonts": {
+        "prefix": "SCHEMA:LoadFonts",
+        "body": [
+            "function SCHEMA:LoadFonts(font, genericFont)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:LoadIntro": {
+        "prefix": "SCHEMA:LoadIntro",
+        "body": [
+            "function SCHEMA:LoadIntro()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:MenuSubpanelCreated": {
+        "prefix": "SCHEMA:MenuSubpanelCreated",
+        "body": [
+            "function SCHEMA:MenuSubpanelCreated(subpanelName, panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:MessageReceived": {
+        "prefix": "SCHEMA:MessageReceived",
+        "body": [
+            "function SCHEMA:MessageReceived(client, info)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnAreaChanged": {
+        "prefix": "SCHEMA:OnAreaChanged",
+        "body": [
+            "function SCHEMA:OnAreaChanged(oldID, newID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:onCharCreated": {
+        "prefix": "SCHEMA:onCharCreated",
+        "body": [
+            "function SCHEMA:onCharCreated(client, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnCharacterDisconnect": {
+        "prefix": "SCHEMA:OnCharacterDisconnect",
+        "body": [
+            "function SCHEMA:OnCharacterDisconnect(client, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnCharacterFallover": {
+        "prefix": "SCHEMA:OnCharacterFallover",
+        "body": [
+            "function SCHEMA:OnCharacterFallover(client, entity, bFallenOver)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnCharacterGetup": {
+        "prefix": "SCHEMA:OnCharacterGetup",
+        "body": [
+            "function SCHEMA:OnCharacterGetup(client, ragdoll)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnCharacterMenuCreated": {
+        "prefix": "SCHEMA:OnCharacterMenuCreated",
+        "body": [
+            "function SCHEMA:OnCharacterMenuCreated(panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnItemSpawned": {
+        "prefix": "SCHEMA:OnItemSpawned",
+        "body": [
+            "function SCHEMA:OnItemSpawned(entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnItemTransferred": {
+        "prefix": "SCHEMA:OnItemTransferred",
+        "body": [
+            "function SCHEMA:OnItemTransferred(item, curInv, inventory)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnLocalVarSet": {
+        "prefix": "SCHEMA:OnLocalVarSet",
+        "body": [
+            "function SCHEMA:OnLocalVarSet(key, var)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnPAC3PartTransferred": {
+        "prefix": "SCHEMA:OnPAC3PartTransferred",
+        "body": [
+            "function SCHEMA:OnPAC3PartTransferred(part)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnPickupMoney": {
+        "prefix": "SCHEMA:OnPickupMoney",
+        "body": [
+            "function SCHEMA:OnPickupMoney(client, self)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnPlayerAreaChanged": {
+        "prefix": "SCHEMA:OnPlayerAreaChanged",
+        "body": [
+            "function SCHEMA:OnPlayerAreaChanged(client, oldID, newID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnPlayerObserve": {
+        "prefix": "SCHEMA:OnPlayerObserve",
+        "body": [
+            "function SCHEMA:OnPlayerObserve(client, state)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnPlayerOptionSelected": {
+        "prefix": "SCHEMA:OnPlayerOptionSelected",
+        "body": [
+            "function SCHEMA:OnPlayerOptionSelected(client, callingClient, option)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnPlayerPurchaseDoor": {
+        "prefix": "SCHEMA:OnPlayerPurchaseDoor",
+        "body": [
+            "function SCHEMA:OnPlayerPurchaseDoor(client, entity, bBuying, bCallOnDoorChild)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnPlayerRestricted": {
+        "prefix": "SCHEMA:OnPlayerRestricted",
+        "body": [
+            "function SCHEMA:OnPlayerRestricted(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnPlayerUnRestricted": {
+        "prefix": "SCHEMA:OnPlayerUnRestricted",
+        "body": [
+            "function SCHEMA:OnPlayerUnRestricted(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnSavedItemLoaded": {
+        "prefix": "SCHEMA:OnSavedItemLoaded",
+        "body": [
+            "function SCHEMA:OnSavedItemLoaded(loadedItems)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:OnWipeTables": {
+        "prefix": "SCHEMA:OnWipeTables",
+        "body": [
+            "function SCHEMA:OnWipeTables()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerEnterSequence": {
+        "prefix": "SCHEMA:PlayerEnterSequence",
+        "body": [
+            "function SCHEMA:PlayerEnterSequence(client, sequence, callback, time, bNoFreeze)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerInteractEntity": {
+        "prefix": "SCHEMA:PlayerInteractEntity",
+        "body": [
+            "function SCHEMA:PlayerInteractEntity(client, entity, option, data)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerInteractItem": {
+        "prefix": "SCHEMA:PlayerInteractItem",
+        "body": [
+            "function SCHEMA:PlayerInteractItem(client, action, item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerJoinedClass": {
+        "prefix": "SCHEMA:PlayerJoinedClass",
+        "body": [
+            "function SCHEMA:PlayerJoinedClass(client, class, oldClass)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerLeaveSequence": {
+        "prefix": "SCHEMA:PlayerLeaveSequence",
+        "body": [
+            "function SCHEMA:PlayerLeaveSequence(entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerLoadedCharacter": {
+        "prefix": "SCHEMA:PlayerLoadedCharacter",
+        "body": [
+            "function SCHEMA:PlayerLoadedCharacter(client, character, currentChar)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerLockedDoor": {
+        "prefix": "SCHEMA:PlayerLockedDoor",
+        "body": [
+            "function SCHEMA:PlayerLockedDoor(client, door, partner)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerLockedVehicle": {
+        "prefix": "SCHEMA:PlayerLockedVehicle",
+        "body": [
+            "function SCHEMA:PlayerLockedVehicle(client, vehicle)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerMessageSend": {
+        "prefix": "SCHEMA:PlayerMessageSend",
+        "body": [
+            "function SCHEMA:PlayerMessageSend(speaker, chatType, text, anonymous, receivers, rawText)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerModelChanged": {
+        "prefix": "SCHEMA:PlayerModelChanged",
+        "body": [
+            "function SCHEMA:PlayerModelChanged(client, model)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerStaminaGained": {
+        "prefix": "SCHEMA:PlayerStaminaGained",
+        "body": [
+            "function SCHEMA:PlayerStaminaGained(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerStaminaLost": {
+        "prefix": "SCHEMA:PlayerStaminaLost",
+        "body": [
+            "function SCHEMA:PlayerStaminaLost(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerThrowPunch": {
+        "prefix": "SCHEMA:PlayerThrowPunch",
+        "body": [
+            "function SCHEMA:PlayerThrowPunch(client, trace)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerUnlockedDoor": {
+        "prefix": "SCHEMA:PlayerUnlockedDoor",
+        "body": [
+            "function SCHEMA:PlayerUnlockedDoor(client, door, partner)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerUnlockedVehicle": {
+        "prefix": "SCHEMA:PlayerUnlockedVehicle",
+        "body": [
+            "function SCHEMA:PlayerUnlockedVehicle(client, door)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerUse": {
+        "prefix": "SCHEMA:PlayerUse",
+        "body": [
+            "function SCHEMA:PlayerUse(client, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerUseDoor": {
+        "prefix": "SCHEMA:PlayerUseDoor",
+        "body": [
+            "function SCHEMA:PlayerUseDoor(client, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PlayerWeaponChanged": {
+        "prefix": "SCHEMA:PlayerWeaponChanged",
+        "body": [
+            "function SCHEMA:PlayerWeaponChanged(client, weapon)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ModuleLoaded": {
+        "prefix": "SCHEMA:ModuleLoaded",
+        "body": [
+            "function SCHEMA:ModuleLoaded(uniqueID, moduleTable)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ModuleShouldLoad": {
+        "prefix": "SCHEMA:ModuleShouldLoad",
+        "body": [
+            "function SCHEMA:ModuleShouldLoad(uniqueID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ModuleUnloaded": {
+        "prefix": "SCHEMA:ModuleUnloaded",
+        "body": [
+            "function SCHEMA:ModuleUnloaded(uniqueID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PopulateCharacterInfo": {
+        "prefix": "SCHEMA:PopulateCharacterInfo",
+        "body": [
+            "function SCHEMA:PopulateCharacterInfo(client, character, tooltip)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PopulateEntityInfo": {
+        "prefix": "SCHEMA:PopulateEntityInfo",
+        "body": [
+            "function SCHEMA:PopulateEntityInfo(entity, tooltip)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PopulateHelpMenu": {
+        "prefix": "SCHEMA:PopulateHelpMenu",
+        "body": [
+            "function SCHEMA:PopulateHelpMenu(categories)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PopulateImportantCharacterInfo": {
+        "prefix": "SCHEMA:PopulateImportantCharacterInfo",
+        "body": [
+            "function SCHEMA:PopulateImportantCharacterInfo(entity, character, tooltip)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PopulateItemTooltip": {
+        "prefix": "SCHEMA:PopulateItemTooltip",
+        "body": [
+            "function SCHEMA:PopulateItemTooltip(tooltip, item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PopulatePlayerTooltip": {
+        "prefix": "SCHEMA:PopulatePlayerTooltip",
+        "body": [
+            "function SCHEMA:PopulatePlayerTooltip(client, tooltip)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PopulateScoreboardPlayerMenu": {
+        "prefix": "SCHEMA:PopulateScoreboardPlayerMenu",
+        "body": [
+            "function SCHEMA:PopulateScoreboardPlayerMenu(client, menu)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PostChatboxDraw": {
+        "prefix": "SCHEMA:PostChatboxDraw",
+        "body": [
+            "function SCHEMA:PostChatboxDraw(width, height, alpha)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PostDrawLiliaModelView": {
+        "prefix": "SCHEMA:PostDrawLiliaModelView",
+        "body": [
+            "function SCHEMA:PostDrawLiliaModelView(panel, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PostDrawInventory": {
+        "prefix": "SCHEMA:PostDrawInventory",
+        "body": [
+            "function SCHEMA:PostDrawInventory(panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PostLoadData": {
+        "prefix": "SCHEMA:PostLoadData",
+        "body": [
+            "function SCHEMA:PostLoadData()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PostPlayerLoadout": {
+        "prefix": "SCHEMA:PostPlayerLoadout",
+        "body": [
+            "function SCHEMA:PostPlayerLoadout(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PostPlayerSay": {
+        "prefix": "SCHEMA:PostPlayerSay",
+        "body": [
+            "function SCHEMA:PostPlayerSay(client, chatType, message, anonymous)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PostSetupActs": {
+        "prefix": "SCHEMA:PostSetupActs",
+        "body": [
+            "function SCHEMA:PostSetupActs()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PreCharacterDeleted": {
+        "prefix": "SCHEMA:PreCharacterDeleted",
+        "body": [
+            "function SCHEMA:PreCharacterDeleted(client, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PrePlayerLoadedCharacter": {
+        "prefix": "SCHEMA:PrePlayerLoadedCharacter",
+        "body": [
+            "function SCHEMA:PrePlayerLoadedCharacter(client, character, currentChar)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:PrePlayerMessageSend": {
+        "prefix": "SCHEMA:PrePlayerMessageSend",
+        "body": [
+            "function SCHEMA:PrePlayerMessageSend(client, chatType, message, bAnonymous)\n\t$0\nend"
+        ],
+        "description": "Called before a message sent by a player is processed to be sent to other players - i.e this is ran as early as possible and before things like the auto chat formatting. Can be used to prevent the message from being sent at all."
+    },
+
+    "SCHEMA:SaveData": {
+        "prefix": "SCHEMA:SaveData",
+        "body": [
+            "function SCHEMA:SaveData()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ScreenResolutionChanged": {
+        "prefix": "SCHEMA:ScreenResolutionChanged",
+        "body": [
+            "function SCHEMA:ScreenResolutionChanged(width, height)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:SetupActs": {
+        "prefix": "SCHEMA:SetupActs",
+        "body": [
+            "function SCHEMA:SetupActs()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:SetupAreaProperties": {
+        "prefix": "SCHEMA:SetupAreaProperties",
+        "body": [
+            "function SCHEMA:SetupAreaProperties()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ShipmentItemTaken": {
+        "prefix": "SCHEMA:ShipmentItemTaken",
+        "body": [
+            "function SCHEMA:ShipmentItemTaken(client, uniqueID, amount)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ShouldBarDraw": {
+        "prefix": "SCHEMA:ShouldBarDraw",
+        "body": [
+            "function SCHEMA:ShouldBarDraw(bar)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ShouldDeleteSavedItems": {
+        "prefix": "SCHEMA:ShouldDeleteSavedItems",
+        "body": [
+            "function SCHEMA:ShouldDeleteSavedItems()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ShouldDisplayArea": {
+        "prefix": "SCHEMA:ShouldDisplayArea",
+        "body": [
+            "function SCHEMA:ShouldDisplayArea(newID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ShouldDrawCrosshair": {
+        "prefix": "SCHEMA:ShouldDrawCrosshair",
+        "body": [
+            "function SCHEMA:ShouldDrawCrosshair(client, weapon)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ShouldDrawItemSize": {
+        "prefix": "SCHEMA:ShouldDrawItemSize",
+        "body": [
+            "function SCHEMA:ShouldDrawItemSize(item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ShouldHideBars": {
+        "prefix": "SCHEMA:ShouldHideBars",
+        "body": [
+            "function SCHEMA:ShouldHideBars()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ShouldPermakillCharacter": {
+        "prefix": "SCHEMA:ShouldPermakillCharacter",
+        "body": [
+            "function SCHEMA:ShouldPermakillCharacter(client, character, inflictor, attacker)\n\t$0\nend"
+        ],
+        "description": "Whether or not a character should be permakilled upon death. This is only called if the permakill server config is enabled."
+    },
+
+    "SCHEMA:ShouldPlayerDrowned": {
+        "prefix": "SCHEMA:ShouldPlayerDrowned",
+        "body": [
+            "function SCHEMA:ShouldPlayerDrowned(v)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ShouldRemoveRagdollOnDeath": {
+        "prefix": "SCHEMA:ShouldRemoveRagdollOnDeath",
+        "body": [
+            "function SCHEMA:ShouldRemoveRagdollOnDeath(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ShouldRestoreInventory": {
+        "prefix": "SCHEMA:ShouldRestoreInventory",
+        "body": [
+            "function SCHEMA:ShouldRestoreInventory(characterID, inventoryID, inventoryType)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ShouldShowPlayerOnScoreboard": {
+        "prefix": "SCHEMA:ShouldShowPlayerOnScoreboard",
+        "body": [
+            "function SCHEMA:ShouldShowPlayerOnScoreboard(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ShouldSpawnClientRagdoll": {
+        "prefix": "SCHEMA:ShouldSpawnClientRagdoll",
+        "body": [
+            "function SCHEMA:ShouldSpawnClientRagdoll(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ShowEntityMenu": {
+        "prefix": "SCHEMA:ShowEntityMenu",
+        "body": [
+            "function SCHEMA:ShowEntityMenu(entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:ThirdPersonToggled": {
+        "prefix": "SCHEMA:ThirdPersonToggled",
+        "body": [
+            "function SCHEMA:ThirdPersonToggled(oldValue, value)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:UpdateCharacterInfo": {
+        "prefix": "SCHEMA:UpdateCharacterInfo",
+        "body": [
+            "function SCHEMA:UpdateCharacterInfo(panel, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:UpdateCharacterInfoCategory": {
+        "prefix": "SCHEMA:UpdateCharacterInfoCategory",
+        "body": [
+            "function SCHEMA:UpdateCharacterInfoCategory(panel, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:VoiceDistanceChanged": {
+        "prefix": "SCHEMA:VoiceDistanceChanged",
+        "body": [
+            "function SCHEMA:VoiceDistanceChanged(newValue)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:WeaponCycleSound": {
+        "prefix": "SCHEMA:WeaponCycleSound",
+        "body": [
+            "function SCHEMA:WeaponCycleSound()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SCHEMA:WeaponSelectSound": {
+        "prefix": "SCHEMA:WeaponSelectSound",
+        "body": [
+            "function SCHEMA:WeaponSelectSound(weapon)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "AdjustCreationPayload": {
+        "prefix": "AdjustCreationPayload",
+        "body": [
+            "AdjustCreationPayload(client, payload, newPayload)\n\t$0\nend"
+        ],
+        "description": "Adjusts the data used just before creating a new character."
+    },
+
+    "AdjustStaminaOffset": {
+        "prefix": "AdjustStaminaOffset",
+        "body": [
+            "AdjustStaminaOffset(client, baseOffset)\n\t$0\nend"
+        ],
+        "description": "Adjusts a player's current stamina offset amount. This is called when the player's stamina is about to be changed; every 0.25 seconds on the server, and every frame on the client."
+    },
+
+    "BuildBusinessMenu": {
+        "prefix": "BuildBusinessMenu",
+        "body": [
+            "BuildBusinessMenu()\n\t$0\nend"
+        ],
+        "description": "Creates the business panel in the tab menu."
+    },
+
+    "CanAutoFormatMessage": {
+        "prefix": "CanAutoFormatMessage",
+        "body": [
+            "CanAutoFormatMessage(speaker, chatType, text)\n\t$0\nend"
+        ],
+        "description": "Whether or not a message can be auto formatted with punctuation and capitalization."
+    },
+
+    "CanCreateCharacterInfo": {
+        "prefix": "CanCreateCharacterInfo",
+        "body": [
+            "CanCreateCharacterInfo(suppress)\n\t$0\nend"
+        ],
+        "description": "Whether or not certain information can be displayed in the character info panel in the tab menu."
+    },
+
+    "CanDrawAmmoHUD": {
+        "prefix": "CanDrawAmmoHUD",
+        "body": [
+            "CanDrawAmmoHUD(weapon)\n\t$0\nend"
+        ],
+        "description": "Whether or not the ammo HUD should be drawn."
+    },
+
+    "CanPlayerAccessDoor": {
+        "prefix": "CanPlayerAccessDoor",
+        "body": [
+            "CanPlayerAccessDoor(client, door, access)\n\t$0\nend"
+        ],
+        "description": "Called when a player tries to use abilities on the door, such as locking."
+    },
+
+    "CanPlayerCombineItem": {
+        "prefix": "CanPlayerCombineItem",
+        "body": [
+            "CanPlayerCombineItem(client, item, other)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to combine an item other into the given item."
+    },
+
+    "CanPlayerCreateCharacter": {
+        "prefix": "CanPlayerCreateCharacter",
+        "body": [
+            "CanPlayerCreateCharacter(client, payload)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to create a new character with the given payload."
+    },
+
+    "CanPlayerDropItem": {
+        "prefix": "CanPlayerDropItem",
+        "body": [
+            "CanPlayerDropItem(client, item)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to drop the given item."
+    },
+
+    "CanPlayerEarnSalary": {
+        "prefix": "CanPlayerEarnSalary",
+        "body": [
+            "CanPlayerEarnSalary(client, faction)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can earn money at regular intervals. This hook runs only if the player's character faction has a salary set - i.e FACTION.pay is set to something other than 0 for their faction."
+    },
+
+    "CanPlayerEnterObserver": {
+        "prefix": "CanPlayerEnterObserver",
+        "body": [
+            "CanPlayerEnterObserver(client)\n\t$0\nend"
+        ],
+        "description": "Whether or not the player is allowed to enter observer mode. This is allowed only for admins by default and can be customized by server owners if the server is using a CAMI-compliant admin mod."
+    },
+
+    "CanPlayerEquipItem": {
+        "prefix": "CanPlayerEquipItem",
+        "body": [
+            "CanPlayerEquipItem(client, item)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can equip the given item. This is called for items with outfit, pacoutfit, or weapons as their base. Schemas/modules can utilize this hook for their items."
+    },
+
+    "CanPlayerHoldObject": {
+        "prefix": "CanPlayerHoldObject",
+        "body": [
+            "CanPlayerHoldObject(client, entity)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to hold an entity with the hands SWEP."
+    },
+
+    "CanPlayerInteractEntity": {
+        "prefix": "CanPlayerInteractEntity",
+        "body": [
+            "CanPlayerInteractEntity(client, entity, option, data)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to interact with an entity's interaction menu if it has one."
+    },
+
+    "CanPlayerInteractItem": {
+        "prefix": "CanPlayerInteractItem",
+        "body": [
+            "CanPlayerInteractItem(client, action, item, data)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to interact with an item via an inventory action (e.g picking up, dropping, transferring inventories, etc). Note that this is for an item table, not an item entity. This is called after CanPlayerDropItem and CanPlayerTakeItem."
+    },
+
+    "CanPlayerJoinClass": {
+        "prefix": "CanPlayerJoinClass",
+        "body": [
+            "CanPlayerJoinClass(client, class, info)\n\t$0\nend"
+        ],
+        "description": "Whether or not a plyer is allowed to join a class."
+    },
+
+    "CanPlayerKnock": {
+        "prefix": "CanPlayerKnock",
+        "body": [
+            "CanPlayerKnock(client, entity)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can knock on the door with the hands SWEP."
+    },
+
+    "CanPlayerOpenShipment": {
+        "prefix": "CanPlayerOpenShipment",
+        "body": [
+            "CanPlayerOpenShipment(client, entity)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can open a shipment spawned from the business menu."
+    },
+
+    "CanPlayerSpawnContainer": {
+        "prefix": "CanPlayerSpawnContainer",
+        "body": [
+            "CanPlayerSpawnContainer(client, model, entity)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to spawn a container entity."
+    },
+
+    "CanPlayerTakeItem": {
+        "prefix": "CanPlayerTakeItem",
+        "body": [
+            "CanPlayerTakeItem(client, item)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player is allowed to take an item and put it in their inventory."
+    },
+
+    "CanPlayerThrowPunch": {
+        "prefix": "CanPlayerThrowPunch",
+        "body": [
+            "CanPlayerThrowPunch(client)\n\t$0\nend"
+        ],
+        "description": "Whether or not the player is allowed to punch with the hands SWEP."
+    },
+
+    "CanPlayerTradeWithVendor": {
+        "prefix": "CanPlayerTradeWithVendor",
+        "body": [
+            "CanPlayerTradeWithVendor(client, entity, uniqueID, isSellingToVendor)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can trade with a vendor."
+    },
+
+    "CanPlayerUnequipItem": {
+        "prefix": "CanPlayerUnequipItem",
+        "body": [
+            "CanPlayerUnequipItem(client, item)\n\t$0\nend"
+        ],
+        "description": "Whether or not a player can unequip an item."
+    },
+
+    "CanPlayerUseBusiness": {
+        "prefix": "CanPlayerUseBusiness",
+        "body": [
+            "CanPlayerUseBusiness(client, uniqueID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CanPlayerUseCharacter": {
+        "prefix": "CanPlayerUseCharacter",
+        "body": [
+            "CanPlayerUseCharacter(client, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CanPlayerUseDoor": {
+        "prefix": "CanPlayerUseDoor",
+        "body": [
+            "CanPlayerUseDoor(client, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CanPlayerUseVendor": {
+        "prefix": "CanPlayerUseVendor",
+        "body": [
+            "CanPlayerUseVendor(activator)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CanPlayerViewInventory": {
+        "prefix": "CanPlayerViewInventory",
+        "body": [
+            "CanPlayerViewInventory()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CanSaveContainer": {
+        "prefix": "CanSaveContainer",
+        "body": [
+            "CanSaveContainer(entity, inventory)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CanTransferItem": {
+        "prefix": "CanTransferItem",
+        "body": [
+            "CanTransferItem(item, currentInv, oldInv)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CharacterAttributeBoosted": {
+        "prefix": "CharacterAttributeBoosted",
+        "body": [
+            "CharacterAttributeBoosted(client, character, attribID, boostID, boostAmount)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CharacterAttributeUpdated": {
+        "prefix": "CharacterAttributeUpdated",
+        "body": [
+            "CharacterAttributeUpdated(client, self, key, value)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CharacterDeleted": {
+        "prefix": "CharacterDeleted",
+        "body": [
+            "CharacterDeleted(client, id, isCurrentChar)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CharacterHasFlags": {
+        "prefix": "CharacterHasFlags",
+        "body": [
+            "CharacterHasFlags(self, flags)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CharacterLoaded": {
+        "prefix": "CharacterLoaded",
+        "body": [
+            "CharacterLoaded(character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CharacterPostSave": {
+        "prefix": "CharacterPostSave",
+        "body": [
+            "CharacterPostSave(character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CharacterPreSave": {
+        "prefix": "CharacterPreSave",
+        "body": [
+            "CharacterPreSave(character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CharacterRecognized": {
+        "prefix": "CharacterRecognized",
+        "body": [
+            "CharacterRecognized()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CharacterRestored": {
+        "prefix": "CharacterRestored",
+        "body": [
+            "CharacterRestored(character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CharacterVarChanged": {
+        "prefix": "CharacterVarChanged",
+        "body": [
+            "CharacterVarChanged(character, key, oldVar, value)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CharacterVendorTraded": {
+        "prefix": "CharacterVendorTraded",
+        "body": [
+            "CharacterVendorTraded(client, entity, uniqueID, isSellingToVendor)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ChatboxCreated": {
+        "prefix": "ChatboxCreated",
+        "body": [
+            "ChatboxCreated()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ChatboxPositionChanged": {
+        "prefix": "ChatboxPositionChanged",
+        "body": [
+            "ChatboxPositionChanged(x, y, width, height)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ColorSchemeChanged": {
+        "prefix": "ColorSchemeChanged",
+        "body": [
+            "ColorSchemeChanged(color)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ContainerRemoved": {
+        "prefix": "ContainerRemoved",
+        "body": [
+            "ContainerRemoved(container, inventory)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CreateCharacterInfo": {
+        "prefix": "CreateCharacterInfo",
+        "body": [
+            "CreateCharacterInfo(panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CreateCharacterInfoCategory": {
+        "prefix": "CreateCharacterInfoCategory",
+        "body": [
+            "CreateCharacterInfoCategory(panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CreateItemInteractionMenu": {
+        "prefix": "CreateItemInteractionMenu",
+        "body": [
+            "CreateItemInteractionMenu(icon, menu, itemTable)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CreateMenuButtons": {
+        "prefix": "CreateMenuButtons",
+        "body": [
+            "CreateMenuButtons(tabs)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "CreateShipment": {
+        "prefix": "CreateShipment",
+        "body": [
+            "CreateShipment(client, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "DatabaseConnected": {
+        "prefix": "DatabaseConnected",
+        "body": [
+            "DatabaseConnected()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "DatabaseConnectionFailed": {
+        "prefix": "DatabaseConnectionFailed",
+        "body": [
+            "DatabaseConnectionFailed(error)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "DoModuleIncludes": {
+        "prefix": "DoModuleIncludes",
+        "body": [
+            "DoModuleIncludes(path, moduleTable)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "DrawCharacterOverview": {
+        "prefix": "DrawCharacterOverview",
+        "body": [
+            "DrawCharacterOverview()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "DrawLiliaModelView": {
+        "prefix": "DrawLiliaModelView",
+        "body": [
+            "DrawLiliaModelView(panel, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "DrawPlayerRagdoll": {
+        "prefix": "DrawPlayerRagdoll",
+        "body": [
+            "DrawPlayerRagdoll(entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "GetCharacterDescription": {
+        "prefix": "GetCharacterDescription",
+        "body": [
+            "GetCharacterDescription(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "GetCharacterName": {
+        "prefix": "GetCharacterName",
+        "body": [
+            "GetCharacterName(speaker, chatType)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "GetChatPrefixInfo": {
+        "prefix": "GetChatPrefixInfo",
+        "body": [
+            "GetChatPrefixInfo(text)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "GetCrosshairAlpha": {
+        "prefix": "GetCrosshairAlpha",
+        "body": [
+            "GetCrosshairAlpha(curAlpha)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "GetDefaultAttributePoints": {
+        "prefix": "GetDefaultAttributePoints",
+        "body": [
+            "GetDefaultAttributePoints(client, count)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "GetDefaultCharacterName": {
+        "prefix": "GetDefaultCharacterName",
+        "body": [
+            "GetDefaultCharacterName(client, faction)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "GetMaxPlayerCharacter": {
+        "prefix": "GetMaxPlayerCharacter",
+        "body": [
+            "GetMaxPlayerCharacter(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "GetPlayerDeathSound": {
+        "prefix": "GetPlayerDeathSound",
+        "body": [
+            "GetPlayerDeathSound(client)\n\t$0\nend"
+        ],
+        "description": "Returns the sound to emit from the player upon death. If nothing is returned then it will use the default male/female death sounds."
+    },
+
+    "GetPlayerEntityMenu": {
+        "prefix": "GetPlayerEntityMenu",
+        "body": [
+            "GetPlayerEntityMenu(client, options)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "GetPlayerIcon": {
+        "prefix": "GetPlayerIcon",
+        "body": [
+            "GetPlayerIcon(speaker)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "GetPlayerPainSound": {
+        "prefix": "GetPlayerPainSound",
+        "body": [
+            "GetPlayerPainSound(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "GetPlayerPunchDamage": {
+        "prefix": "GetPlayerPunchDamage",
+        "body": [
+            "GetPlayerPunchDamage(client, damage, context)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "GetSalaryAmount": {
+        "prefix": "GetSalaryAmount",
+        "body": [
+            "GetSalaryAmount(client, faction)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "GetTypingIndicator": {
+        "prefix": "GetTypingIndicator",
+        "body": [
+            "GetTypingIndicator(character, text)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "InitializedChatClasses": {
+        "prefix": "InitializedChatClasses",
+        "body": [
+            "InitializedChatClasses()\n\t$0\nend"
+        ],
+        "description": "Registers chat classes after the core framework chat classes have been registered. You should usually create your chat classes in this hook - especially if you want to reference the properties of a framework chat class."
+    },
+
+    "InitializedConfig": {
+        "prefix": "InitializedConfig",
+        "body": [
+            "InitializedConfig()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "InitializedModules": {
+        "prefix": "InitializedModules",
+        "body": [
+            "InitializedModules()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "InitializedSchema": {
+        "prefix": "InitializedSchema",
+        "body": [
+            "InitializedSchema()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "InventoryItemAdded": {
+        "prefix": "InventoryItemAdded",
+        "body": [
+            "InventoryItemAdded(oldInv, inventory, item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "InventoryItemRemoved": {
+        "prefix": "InventoryItemRemoved",
+        "body": [
+            "InventoryItemRemoved(inventory, item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "IsCharacterRecognized": {
+        "prefix": "IsCharacterRecognized",
+        "body": [
+            "IsCharacterRecognized(character, id)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "IsPlayerRecognized": {
+        "prefix": "IsPlayerRecognized",
+        "body": [
+            "IsPlayerRecognized(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "IsRecognizedChatType": {
+        "prefix": "IsRecognizedChatType",
+        "body": [
+            "IsRecognizedChatType(chatType)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "LoadData": {
+        "prefix": "LoadData",
+        "body": [
+            "LoadData()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "LoadFonts": {
+        "prefix": "LoadFonts",
+        "body": [
+            "LoadFonts(font, genericFont)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "LoadIntro": {
+        "prefix": "LoadIntro",
+        "body": [
+            "LoadIntro()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MenuSubpanelCreated": {
+        "prefix": "MenuSubpanelCreated",
+        "body": [
+            "MenuSubpanelCreated(subpanelName, panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "MessageReceived": {
+        "prefix": "MessageReceived",
+        "body": [
+            "MessageReceived(client, info)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnAreaChanged": {
+        "prefix": "OnAreaChanged",
+        "body": [
+            "OnAreaChanged(oldID, newID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "onCharCreated": {
+        "prefix": "onCharCreated",
+        "body": [
+            "onCharCreated(client, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnCharacterDisconnect": {
+        "prefix": "OnCharacterDisconnect",
+        "body": [
+            "OnCharacterDisconnect(client, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnCharacterFallover": {
+        "prefix": "OnCharacterFallover",
+        "body": [
+            "OnCharacterFallover(client, entity, bFallenOver)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnCharacterGetup": {
+        "prefix": "OnCharacterGetup",
+        "body": [
+            "OnCharacterGetup(client, ragdoll)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnCharacterMenuCreated": {
+        "prefix": "OnCharacterMenuCreated",
+        "body": [
+            "OnCharacterMenuCreated(panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnItemSpawned": {
+        "prefix": "OnItemSpawned",
+        "body": [
+            "OnItemSpawned(entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnItemTransferred": {
+        "prefix": "OnItemTransferred",
+        "body": [
+            "OnItemTransferred(item, curInv, inventory)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnLocalVarSet": {
+        "prefix": "OnLocalVarSet",
+        "body": [
+            "OnLocalVarSet(key, var)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnPAC3PartTransferred": {
+        "prefix": "OnPAC3PartTransferred",
+        "body": [
+            "OnPAC3PartTransferred(part)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnPickupMoney": {
+        "prefix": "OnPickupMoney",
+        "body": [
+            "OnPickupMoney(client, self)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnPlayerAreaChanged": {
+        "prefix": "OnPlayerAreaChanged",
+        "body": [
+            "OnPlayerAreaChanged(client, oldID, newID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnPlayerObserve": {
+        "prefix": "OnPlayerObserve",
+        "body": [
+            "OnPlayerObserve(client, state)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnPlayerOptionSelected": {
+        "prefix": "OnPlayerOptionSelected",
+        "body": [
+            "OnPlayerOptionSelected(client, callingClient, option)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnPlayerPurchaseDoor": {
+        "prefix": "OnPlayerPurchaseDoor",
+        "body": [
+            "OnPlayerPurchaseDoor(client, entity, bBuying, bCallOnDoorChild)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnPlayerRestricted": {
+        "prefix": "OnPlayerRestricted",
+        "body": [
+            "OnPlayerRestricted(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnPlayerUnRestricted": {
+        "prefix": "OnPlayerUnRestricted",
+        "body": [
+            "OnPlayerUnRestricted(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnSavedItemLoaded": {
+        "prefix": "OnSavedItemLoaded",
+        "body": [
+            "OnSavedItemLoaded(loadedItems)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "OnWipeTables": {
+        "prefix": "OnWipeTables",
+        "body": [
+            "OnWipeTables()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerEnterSequence": {
+        "prefix": "PlayerEnterSequence",
+        "body": [
+            "PlayerEnterSequence(client, sequence, callback, time, bNoFreeze)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerInteractEntity": {
+        "prefix": "PlayerInteractEntity",
+        "body": [
+            "PlayerInteractEntity(client, entity, option, data)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerInteractItem": {
+        "prefix": "PlayerInteractItem",
+        "body": [
+            "PlayerInteractItem(client, action, item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerJoinedClass": {
+        "prefix": "PlayerJoinedClass",
+        "body": [
+            "PlayerJoinedClass(client, class, oldClass)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerLeaveSequence": {
+        "prefix": "PlayerLeaveSequence",
+        "body": [
+            "PlayerLeaveSequence(entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerLoadedCharacter": {
+        "prefix": "PlayerLoadedCharacter",
+        "body": [
+            "PlayerLoadedCharacter(client, character, currentChar)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerLockedDoor": {
+        "prefix": "PlayerLockedDoor",
+        "body": [
+            "PlayerLockedDoor(client, door, partner)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerLockedVehicle": {
+        "prefix": "PlayerLockedVehicle",
+        "body": [
+            "PlayerLockedVehicle(client, vehicle)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerMessageSend": {
+        "prefix": "PlayerMessageSend",
+        "body": [
+            "PlayerMessageSend(speaker, chatType, text, anonymous, receivers, rawText)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerModelChanged": {
+        "prefix": "PlayerModelChanged",
+        "body": [
+            "PlayerModelChanged(client, model)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerStaminaGained": {
+        "prefix": "PlayerStaminaGained",
+        "body": [
+            "PlayerStaminaGained(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerStaminaLost": {
+        "prefix": "PlayerStaminaLost",
+        "body": [
+            "PlayerStaminaLost(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerThrowPunch": {
+        "prefix": "PlayerThrowPunch",
+        "body": [
+            "PlayerThrowPunch(client, trace)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerUnlockedDoor": {
+        "prefix": "PlayerUnlockedDoor",
+        "body": [
+            "PlayerUnlockedDoor(client, door, partner)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerUnlockedVehicle": {
+        "prefix": "PlayerUnlockedVehicle",
+        "body": [
+            "PlayerUnlockedVehicle(client, door)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerUse": {
+        "prefix": "PlayerUse",
+        "body": [
+            "PlayerUse(client, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerUseDoor": {
+        "prefix": "PlayerUseDoor",
+        "body": [
+            "PlayerUseDoor(client, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PlayerWeaponChanged": {
+        "prefix": "PlayerWeaponChanged",
+        "body": [
+            "PlayerWeaponChanged(client, weapon)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ModuleLoaded": {
+        "prefix": "ModuleLoaded",
+        "body": [
+            "ModuleLoaded(uniqueID, moduleTable)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ModuleShouldLoad": {
+        "prefix": "ModuleShouldLoad",
+        "body": [
+            "ModuleShouldLoad(uniqueID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ModuleUnloaded": {
+        "prefix": "ModuleUnloaded",
+        "body": [
+            "ModuleUnloaded(uniqueID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PopulateCharacterInfo": {
+        "prefix": "PopulateCharacterInfo",
+        "body": [
+            "PopulateCharacterInfo(client, character, tooltip)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PopulateEntityInfo": {
+        "prefix": "PopulateEntityInfo",
+        "body": [
+            "PopulateEntityInfo(entity, tooltip)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PopulateHelpMenu": {
+        "prefix": "PopulateHelpMenu",
+        "body": [
+            "PopulateHelpMenu(categories)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PopulateImportantCharacterInfo": {
+        "prefix": "PopulateImportantCharacterInfo",
+        "body": [
+            "PopulateImportantCharacterInfo(entity, character, tooltip)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PopulateItemTooltip": {
+        "prefix": "PopulateItemTooltip",
+        "body": [
+            "PopulateItemTooltip(tooltip, item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PopulatePlayerTooltip": {
+        "prefix": "PopulatePlayerTooltip",
+        "body": [
+            "PopulatePlayerTooltip(client, tooltip)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PopulateScoreboardPlayerMenu": {
+        "prefix": "PopulateScoreboardPlayerMenu",
+        "body": [
+            "PopulateScoreboardPlayerMenu(client, menu)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PostChatboxDraw": {
+        "prefix": "PostChatboxDraw",
+        "body": [
+            "PostChatboxDraw(width, height, alpha)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PostDrawLiliaModelView": {
+        "prefix": "PostDrawLiliaModelView",
+        "body": [
+            "PostDrawLiliaModelView(panel, entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PostDrawInventory": {
+        "prefix": "PostDrawInventory",
+        "body": [
+            "PostDrawInventory(panel)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PostLoadData": {
+        "prefix": "PostLoadData",
+        "body": [
+            "PostLoadData()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PostPlayerLoadout": {
+        "prefix": "PostPlayerLoadout",
+        "body": [
+            "PostPlayerLoadout(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PostPlayerSay": {
+        "prefix": "PostPlayerSay",
+        "body": [
+            "PostPlayerSay(client, chatType, message, anonymous)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PostSetupActs": {
+        "prefix": "PostSetupActs",
+        "body": [
+            "PostSetupActs()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PreCharacterDeleted": {
+        "prefix": "PreCharacterDeleted",
+        "body": [
+            "PreCharacterDeleted(client, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PrePlayerLoadedCharacter": {
+        "prefix": "PrePlayerLoadedCharacter",
+        "body": [
+            "PrePlayerLoadedCharacter(client, character, currentChar)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "PrePlayerMessageSend": {
+        "prefix": "PrePlayerMessageSend",
+        "body": [
+            "PrePlayerMessageSend(client, chatType, message, bAnonymous)\n\t$0\nend"
+        ],
+        "description": "Called before a message sent by a player is processed to be sent to other players - i.e this is ran as early as possible and before things like the auto chat formatting. Can be used to prevent the message from being sent at all."
+    },
+
+    "SaveData": {
+        "prefix": "SaveData",
+        "body": [
+            "SaveData()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ScreenResolutionChanged": {
+        "prefix": "ScreenResolutionChanged",
+        "body": [
+            "ScreenResolutionChanged(width, height)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SetupActs": {
+        "prefix": "SetupActs",
+        "body": [
+            "SetupActs()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "SetupAreaProperties": {
+        "prefix": "SetupAreaProperties",
+        "body": [
+            "SetupAreaProperties()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ShipmentItemTaken": {
+        "prefix": "ShipmentItemTaken",
+        "body": [
+            "ShipmentItemTaken(client, uniqueID, amount)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ShouldBarDraw": {
+        "prefix": "ShouldBarDraw",
+        "body": [
+            "ShouldBarDraw(bar)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ShouldDeleteSavedItems": {
+        "prefix": "ShouldDeleteSavedItems",
+        "body": [
+            "ShouldDeleteSavedItems()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ShouldDisplayArea": {
+        "prefix": "ShouldDisplayArea",
+        "body": [
+            "ShouldDisplayArea(newID)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ShouldDrawCrosshair": {
+        "prefix": "ShouldDrawCrosshair",
+        "body": [
+            "ShouldDrawCrosshair(client, weapon)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ShouldDrawItemSize": {
+        "prefix": "ShouldDrawItemSize",
+        "body": [
+            "ShouldDrawItemSize(item)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ShouldHideBars": {
+        "prefix": "ShouldHideBars",
+        "body": [
+            "ShouldHideBars()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ShouldPermakillCharacter": {
+        "prefix": "ShouldPermakillCharacter",
+        "body": [
+            "ShouldPermakillCharacter(client, character, inflictor, attacker)\n\t$0\nend"
+        ],
+        "description": "Whether or not a character should be permakilled upon death. This is only called if the permakill server config is enabled."
+    },
+
+    "ShouldPlayerDrowned": {
+        "prefix": "ShouldPlayerDrowned",
+        "body": [
+            "ShouldPlayerDrowned(v)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ShouldRemoveRagdollOnDeath": {
+        "prefix": "ShouldRemoveRagdollOnDeath",
+        "body": [
+            "ShouldRemoveRagdollOnDeath(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ShouldRestoreInventory": {
+        "prefix": "ShouldRestoreInventory",
+        "body": [
+            "ShouldRestoreInventory(characterID, inventoryID, inventoryType)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ShouldShowPlayerOnScoreboard": {
+        "prefix": "ShouldShowPlayerOnScoreboard",
+        "body": [
+            "ShouldShowPlayerOnScoreboard(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ShouldSpawnClientRagdoll": {
+        "prefix": "ShouldSpawnClientRagdoll",
+        "body": [
+            "ShouldSpawnClientRagdoll(client)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ShowEntityMenu": {
+        "prefix": "ShowEntityMenu",
+        "body": [
+            "ShowEntityMenu(entity)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "ThirdPersonToggled": {
+        "prefix": "ThirdPersonToggled",
+        "body": [
+            "ThirdPersonToggled(oldValue, value)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "UpdateCharacterInfo": {
+        "prefix": "UpdateCharacterInfo",
+        "body": [
+            "UpdateCharacterInfo(panel, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "UpdateCharacterInfoCategory": {
+        "prefix": "UpdateCharacterInfoCategory",
+        "body": [
+            "UpdateCharacterInfoCategory(panel, character)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "VoiceDistanceChanged": {
+        "prefix": "VoiceDistanceChanged",
+        "body": [
+            "VoiceDistanceChanged(newValue)\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "WeaponCycleSound": {
+        "prefix": "WeaponCycleSound",
+        "body": [
+            "WeaponCycleSound()\n\t$0\nend"
+        ],
+        "description": ""
+    },
+
+    "WeaponSelectSound": {
+        "prefix": "WeaponSelectSound",
+        "body": [
+            "WeaponSelectSound(weapon)\n\t$0\nend"
+        ],
+        "description": ""
+    }
+}

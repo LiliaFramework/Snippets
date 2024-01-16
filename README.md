@@ -1,22 +1,23 @@
-<h1 align="center">Helix Snippets Extension</h1>
+
+<h1 align="center">Lilia Snippets Extension</h1>
 
 <p align="center">
-  <img src="/images/lilia.png" alt="Helix Snippets Logo">
+  <img src="/logo.png" alt="Lilia Snippets Logo">
 </p>
 
 ## Overview
 
-The Helix Snippets extension provides a set of code snippets for the Helix programming language. Easily insert common code patterns and improve your development efficiency with this Visual Studio Code extension.
+The Lilia Snippets extension provides a set of code snippets for the Lilia programming language. Easily insert common code patterns and improve your development efficiency with this Visual Studio Code extension.
 
 ## Features
 
-- **Snippet Library:** A collection of useful snippets for Helix development.
+- **Snippet Library:** A collection of useful snippets for Lilia development.
 - **Easy Insertion:** Quickly insert code snippets with just a few keystrokes.
 - **Visual Studio Code Integration:** Seamlessly integrates with Visual Studio Code for a smooth coding experience.
 
 ## Usage
 
-1. Install the Helix Snippets extension from the Visual Studio Code Marketplace.
+1. Install the Lilia Snippets extension from the Visual Studio Code Marketplace.
 2. Open a LUA file.
 3. Type the snippet prefix and press `Tab` to insert the snippet.
 
@@ -27,62 +28,58 @@ The Helix Snippets extension provides a set of code snippets for the Helix progr
 
 ## Snippet Examples
 
-### helix.plugin
+### lilia.module
 
 ```lua
-local PLUGIN = PLUGIN
+local MODULE = MODULE
 
-PLUGIN.name = "NAME"
-PLUGIN.description = "DESCRIPTION"
-PLUGIN.author = "AUTHOR"
-PLUGIN.schema = "SCHEMA"
+MODULE.name = "NAME"
+MODULE.desc = "DESCRIPTION"
+MODULE.author = "AUTHOR"
+MODULE.schema = "SCHEMA"
 ```
 
-### helix.item
+### lilia.item
 
 ```lua
 ITEM.name = "NAME"
-ITEM.description = "DESCRIPTION"
+ITEM.desc = "DESCRIPTION"
 ITEM.model = "MODEL"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 1
 ITEM.category = "CategoryName"
-ITEM.noBusiness = false
-ITEM.factions = {"faction1", "faction2"}
-ITEM.classes = {"class1", "class2"}
-ITEM.flag = "flags"
 
 ITEM.iconCam = {pos = Vector(0, 0, 0), ang = Angle(0, 0, 0), fov = 70}
 
 ITEM.functions.Option = {
     name = "OptionName",
-    OnClick = function(item)
-        -- OnClick functionality here
+    onClick = function(item)
+        -- onClick functionality here
     end,
-    OnRun = function(item)
-        -- OnRun functionality here
+    onRun = function(item)
+        -- onRun functionality here
         return false
     end,
-    OnCanRun = function(item)
-        -- OnCanRun checks here
+    onCanRun = function(item)
+        -- onCanRun checks here
     end,
 }
 
-function ITEM:GetName()
+function ITEM:getName()
     return self.name
 end
 
-function ITEM:GetDescription()
-    return self.description
+function ITEM:getDesc()
+    return self.desc
 end
 ```
 
-### helix.item.outfit
+### lilia.item.outfit
 
 ```lua
 ITEM.name = "NAME"
-ITEM.description = "DESCRIPTION"
+ITEM.desc = "DESCRIPTION"
 ITEM.model = "MODEL"
 ITEM.width = 1
 ITEM.height = 1
@@ -94,11 +91,11 @@ ITEM.bodyGroups = {
 ITEM.replacements = "MODEL"
 ```
 
-### helix.item.pacoutfit
+### lilia.item.pacoutfit
 
 ```lua
 ITEM.name = "NAME"
-ITEM.description = "DESCRIPTION"
+ITEM.desc = "DESCRIPTION"
 ITEM.model = "MODEL"
 ITEM.width = 1
 ITEM.height = 1
@@ -106,11 +103,11 @@ ITEM.outfitCategory = "CATEGORY"
 ITEM.pacData = {}
 ```
 
-### helix.item.bag
+### lilia.item.bag
 
 ```lua
 ITEM.name = "NAME"
-ITEM.description = "DESCRIPTION"
+ITEM.desc = "DESCRIPTION"
 ITEM.model = "MODEL"
 ITEM.width = 1
 ITEM.height = 1
@@ -118,11 +115,11 @@ ITEM.invWidth = 1
 ITEM.invHeight = 1
 ```
 
-### helix.item.ammo
+### lilia.item.ammo
 
 ```lua
 ITEM.name = "NAME"
-ITEM.description = "DESCRIPTION"
+ITEM.desc = "DESCRIPTION"
 ITEM.model = "MODEL"
 ITEM.width = 1
 ITEM.height = 1
@@ -130,11 +127,11 @@ ITEM.ammo = "AMMO"
 ITEM.ammoAmount = 1
 ```
 
-### helix.item.weapon
+### lilia.item.weapon
 
 ```lua
 ITEM.name = "NAME"
-ITEM.description = "DESCRIPTION"
+ITEM.desc = "DESCRIPTION"
 ITEM.model = "MODEL"
 ITEM.width = 1
 ITEM.height = 1
@@ -142,52 +139,49 @@ ITEM.class = "WEAPONCLASS"
 ITEM.weaponCategory = "CATEGORY"
 ```
 
-### helix.class
+### lilia.class
 
 ```lua
 CLASS.name = "NAME"
 CLASS.faction = FACTION_NAME
 CLASS.isDefault = true
 
-function CLASS:CanSwitchTo(client)
+function CLASS:onCanBe(client)
 end
 
 if (SERVER) then
-    function CLASS:OnLeave(client)
+    function CLASS:onLeave(client)
     end
 
-    function CLASS:OnSet(client)
+    function CLASS:onSet(client)
     end
 
-    function CLASS:OnSpawn(client)
+    function CLASS:onSpawn(client)
     end
 end
 
 CLASS_NAME = CLASS.index
 ```
 
-### helix.faction
+### lilia.faction
 
 ```lua
 FACTION.name = "NAME"
-FACTION.description = "DESCRIPTION"
+FACTION.desc = "DESCRIPTION"
 FACTION.color = Color(255, 255, 255, 255)
 FACTION.isDefault = true
 FACTION.models = {
 	"MODEL",
 }
 
-function FACTION:GetDefaultName(client)
+function FACTION:onGetDefaultName(client)
 end
 
 if (SERVER) then
-    function FACTION:OnCharacterCreated(client, character)
+    function FACTION:onCharCreated(client, character)
     end
 
-    function FACTION:OnSpawn(client)
-    end
-
-    function FACTION:OnTransferred(character)
+    function FACTION:onSpawn(client)
     end
 end
 

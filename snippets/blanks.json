@@ -1,0 +1,162 @@
+{
+    "Lilia Module": {
+        "prefix": "lilia.module",
+        "body": [
+            "local MODULE = MODULE",
+            "",
+            "MODULE.name = \"NAME\"",
+            "MODULE.desc = \"DESCRIPTION\"",
+            "MODULE.author = \"AUTHOR\"",
+            "MODULE.schema = \"SCHEMA\""
+        ],
+        "description": "Create a new module"
+    },
+
+    "Lilia Item": {
+        "prefix": "lilia.item",
+        "body": [
+          "ITEM.name = \"NAME\"",
+          "ITEM.desc = \"DESCRIPTION\"",
+          "ITEM.model = \"MODEL\"",
+          "ITEM.width = 1",
+          "ITEM.height = 1",
+          "ITEM.price = 1",
+          "ITEM.category = \"CategoryName\"",
+          "",
+          "ITEM.iconCam = {\n    pos = Vector(0, 0, 0), \n    ang = Angle(0, 0, 0),\n    fov = 70\n}",
+          "",
+          "ITEM.functions.Option = {",
+          "    name = \"OptionName\",",
+          "    onClick = function(item)",
+          "        -- onClick functionality here",
+          "    end,",
+          "    onRun = function(item)",
+          "        -- onRun functionality here",
+          "        return false",
+          "    end,",
+          "    onCanRun = function(item)",
+          "        -- onCanRun checks here",
+          "    end,",
+          "}",
+          "",
+          "function ITEM:getName()",
+          "    return self.name",
+          "end",
+          "",
+          "function ITEM:getDesc()",
+          "    return self.desc",
+          "end"
+        ],
+        "description": "Create a new item with default values for a Lilia gamemode"
+    },
+
+    "Lilia Outfit Item": {
+        "prefix": "lilia.item.outfit",
+        "body": [
+            "ITEM.name = \"NAME\"",
+            "ITEM.desc = \"DESCRIPTION\"",
+            "ITEM.model = \"MODEL\"",
+            "ITEM.width = 1",
+            "ITEM.height = 1",
+            "ITEM.outfitCategory = \"CATEGORY\"",
+            "ITEM.newSkin = 1",
+            "ITEM.bodyGroups = {",
+            "    [\"BODYGROUPNAME\"] = 1,",
+            "}",
+            "ITEM.replacements = \"MODEL\""
+        ],
+        "description": "Create a new outfit item with default values for a Lilia gamemode"
+    },
+
+    "Lilia PAC Outfit Item": {
+        "prefix": "lilia.item.pacoutfit",
+        "body": [
+            "ITEM.name = \"NAME\"",
+            "ITEM.desc = \"DESCRIPTION\"",
+            "ITEM.model = \"MODEL\"",
+            "ITEM.width = 1",
+            "ITEM.height = 1",
+            "ITEM.outfitCategory = \"CATEGORY\"",
+            "ITEM.pacData = {}"
+        ],
+        "description": "Create a new PAC outfit item with default values for a Lilia gamemode"
+    },
+
+    "Lilia Bag Item": {
+        "prefix": "lilia.item.bag",
+        "body": [
+            "ITEM.name = \"NAME\"",
+            "ITEM.desc = \"DESCRIPTION\"",
+            "ITEM.model = \"MODEL\"",
+            "ITEM.width = 1",
+            "ITEM.height = 1",
+            "ITEM.invWidth = 1",
+            "ITEM.invHeight = 1"
+        ],
+        "description": "Create a new bag item with default values for a Lilia gamemode"
+    },
+
+    "Lilia Ammo Item": {
+        "prefix": "lilia.item.ammo",
+        "body": [
+            "ITEM.name = \"NAME\"",
+            "ITEM.desc = \"DESCRIPTION\"",
+            "ITEM.model = \"MODEL\"",
+            "ITEM.width = 1",
+            "ITEM.height = 1",
+            "ITEM.ammo = \"AMMO\"",
+            "ITEM.ammoAmount = 1"
+        ],
+        "description": "Create a new ammo item with default values for a Lilia gamemode"
+    },
+
+    "Lilia Weapon Item": {
+        "prefix": "lilia.item.weapon",
+        "body": [
+            "ITEM.name = \"NAME\"",
+            "ITEM.desc = \"DESCRIPTION\"",
+            "ITEM.model = \"MODEL\"",
+            "ITEM.width = 1",
+            "ITEM.height = 1",
+            "ITEM.class = \"WEAPONCLASS\"",
+            "ITEM.weaponCategory = \"CATEGORY\""
+        ],
+        "description": "Create a new weapon item with default values for a Lilia gamemode"
+    },
+
+    "Lilia Class": {
+        "prefix": "lilia.class",
+        "body": [
+            "CLASS.name = \"NAME\"",
+            "CLASS.faction = FACTION_NAME",
+            "CLASS.isDefault = true",
+            "\nfunction CLASS:oncanBe(client)\nend",
+            "\nif (SERVER) then",
+            "\tfunction CLASS:onLeave(client)\n\tend",
+            "\n\tfunction CLASS:onSet(client)\n\tend",
+            "\n\tfunction CLASS:onSpawn(client)\n\tend",
+            "end",
+            "\nCLASS_NAME = CLASS.index"
+        ],
+        "description": "Create a new class with default values for a Lilia gamemode"
+    },
+
+    "Lilia Faction": {
+        "prefix": "lilia.faction",
+        "body": [
+            "FACTION.name = \"NAME\"",
+            "FACTION.desc = \"DESCRIPTION\"",
+            "FACTION.color = Color(255, 255, 255, 255)",
+            "FACTION.faction = FACTION_NAME",
+            "FACTION.isDefault = true",
+            "FACTION.models = {\n\t\"MODEL\",\n}",
+            "\nfunction FACTION:onGetDefaultName(client)\nend",
+            "\nif (SERVER) then",
+            "\tfunction FACTION:onCharCreated(client, character)\n\tend",
+            "\n\tfunction FACTION:onSpawn(client)\n\tend",
+            "end",
+            "\nFACTION_NAME = FACTION.index"
+        ],
+        "description": "Create a new faction with default values for a Lilia gamemode"
+    }
+}

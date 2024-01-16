@@ -1,0 +1,841 @@
+{
+    "lia.anim.getModelClass": {
+        "prefix": "lia.anim.getModelClass",
+        "body": [
+            "lia.anim.getModelClass(${1:model})$0"
+        ],
+        "description": "Gets a model's animation class."
+    },
+
+    "lia.anim.setModelClass": {
+        "prefix": "lia.anim.setModelClass",
+        "body": [
+            "lia.anim.setModelClass(${1:model}, ${2:class})$0"
+        ],
+        "description": "Sets a model's animation class."
+    },
+
+    "lia.char.Create": {
+        "prefix": "lia.char.Create",
+        "body": [
+            "lia.char.Create(${1:data}, ${2:callback})$0"
+        ],
+        "description": "Creates a character object with its assigned properties and saves it to the database."
+    },
+
+    "lia.char.New": {
+        "prefix": "lia.char.New",
+        "body": [
+            "lia.char.New(${1:data}, ${2:id}, ${3:client}, ${4:steamID})$0"
+        ],
+        "description": "Creates a new empty Character object. If you are looking to create a usable character, see lia.char.Create."
+    },
+
+    "lia.char.Restore": {
+        "prefix": "lia.char.Restore",
+        "body": [
+            "lia.char.Restore(${1:client}, ${2:callback}, ${3:bNoCache}, ${4:id})$0"
+        ],
+        "description": "Loads all of a player's characters into memory."
+    },
+
+    "lia.char.RestoreVars": {
+        "prefix": "lia.char.RestoreVars",
+        "body": [
+            "lia.char.RestoreVars(${1:data}, ${2:characterInfo})$0"
+        ],
+        "description": "Adds character properties to a table. This is done automatically by lia.char.Restore, so that should be used instead if you are loading characters."
+    },
+
+    "lia.char.cache": {
+        "prefix": "lia.char.cache",
+        "body": [
+            "lia.char.cache"
+        ],
+        "description": "Functions similar to lia.char.loaded, but is serverside only. This contains a table of all loaded characters grouped by the SteamID64 of the player that owns them."
+    },
+
+    "lia.char.loaded": {
+        "prefix": "lia.char.loaded",
+        "body": [
+            "lia.char.loaded"
+        ],
+        "description": "Characters that are currently loaded into memory. This is not a table of characters that players are currently using. Characters are automatically loaded when a player joins the server. Entries are not cleared once the player disconnects, as some data is needed after the player has disconnected. Clients will also keep their own version of this table, so don't expect it to be the same as the server's.\nThe keys in this table are the IDs of characters, and the values are the Character objects that the ID corresponds to."
+    },
+
+    "lia.char.vars": {
+        "prefix": "lia.char.vars",
+        "body": [
+            "lia.char.vars"
+        ],
+        "description": "Variables that are stored on characters. This table is populated automatically by lia.char.RegisterVar."
+    },
+
+    "lia.chat.Format": {
+        "prefix": "lia.chat.Format",
+        "body": [
+            "lia.chat.Format(${1:text})$0"
+        ],
+        "description": "Formats a string to fix basic grammar - removing extra spacing at the beginning and end, capitalizing the first character, and making sure it ends in punctuation."
+    },
+
+    "lia.chat.Parse": {
+        "prefix": "lia.chat.Parse",
+        "body": [
+            "lia.chat.Parse(${1:client}, ${2:message}, ${3:bNoSend})$0"
+        ],
+        "description": "Identifies which chat mode should be used."
+    },
+
+    "lia.chat.Register": {
+        "prefix": "lia.chat.Register",
+        "body": [
+            "lia.chat.Register(${1:chatType}, ${2:data})$0"
+        ],
+        "description": "Registers a new chat type with the information provided. Chat classes should usually be created inside of the InitializedChatClasses hook."
+    },
+
+    "lia.chat.Send": {
+        "prefix": "lia.chat.Send",
+        "body": [
+            "lia.chat.Send(${1:speaker}, ${2:chatType}, ${3:text}, ${4:bAnonymous}, ${5:receivers}, ${6:data})$0"
+        ],
+        "description": "Send a chat message using the specified chat type."
+    },
+
+    "lia.chat.classes": {
+        "prefix": "lia.chat.classes",
+        "body": [
+            "lia.chat.classes"
+        ],
+        "description": "List of all chat classes that have been registered by the framework, where each key is the name of the chat class, and value is the chat class data. Accessing a chat class's data is useful for when you want to copy some functionality or properties to use in your own. Note that if you're accessing this table, you should do so inside of the InitializedChatClasses hook."
+    },
+
+    "lia.class.CanSwitchTo": {
+        "prefix": "lia.class.CanSwitchTo",
+        "body": [
+            "lia.class.CanSwitchTo(${1:client}, ${2:class})$0"
+        ],
+        "description": "Determines if a player is allowed to join a specific class."
+    },
+
+    "lia.class.get": {
+        "prefix": "lia.class.get",
+        "body": [
+            "lia.class.get(${1:identifier})$0"
+        ],
+        "description": "Retrieves a class table."
+    },
+
+    "lia.class.getPlayers": {
+        "prefix": "lia.class.getPlayers",
+        "body": [
+            "lia.class.getPlayers(${1:class})$0"
+        ],
+        "description": "Retrieves the players in a class."
+    },
+
+    "lia.class.LoadFromDir": {
+        "prefix": "lia.class.LoadFromDir",
+        "body": [
+            "lia.class.LoadFromDir(${1:directory})$0"
+        ],
+        "description": "Loads classes from a directory."
+    },
+
+    "lia.command.Add": {
+        "prefix": "lia.command.Add",
+        "body": [
+            "lia.command.Add(${1:command}, ${2:data})$0"
+        ],
+        "description": "Creates a new command."
+    },
+
+    "lia.command.ExtractArgs": {
+        "prefix": "lia.command.ExtractArgs",
+        "body": [
+            "lia.command.ExtractArgs(${1:text})$0"
+        ],
+        "description": "Returns a table of arguments from a given string. Words separated by spaces will be considered one argument. To have an argument containing multiple words, they must be contained within quotation marks."
+    },
+
+    "lia.command.FindAll": {
+        "prefix": "lia.command.FindAll",
+        "body": [
+            "lia.command.FindAll(${1:identifier}, ${2:bSorted}, ${3:bReorganize}, ${4:bRemoveDupes})$0"
+        ],
+        "description": "Returns an array of potential commands by unique id. When bSorted is true, the commands will be sorted by name. When bReorganize is true, it will move any exact match to the top of the array. When bRemoveDupes is true, it will remove any commands that have the same NAME."
+    },
+
+    "lia.command.FindPlayer": {
+        "prefix": "lia.command.FindPlayer",
+        "body": [
+            "lia.command.FindPlayer(${1:client}, ${2:name})$0"
+        ],
+        "description": "Attempts to find a player by an identifier. If unsuccessful, a notice will be displayed to the specified player. The search criteria is derived from lia.util.FindPlayer."
+    },
+
+    "lia.command.HasAccess": {
+        "prefix": "lia.command.HasAccess",
+        "body": [
+            "lia.command.HasAccess(${1:client}, ${2:command})$0"
+        ],
+        "description": "Returns true if a player is allowed to run a certain command."
+    },
+
+    "lia.command.Parse": {
+        "prefix": "lia.command.Parse",
+        "body": [
+            "lia.command.Parse(${1:client}, ${2:text}, ${3:realCommand}, ${4:arguments})$0"
+        ],
+        "description": "Parses a chat string and runs the command if one is found. Specifically, it checks for commands in a string with the format /CommandName some arguments."
+    },
+
+    "lia.command.Run": {
+        "prefix": "lia.command.Run",
+        "body": [
+            "lia.command.Run(${1:client}, ${2:command}, ${3:arguments})$0"
+        ],
+        "description": "Forces a player to execute a command by name."
+    },
+
+    "lia.command.Send": {
+        "prefix": "lia.command.Send",
+        "body": [
+            "lia.command.Send(${1:command}, ${2:arguments})$0"
+        ],
+        "description": "Request the server to run a command. This mimics similar functionality to the client typing /CommandName in the chatbox."
+    },
+
+    "lia.config.Add": {
+        "prefix": "lia.config.Add",
+        "body": [
+            "lia.config.Add(${1:key}, ${2:value}, ${3:description}, ${4:callback}, ${5:data}, ${6:bNoNetworking}, ${7:bSchemaOnly})$0"
+        ],
+        "description": "Creates a config option with the given information."
+    },
+
+    "lia.config.get": {
+        "prefix": "lia.config.get",
+        "body": [
+            "lia.config.get(${1:key}, ${2:default})$0"
+        ],
+        "description": "Retrieves a value of a config option. If it is not set, it'll return the default that you've specified."
+    },
+
+    "lia.config.Load": {
+        "prefix": "lia.config.Load",
+        "body": [
+            "lia.config.Load()$0"
+        ],
+        "description": "Loads all saved config options from disk."
+    },
+
+    "lia.config.Save": {
+        "prefix": "lia.config.Save",
+        "body": [
+            "lia.config.Save()$0"
+        ],
+        "description": "Saves all config options to disk."
+    },
+
+    "lia.config.set": {
+        "prefix": "lia.config.set",
+        "body": [
+            "lia.config.set(${1:key}, ${2:value})$0"
+        ],
+        "description": "Sets the value of a config option."
+    },
+
+    "lia.config.setDefault": {
+        "prefix": "lia.config.setDefault",
+        "body": [
+            "lia.config.setDefault(${1:key}, ${2:value})$0"
+        ],
+        "description": "Sets the default value for a config option."
+    },
+
+    "lia.currency.get": {
+        "prefix": "lia.currency.get",
+        "body": [
+            "lia.currency.get(${1:amount})$0"
+        ],
+        "description": "Returns a formatted string according to the current currency."
+    },
+
+    "lia.currency.set": {
+        "prefix": "lia.currency.set",
+        "body": [
+            "lia.currency.set(${1:amount}, ${2:singular}, ${3:plural}, ${4:model})$0"
+        ],
+        "description": "Sets the currency type."
+    },
+
+    "lia.currency.Spawn": {
+        "prefix": "lia.currency.Spawn",
+        "body": [
+            "lia.currency.Spawn(${1:pos}, ${2:amount}, ${3:angle})$0"
+        ],
+        "description": "Spawns an amount of cash at a specific location on the map."
+    },
+
+    "lia.data.Delete": {
+        "prefix": "lia.data.Delete",
+        "body": [
+            "lia.data.Delete(${1:key}, ${2:bGlobal}, ${3:bIgnoreMap})$0"
+        ],
+        "description": "Deletes the contents of a saved file in the data/lilia folder."
+    },
+
+    "lia.data.get": {
+        "prefix": "lia.data.get",
+        "body": [
+            "lia.data.get(${1:key}, ${2:default}, ${3:bGlobal}, ${4:bIgnoreMap}, ${5:bRefresh})$0"
+        ],
+        "description": "Retrieves the contents of a saved file in the data/lilia folder."
+    },
+
+    "lia.data.set": {
+        "prefix": "lia.data.set",
+        "body": [
+            "lia.data.set(${1:key}, ${2:default}, ${3:bGlobal}, ${4:bIgnoreMap})$0"
+        ],
+        "description": "Populates a file in the data/lilia folder with some serialized data."
+    },
+
+    "lia.date.Construct": {
+        "prefix": "lia.date.Construct",
+        "body": [
+            "lia.date.Construct(${1:currentDate})$0"
+        ],
+        "description": "Returns a date object from a table or serialized date."
+    },
+
+    "lia.date.get": {
+        "prefix": "lia.date.get",
+        "body": [
+            "lia.date.get()$0"
+        ],
+        "description": "Returns the currently set date."
+    },
+
+    "lia.date.getFormatted": {
+        "prefix": "lia.date.getFormatted",
+        "body": [
+            "lia.date.getFormatted(${1:format}, ${2:currentDate})$0"
+        ],
+        "description": "Returns a string formatted version of a date."
+    },
+
+    "lia.date.getSerialized": {
+        "prefix": "lia.date.getSerialized",
+        "body": [
+            "lia.date.getSerialized(${1:currentDate})$0"
+        ],
+        "description": "Returns a serialized version of a date. This is useful when you need to network a date to clients, or save a date to disk."
+    },
+
+    "lia.date.Initialize": {
+        "prefix": "lia.date.Initialize",
+        "body": [
+            "lia.date.Initialize()$0"
+        ],
+        "description": "Loads the date from disk."
+    },
+
+    "lia.date.ResolveOffset": {
+        "prefix": "lia.date.ResolveOffset",
+        "body": [
+            "lia.date.ResolveOffset()$0"
+        ],
+        "description": "Updates the internal in-game date/time representation and resets the offset."
+    },
+
+    "lia.date.Save": {
+        "prefix": "lia.date.Save",
+        "body": [
+            "lia.date.Save()$0"
+        ],
+        "description": "Saves the current in-game date to disk."
+    },
+
+    "lia.date.Send": {
+        "prefix": "lia.date.Send",
+        "body": [
+            "lia.date.Send(${1:client})$0"
+        ],
+        "description": "Sends the current date to a player. This is done automatically when the player joins the server."
+    },
+
+    "lia.date.UpdateTimescale": {
+        "prefix": "lia.date.UpdateTimescale",
+        "body": [
+            "lia.date.UpdateTimescale(${1:secondsPerMinute})$0"
+        ],
+        "description": "Updates the time scale of the in-game date/time. The time scale is given in seconds per minute (i.e how many real life seconds it takes for an in-game minute to pass). You should avoid using this function and use the in-game config menu to change the time scale instead."
+    },
+
+    "lia.faction.get": {
+        "prefix": "lia.faction.get",
+        "body": [
+            "lia.faction.get(${1:identifier})$0"
+        ],
+        "description": "Retrieves a faction table."
+    },
+
+    "lia.faction.getIndex": {
+        "prefix": "lia.faction.getIndex",
+        "body": [
+            "lia.faction.getIndex(${1:uniqueID})$0"
+        ],
+        "description": "Retrieves a faction index."
+    },
+
+    "lia.faction.HasWhitelist": {
+        "prefix": "lia.faction.HasWhitelist",
+        "body": [
+            "lia.faction.HasWhitelist(${1:faction})$0"
+        ],
+        "description": "Returns true if a faction requires a whitelist."
+    },
+
+    "lia.faction.LoadFromDir": {
+        "prefix": "lia.faction.LoadFromDir",
+        "body": [
+            "lia.faction.LoadFromDir(${1:directory})$0"
+        ],
+        "description": "Loads factions from a directory."
+    },
+
+    "lia.flag.Add": {
+        "prefix": "lia.flag.Add",
+        "body": [
+            "lia.flag.Add(${1:flag}, ${2:description}, ${3:callback})$0"
+        ],
+        "description": "Creates a flag. This should be called shared in order for the client to be aware of the flag's existence."
+    },
+
+    "lia.inventory.get": {
+        "prefix": "lia.inventory.get",
+        "body": [
+            "lia.inventory.get(${1:invID})$0"
+        ],
+        "description": "Retrieves an inventory table."
+    },
+
+    "lia.inventory.Restore": {
+        "prefix": "lia.inventory.Restore",
+        "body": [
+            "lia.inventory.Restore(${1:invID}, ${1:width}, ${1:height}, ${1:callback})$0"
+        ],
+        "description": "Loads an inventory and associated items from the database into memory. If you are passing a table into invID, it requires a table where the key is the inventory ID, and the value is a table of the width and height values."
+    },
+
+    "lia.item.get": {
+        "prefix": "lia.item.get",
+        "body": [
+            "lia.item.get(${1:identifier})$0"
+        ],
+        "description": "Retrieves an item table."
+    },
+
+    "lia.item.Spawn": {
+        "prefix": "lia.item.Spawn",
+        "body": [
+            "lia.item.Spawn(${1:uniqueID}, ${2:position}, ${3:callback}, ${4:angles}, ${5:data})$0"
+        ],
+        "description": "Instances and spawns a given item type."
+    },
+
+    "lia.lang.AddTable": {
+        "prefix": "lia.lang.AddTable",
+        "body": [
+            "lia.lang.AddTable(${1:language}, ${2:data})$0"
+        ],
+        "description": "Adds phrases to a language. This is used when you aren't adding entries through the files in the languages/ folder. A common use case is adding language phrases in a single-file module."
+    },
+
+    "lia.lang.LoadFromDir": {
+        "prefix": "lia.lang.LoadFromDir",
+        "body": [
+            "lia.lang.LoadFromDir(${1:directory})$0"
+        ],
+        "description": "Loads language files from a directory."
+    },
+
+    "lia.log.Add": {
+        "prefix": "lia.log.Add",
+        "body": [
+            "lia.log.Add(${1:client}, ${2:logType}, ${3:args})$0"
+        ],
+        "description": "Add a log message."
+    },
+
+    "lia.log.AddType": {
+        "prefix": "lia.log.AddType",
+        "body": [
+            "lia.log.AddType(${1:logType}, ${2:format}, ${3:flag})$0"
+        ],
+        "description": "Adds a log type."
+    },
+
+    "lia.menu.IsOpen": {
+        "prefix": "lia.menu.IsOpen",
+        "body": [
+            "lia.menu.IsOpen()"
+        ],
+        "description": "Checks whether or not an entity menu is currently open."
+    },
+
+    "lia.menu.NetworkChoice": {
+        "prefix": "lia.menu.NetworkChoice",
+        "body": [
+            "lia.menu.NetworkChoice(${1:entity}, ${2:choice}, ${3:data})$0"
+        ],
+        "description": "Notifies the server of an option that was chosen for the given entity."
+    },
+
+    "lia.menu.Open": {
+        "prefix": "lia.menu.Open",
+        "body": [
+            "lia.menu.Open(${1:options}, ${2:entity})$0"
+        ],
+        "description": "Opens up a context menu for the given entity."
+    },
+
+    "lia.util.Notify": {
+        "prefix": "lia.util.Notify",
+        "body": [
+            "lia.util.Notify(${1:message}, ${2:recipient})$0"
+        ],
+        "description": "Sends a notification to a specified recipient."
+    },
+
+    "lia.util.NotifyLocalized": {
+        "prefix": "lia.util.NotifyLocalized",
+        "body": [
+            "lia.util.NotifyLocalized(${1:message}, ${2:recipient}, ${3:args})$0"
+        ],
+        "description": "Sends a translated notification to a specified recipient."
+    },
+
+    "lia.option.Add": {
+        "prefix": "lia.option.Add",
+        "body": [
+            "lia.option.Add(${1:key}, ${2:optionType}, ${3:default}, ${4:data})$0"
+        ],
+        "description": "Creates a client-side configuration option with the given information."
+    },
+
+    "lia.option.get(client": {
+        "prefix": "lia.option.get",
+        "body": [
+            "lia.option.get(${1:client}, ${2:key}, ${3:default})$0"
+        ],
+        "description": "Retrieves an option value from the specified player. If it is not set, it'll return the default that you've specified. This function will error when an invalid player is passed."
+    },
+
+    "lia.option.get(key": {
+        "prefix": "lia.option.get",
+        "body": [
+            "lia.option.get(${1:key}, ${2:default})$0"
+        ],
+        "description": "Retrieves an option value for the local player. If it is not set, it'll return the default that you've specified."
+    },
+
+    "lia.option.getAll": {
+        "prefix": "lia.option.getAll",
+        "body": [
+            "lia.option.getAll()$0"
+        ],
+        "description": "Returns all of the available options. Note that this does contain the actual values of the options, just their properties."
+    },
+
+    "lia.option.getAllByCategories": {
+        "prefix": "lia.option.getAllByCategories",
+        "body": [
+            "lia.option.getAllByCategories(${1:bRemoveHidden})$0"
+        ],
+        "description": "Returns all of the available options grouped by their categories. The returned table contains category tables, that contain all the options in that category as an array (this is so you can sort them if you'd like)."
+    },
+
+    "lia.option.Load": {
+        "prefix": "lia.option.Load",
+        "body": [
+            "lia.option.Load()$0"
+        ],
+        "description": "Loads all saved options from disk."
+    },
+
+    "lia.option.Save": {
+        "prefix": "lia.option.Save",
+        "body": [
+            "lia.option.Save()$0"
+        ],
+        "description": "Saves all options to disk."
+    },
+
+    "lia.option.set": {
+        "prefix": "lia.option.set",
+        "body": [
+            "lia.option.set(${1:key}, ${2:value}, ${3:bNoSave})$0"
+        ],
+        "description": "Sets an option value for the local player. This function will error when an invalid key is passed."
+    },
+
+    "lia.option.Sync": {
+        "prefix": "lia.option.Sync",
+        "body": [
+            "lia.option.Sync()$0"
+        ],
+        "description": "Syncs all networked options to the server."
+    },
+
+    "lia.storage.AddReceiver": {
+        "prefix": "lia.storage.AddReceiver",
+        "body": [
+            "lia.storage.AddReceiver(${1:client}, ${2:inventory}, ${3:bDontSync})$0"
+        ],
+        "description": "Adds a receiver to a given inventory with a storage context."
+    },
+
+    "lia.storage.Close": {
+        "prefix": "lia.storage.Close",
+        "body": [
+            "lia.storage.Close(${1:inventory})$0"
+        ],
+        "description": "Forcefully makes clients close this inventory if they have it open."
+    },
+
+    "lia.storage.CreateContext": {
+        "prefix": "lia.storage.CreateContext",
+        "body": [
+            "lia.storage.CreateContext(${1:inventory}, ${2:info})$0"
+        ],
+        "description": "Creates a storage context on the given inventory."
+    },
+
+    "lia.storage.InUse": {
+        "prefix": "lia.storage.InUse",
+        "body": [
+            "lia.storage.InUse(${1:inventory})$0"
+        ],
+        "description": "Returns whether or not the given inventory has a storage context and is being looked at by other players."
+    },
+
+    "lia.storage.InUseBy": {
+        "prefix": "lia.storage.InUseBy",
+        "body": [
+            "lia.storage.InUseBy(${1:inventory}, ${2:client})$0"
+        ],
+        "description": "Returns whether or not an inventory is in use by a specific player."
+    },
+
+    "lia.storage.Open": {
+        "prefix": "lia.storage.Open",
+        "body": [
+            "lia.storage.Open(${1:client}, ${2:inventory}, ${3:info})$0"
+        ],
+        "description": "Makes a player open an inventory that they can interact with. This can be called multiple times on the same inventory, if the info passed allows for multiple users."
+    },
+
+    "lia.storage.RemoveContext": {
+        "prefix": "lia.storage.RemoveContext",
+        "body": [
+            "lia.storage.RemoveContext(${1:inventory})$0"
+        ],
+        "description": "Removes a storage context from an inventory if it exists."
+    },
+
+    "lia.storage.RemoveReceiver": {
+        "prefix": "lia.storage.RemoveReceiver",
+        "body": [
+            "lia.storage.RemoveReceiver(${1:client}, ${2:inventory}, ${3:bDontRemove})$0"
+        ],
+        "description": "Removes a storage receiver and removes the context if there are no more receivers."
+    },
+
+    "lia.storage.Sync": {
+        "prefix": "lia.storage.Sync",
+        "body": [
+            "lia.storage.Sync(${1:client}, ${2:inventory})$0"
+        ],
+        "description": "Synchronizes an inventory with a storage context to the given client."
+    },
+
+    "lia.util.DimColor": {
+        "prefix": "lia.util.DimColor",
+        "body": [
+            "lia.util.DimColor(${1:color}, ${2:multiplier}, ${3:alpha})$0"
+        ],
+        "description": "Returns a dimmed version of the given color by the given scale."
+    },
+
+    "lia.util.DrawBlur": {
+        "prefix": "lia.util.DrawBlur",
+        "body": [
+            "lia.util.DrawBlur(${1:panel}, ${2:amount}, ${3:passes}, ${4:alpha})$0"
+        ],
+        "description": "Blurs the content underneath the given panel. This will fall back to a simple darkened rectangle if the player has blurring disabled."
+    },
+
+    "lia.util.DrawBlurAt": {
+        "prefix": "lia.util.DrawBlurAt",
+        "body": [
+            "lia.util.DrawBlurAt(${1:x}, ${2:y}, ${3:width}, ${4:height}, ${5:amount}, ${6:passes}, ${7:alpha})$0"
+        ],
+        "description": "Draws a blurred rectangle with the given position and bounds. This shouldn't be used for panels, see lia.util.DrawBlur instead."
+    },
+
+    "lia.util.DrawText": {
+        "prefix": "lia.util.DrawText",
+        "body": [
+            "lia.util.DrawText(${1:text}, ${2:x}, ${3:y}, ${4:color}, ${5:alignX}, ${6:alignY}, ${7:font}, ${8:alpha})$0"
+        ],
+        "description": "Draws some text with a shadow."
+    },
+
+    "lia.util.EmitQueuedSounds": {
+        "prefix": "lia.util.EmitQueuedSounds",
+        "body": [
+            "lia.util.EmitQueuedSounds(${1:entity}, ${2:sounds}, ${3:delay}, ${4:spacing}, ${5:volume}, ${6:pitch})$0"
+        ],
+        "description": "Emits sounds one after the other from an entity."
+    },
+
+    "lia.util.ExpandCamelCase": {
+        "prefix": "lia.util.ExpandCamelCase",
+        "body": [
+            "lia.util.ExpandCamelCase(${1:input}, ${2:bNoUpperFirst})$0"
+        ],
+        "description": "Returns a string that is the given input with spaces in between each CamelCase word. This function will ignore any words that do not begin with a capital letter. The words ooc, looc, afk, and url will be automatically transformed into uppercase text. This will not capitalize non-ASCII letters due to limitations with Lua's pattern matching."
+    },
+
+    "lia.util.FormatStringNamed": {
+        "prefix": "lia.util.FormatStringNamed",
+        "body": [
+            "lia.util.FormatStringNamed(${1:format}, ${2:arguments})$0"
+        ],
+        "description": "Returns a string that has the named arguments in the format string replaced with the given arguments."
+    },
+
+    "lia.util.getCharacters": {
+        "prefix": "lia.util.getCharacters",
+        "body": [
+            "lia.util.getCharacters()$0"
+        ],
+        "description": "Returns an iterator for characters. The resulting key/values will be a player and their corresponding characters. This iterator skips over any players that do not have a valid character loaded."
+    },
+
+    "lia.util.getMaterial": {
+        "prefix": "lia.util.getMaterial",
+        "body": [
+            "lia.util.getMaterial(${1:materialPath})$0"
+        ],
+        "description": "Returns a cached copy of the given material, or creates and caches one if it doesn't exist. This is a quick helper function if you aren't locally storing a Material() call."
+    },
+
+    "lia.util.getStringTime": {
+        "prefix": "lia.util.getStringTime",
+        "body": [
+            "lia.util.getStringTime(${1:text})$0"
+        ],
+        "description": "Gets the amount of seconds from a given formatted string. If no time units are specified, it is assumed minutes. The valid values are as follows:\ns - Seconds\nm - Minutes\nh - Hours\nd - Days\nw - Weeks\nmo - Months\ny - Years"
+    },
+
+    "lia.util.getTypeFromValue": {
+        "prefix": "lia.util.getTypeFromValue",
+        "body": [
+            "lia.util.getTypeFromValue(${1:value})$0"
+        ],
+        "description": "Returns the lia.type of the given value."
+    },
+
+    "lia.util.getUTCTime": {
+        "prefix": "lia.util.getUTCTime",
+        "body": [
+            "lia.util.getUTCTime()$0"
+        ],
+        "description": "Gets the current time in the UTC time-zone."
+    },
+
+    "lia.util.Include": {
+        "prefix": "lia.util.Include",
+        "body": [
+            "lia.util.Include(${1:fileName}, ${2:realm})$0"
+        ],
+        "description": "Includes a lua file based on the prefix of the file. This will automatically call include and AddCSLuaFile based on the current realm. This function should always be called shared to ensure that the client will receive the file from the server."
+    },
+
+    "lia.util.IncludeDir": {
+        "prefix": "lia.util.IncludeDir",
+        "body": [
+            "lia.util.IncludeDir(${1:directory}, ${2:bFromLua})$0"
+        ],
+        "description": "Includes multiple files in a directory."
+    },
+
+    "lia.util.IsColor": {
+        "prefix": "lia.util.IsColor",
+        "body": [
+            "lia.util.IsColor(${1:input})$0"
+        ],
+        "description": "Returns true if the given input is a color table. This is necessary since the engine IsColor function only checks for color metatables - which are not used for regular Lua color types."
+    },
+
+    "lia.util.MetatableSafeTableMerge": {
+        "prefix": "lia.util.MetatableSafeTableMerge",
+        "body": [
+            "lia.util.MetatableSafeTableMerge(${1:destination}, ${2:source})$0"
+        ],
+        "description": "Merges the contents of the second table with the content in the first one. The destination table will be modified. If element is table but not metatable object, value's elements will be changed only."
+    },
+
+    "lia.util.PushBlur": {
+        "prefix": "lia.util.PushBlur",
+        "body": [
+            "lia.util.PushBlur(${1:drawFunc})$0"
+        ],
+        "description": "Pushes a 3D2D blur to be rendered in the world. The draw function will be called next frame in the PostDrawOpaqueRenderables hook."
+    },
+
+    "lia.util.ResetStencilValues": {
+        "prefix": "lia.util.ResetStencilValues",
+        "body": [
+            "lia.util.ResetStencilValues()$0"
+        ],
+        "description": "Resets all stencil values to known good (i.e defaults)."
+    },
+
+    "lia.util.SanitizeType": {
+        "prefix": "lia.util.SanitizeType",
+        "body": [
+            "lia.util.SanitizeType(${1:type}, ${2:input})$0"
+        ],
+        "description": "Sanitizes an input value with the given type. This function ensures that a valid type is always returned. If a valid value could not be found, it will return the default value for the type. This only works for simple types - e.g it does not work for player, character, or Steam ID types."
+    },
+
+    "lia.util.StringMatches": {
+        "prefix": "lia.util.StringMatches",
+        "body": [
+            "lia.util.StringMatches(${1:a}, ${2:b})$0"
+        ],
+        "description": "Checks to see if two strings are equivalent using a fuzzy manner. Both strings will be lowered, and will return true if the strings are identical, or if b is a substring of a."
+    },
+
+    "lia.util.StripRealmPrefix": {
+        "prefix": "lia.util.StripRealmPrefix",
+        "body": [
+            "lia.util.StripRealmPrefix(${1:name})$0"
+        ],
+        "description": "Removes the realm prefix from a file name. The returned string will be unchanged if there is no prefix found."
+    },
+
+    "lia.util.WrapText": {
+        "prefix": "lia.util.WrapText",
+        "body": [
+            "lia.util.WrapText(${1:text}, ${2:maxWidth}, ${3:font})$0"
+        ],
+        "description": "Wraps text so it does not pass a certain width. This function will try and break lines between words if it can, otherwise it will break a word if it's too long."
+    }
+}
