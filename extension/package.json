@@ -1,0 +1,26 @@
+{
+    "name": "Lilia-Snippets",
+    "displayName": "Lilia Snippets",
+    "description": "Snippets for Lilia! If a method of whatever is missing, please add me and tell me! (@liliaplayer on Discord)",
+    "version": "1.0.1",
+    "publisher": "Leonheart",
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "icon": "logo.ico",
+    "activationEvents": [
+        "onLanguage:lua",
+        "onLanguage:glua"
+    ],
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "lua",
+                "path": "./snippets.json"
+            }
+        ]
+    }
+}
