@@ -23,8 +23,9 @@ The Lilia Snippets extension provides a set of code snippets for the Lilia progr
 
 ## Contributors
 
-1. Fedox (Started project)
-2. Winkarst (Added fcking lot stuff into it)
+1. Fedox (Creator of the Helix version)
+2. Samael (Re-did & implemented most hooks)
+3. B0zy (Fixed several hooks & added new ones)
 
 ## Snippet Examples
 
@@ -146,17 +147,17 @@ CLASS.name = "NAME"
 CLASS.faction = FACTION_NAME
 CLASS.isDefault = true
 
-function CLASS:onCanBe(client)
+function CLASS:OnCanBe(client)
 end
 
 if (SERVER) then
-    function CLASS:onLeave(client)
+    function CLASS:OnLeave(client)
     end
 
-    function CLASS:onSet(client)
+    function CLASS:OnSet(client)
     end
 
-    function CLASS:onSpawn(client)
+    function CLASS:OnSpawn(client)
     end
 end
 
@@ -174,14 +175,14 @@ FACTION.models = {
 	"MODEL",
 }
 
-function FACTION:onGetDefaultName(client)
+function FACTION:OnGetDefaultName(client)
 end
 
 if (SERVER) then
-    function FACTION:onCharCreated(client, character)
+    function FACTION:OnCharCreated(client, character)
     end
 
-    function FACTION:onSpawn(client)
+    function FACTION:OnSpawn(client)
     end
 end
 
