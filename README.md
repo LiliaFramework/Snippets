@@ -1,10 +1,9 @@
-
-<h1 align="center">Lilia Snippets Extension</h1>
+<h1 align="center">Lilia - Snippets Extension</h1>
 
 <p align="center">
-  <img src="/logo.png" alt="Lilia Snippets Logo">
+  <img src="https://i.imgur.com/yY3wT30.png" alt="Lilia Icon">
 </p>
-
+ 
 ## Overview
 
 The Lilia Snippets extension provides a set of code snippets for the Lilia programming language. Easily insert common code patterns and improve your development efficiency with this Visual Studio Code extension.
