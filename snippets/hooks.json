@@ -343,5 +343,68 @@
 			"function MODULE:StartChat()\n\t$0\nend"
 		],
 		"description": "Called when the chat input box is opened."
+	},
+	"MODULE:CanPlayerAccessDoor": {
+		"prefix": "MODULE:CanPlayerAccessDoor",
+		"body": [
+			"function MODULE:CanPlayerAccessDoor(client, door, access)\n\t$0\nend"
+		],
+		"description": "Whether or not a player can access a door."
+	},
+	"MODULE:CanPlayerUseDoor": {
+		"prefix": "MODULE:CanPlayerUseDoor",
+		"body": [
+			"function MODULE:CanPlayerUseDoor(client, entity)\n\t$0\nend"
+		],
+		"description": "Whether or not a player can use a door."
+	},
+	"MODULE:KeyLock":{ 
+		"prefix": "MODULE:KeyLock",
+		"body": [
+			"function MODULE:KeyLock(owner, entity, time)\n\t$0\nend"
+		],
+		"description": "Called when a player locks a door with a key."
+	},
+	"MODULE:KeyUnlock": {
+		"prefix": "MODULE:KeyUnlock",
+		"body": [
+			"function MODULE:KeyUnlock(owner, entity, time)\n\t$0\nend"
+		],
+		"description": "Called when a player unlocks a door with a key."
+	},
+	"MODULE:OnPlayerPurchaseDoor": {
+		"prefix": "MODULE:OnPlayerPurchaseDoor",
+		"body": [
+			"function MODULE:OnPlayerPurchaseDoor(client, entity, buying, CallOnDoorChild)\n\t$0\nend"
+		],
+		"description": "Called when a player purchases a door."
+	},
+	"MODULE:PlayerUseDoor": {
+		"prefix": "MODULE:PlayerUseDoor",
+		"body": [
+			"function MODULE:PlayerUseDoor(client, entity)\n\t$0\nend"
+		],
+		"description": "Called when a player uses a door."
+	},
+	"MODULE:ToggleLock": {
+		"prefix": "MODULE:ToggleLock",
+		"body": [
+			"function MODULE:ToggleLock(client, door, state)\n\t$0\nend"
+		],
+		"description": "Called when a player toggles a door lock."
+	},
+	"MODULE:callOnDoorChildren": {
+		"prefix": "MODULE:callOnDoorChildren",
+		"body": [
+			"function MODULE:callOnDoorChildren(entity, callback)\n\t$0\nend"
+		],
+		"description": "Call a function on all door children."
+	},
+	"MODULE:copyParentDoor": {
+		"prefix": "MODULE:copyParentDoor",
+		"body": [
+			"function MODULE:copyParentDoor(child)\n\t$0\nend"
+		],
+		"description": "Copies the parent door's properties to a child door. "
 	}
 }
