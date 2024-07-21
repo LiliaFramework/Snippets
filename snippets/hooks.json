@@ -406,5 +406,33 @@
 			"function MODULE:copyParentDoor(child)\n\t$0\nend"
 		],
 		"description": "Copies the parent door's properties to a child door. "
+	},
+	"MODULE:BuildHelpMenu": {
+		"prefix": "MODULE:BuildHelpMenu",
+		"body": [
+			"function MODULE:BuildHelpMenu(tabs)\n\t$0\nend"
+		],
+		"description": "Build the help menu."
+	},
+	"MODULE:CanPlayerViewInventory": {
+		"prefix": "MODULE:CanPlayerViewInventory",
+		"body": [
+			"function MODULE:CanPlayerViewInventory()\n\t$0\nend"
+		],
+		"description": "Whether or not a player can view an inventory."
+	},
+	"MODULE:CreateMenuButtons": {
+		"prefix": "MODULE:CreateMenuButtons",
+		"body": [
+			"function MODULE:CreateMenuButtons(tabs)\n\t$0\nend"
+		],
+		"description": "Create the menu buttons."
+	},
+	"MODULE:PostDrawInventory": {
+		"prefix": "MODULE:PostDrawInventory",
+		"body": [
+			"function MODULE:PostDrawInventory(panel)\n\t$0\nend"
+		],
+		"description": "Called after the inventory has been drawn."
 	}
 }
