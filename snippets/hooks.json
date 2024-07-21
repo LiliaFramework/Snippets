@@ -301,5 +301,47 @@
 			"function MODULE:BodygrouperClosetRemoveUser(closet, client)\n\t$0\nend"
 		],
 		"description": "Called when a player has removed a user from a bodygrouper closet."
+	},
+	"MODULE:ChadAddText": {
+		"prefix": "MODULE:ChadAddText",
+		"body": [
+			"function MODULE:ChadAddText(text, ...)\n\t$0\nend"
+		],
+		"description": "Called to add text to the chat. This hook allows for customization of the text being added to the chat. It can be used to modify or format the text before it is displayed."
+	},
+	"MODULE:ChatTextChanged": {
+		"prefix": "MODULE:ChatTextChanged",
+		"body": [
+			"function MODULE:ChatTextChanged(text)\n\t$0\nend"
+		],
+		"description": "Called when the text in the chat input box changes. This hook allows for additional actions or modifications to be made whenever the chat input text changes."
+	},
+	"MODULE:FinishChat()":{
+		"prefix": "MODULE:FinishChat",
+		"body": [
+			"function MODULE:FinishChat()\n\t$0\nend"
+		],
+		"description": "Called when the chat has been finished."
+	},
+	"MODULE:OnChatReceived": {
+		"prefix": "MODULE:OnChatReceived",
+		"body": [
+			"function MODULE:OnChatReceived(client, message, chatType, anonymous)\n\t$0\nend"
+		],
+		"description": "Called when a player has received a chat message."
+	},
+	"MODULE:PostPlayerSay": {
+		"prefix": "MODULE:PostPlayerSay",
+		"body": [
+			"function MODULE:PostPlayerSay(client, message, chatType, anonymous)\n\t$0\nend"
+		],
+		"description": "Called after a player has said something."
+	},
+	"MODULE:StartChat()": {
+		"prefix": "MODULE:StartChat",
+		"body": [
+			"function MODULE:StartChat()\n\t$0\nend"
+		],
+		"description": "Called when the chat input box is opened."
 	}
 }
