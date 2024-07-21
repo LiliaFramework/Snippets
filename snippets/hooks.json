@@ -203,5 +203,103 @@
 			"function MODULE:ShouldDataBeSaved()\n\t$0\nend"
 		],
 		"description": "Whether or not the data should be saved."
+	},
+	"MODULE:AdjustStaminaOffset": {
+		"prefix": "MODULE:AdjustStaminaOffset",
+		"body": [
+			"function MODULE:AdjustStaminaOffset(client, offset)\n\t$0\nend"
+		],
+		"description": "Adjust the stamina offset."
+	},
+	"MODULE:AdjustStaminaOffsetRunning": {
+		"prefix": "MODULE:AdjustStaminaOffsetRunning",
+		"body": [
+			"function MODULE:AdjustStaminaOffsetRunning(client, offset)\n\t$0\nend"
+		],
+		"description": "Adjust the stamina offset when running."
+	},
+	"MODULE:AdjustStaminaRegeneration": {
+		"prefix": "MODULE:AdjustStaminaRegeneration",
+		"body": [
+			"function MODULE:AdjustStaminaRegeneration(client, regeneration)\n\t$0\nend"
+		],
+		"description": "Adjust the stamina regeneration."
+	},
+	"MODULE:CalcStaminaChange": {
+		"prefix": "MODULE:CalcStaminaChange",
+		"body": [
+			"function MODULE:CalcStaminaChange(client, change)\n\t$0\nend"
+		],
+		"description": "Calculate the stamina change."
+	},
+	"MODULE:CanPlayerThrowPunch": {
+		"prefix": "MODULE:CanPlayerThrowPunch",
+		"body": [
+			"function MODULE:CanPlayerThrowPunch(client)\n\t$0\nend"
+		],
+		"description": "Whether or not a player can throw a punch."
+	},
+	"MODULE:CanPlayerViewAttrivutes": {
+		"prefix": "MODULE:CanPlayerViewAttrivutes",
+		"body": [
+			"function MODULE:CanPlayerViewAttrivutes(client)\n\t$0\nend"
+		],
+		"description": "Whether or not a player can view attributes."
+	},
+	"MODULE:CharMaxStamina": {
+		"prefix": "MODULE:CharMaxStamina",
+		"body": [
+			"function MODULE:CharMaxStamina(character)\n\t$0\nend"
+		],
+		"description": "The maximum stamina of a character."
+	},
+	"MODULE:GetStartAttribPoints": {
+		"prefix": "MODULE:GetStartAttribPoints",
+		"body": [
+			"function MODULE:GetStartAttribPoints(client, context)\n\t$0\nend"
+		],
+		"description": "The starting attribute points of a character."
+	},
+	"MODULE:OnCharAttribBoosted": {
+		"prefix": "MODULE:OnCharAttribBoost",
+		"body": [
+			"function MODULE:OnCharAttribBoost(client, character, key, value)\n\t$0\nend"
+		],
+		"description": "Called when a character's attribute is boosted."
+	},
+	"MODULE:PlayerCanPickupItem": {
+		"prefix": "MODULE:PlayerCanPickupItem",
+		"body": [
+			"function MODULE:PlayerCanPickupItem(client, item)\n\t$0\nend"
+		],
+		"description": "Whether or not a player can pick up an item."
+	},
+	"MODULE:PlayerStaminaGained": {
+		"prefix": "MODULE:PlayerStaminaGained",
+		"body": [
+			"function MODULE:PlayerStaminaGained(client)\n\t$0\nend"
+		],
+		"description": "Called when a player has gained stamina."
+	},
+	"MODULE:PlayerStaminaLost": {
+		"prefix": "MODULE:PlayerStaminaLost",
+		"body": [
+			"function MODULE:PlayerStaminaLost(client)\n\t$0\nend"
+		],
+		"description": "Called when a player has lost stamina."
+	},
+	"MODULE:BodygrouperClosetAddUser": {
+		"prefix": "MODULE:BodygrouperClosetAddUser",
+		"body": [
+			"function MODULE:BodygrouperClosetAddUser(closet, client)\n\t$0\nend"
+		],
+		"description": "Called when a player has added a user to a bodygrouper closet."
+	},
+	"MODULE:BodygrouperClosetRemoveUser": {
+		"prefix": "MODULE:BodygrouperClosetRemoveUser",
+		"body": [
+			"function MODULE:BodygrouperClosetRemoveUser(closet, client)\n\t$0\nend"
+		],
+		"description": "Called when a player has removed a user from a bodygrouper closet."
 	}
 }
