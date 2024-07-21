@@ -71,110 +71,34 @@
         "description": "Called when a player's character has been transferred to this faction."
     },
 
-	"MODULE:CanItemBeTransfered": {
-		"prefix": "MODULE:CanItemBeTransfered",
-		"body": [
-			"function MODULE:CanItemBeTransfered(item, currentInv, oldInv)\n\t$0\nend"
-		],
-		"description": "Determines whether an item can be transferred between inventories."
-	},
-
-	"MODULE:CanPlayerAccessDoor": {
-		"prefix": "MODULE:CanPlayerAccessDoor",
-		"body": [
-			"function MODULE:CanPlayerAccessDoor(client, door, access)\n\t$0\nend"
-		],
-		"description": "Called when a player tries to use abilities on the door, such as locking."
-	},
-
-	"MODULE:CanPlayerAccesVendor": {
-		"prefix": "MODULE:CanPlayerAccesVendor",
-		"body": [
-			"function MODULE:CanPlayerAccessVendor(client)\n\t$0\nend"
-		],
-		"description": "Determines whether a player is allowed to access a vendor entity. This hook can be used to implement custom checks to determine if a player is allowed to access a specific vendor entity."
-	},
-
-	"MODULE:CanPlayerCreateCharacter":{
-		"prefix": "MODULE:CanPlayerCreateCharacter",
-		"body": [
-			"function MODULE:CanPlayerCreateCharacter(client)\n\t$0\nend"
-		],
-		"description": "Whether or not a player is allowed to create a new character."
-	},
-
 	"MODULE:CanPlayerDropItem": {
 		"prefix": "MODULE:CanPlayerDropItem",
 		"body": [
 			"function MODULE:CanPlayerDropItem(client, item)\n\t$0\nend"
 		],
-		"description": "Whether or not a player is allowed to drop the given item."
+		"description": "Whether or not a player can drop an item."
 	},
-	
-	"MODULE:CanPlayerEarnSalary": {
-		"prefix": "MODULE:CanPlayerEarnSalary",
-		"body": [
-			"function MODULE:CanPlayerEarnSalary(client, faction, class)\n\t$0\nend"
-		],
-		"description": "Whether or not a player can earn money at regular intervals. This hook runs only if the player's character faction has a salary set i.e FACTION.pay is set to something other than 0 for their faction."
-	}, 
-
 	"MODULE:CanPlayerEquipItem": {
 		"prefix": "MODULE:CanPlayerEquipItem",
 		"body": [
 			"function MODULE:CanPlayerEquipItem(client, item)\n\t$0\nend"
 		],
-		"description": "Whether or not a player can equip the given item. This is called for items with outfit, pacoutfit, or weapons as their base. Schemas/modules can utilize this hook for their items."
+		"description": "Whether or not a player can equip an item."
 	},
-
 	"MODULE:CanPlayerInteractItem": {
-		"prefix": "MODULE:CanPlayerInteractItem", 
+		"prefix": "MODULE:CanPlayerInteractItem",
 		"body": [
-			"function MODULE:CanPlayerInteractItem(client, action, item)\n\t$0\nend"
+			"function MODULE:CanPlayerInteractItem(client, item, action)\n\t$0\nend"
 		],
-		"description": "Whether or not a player is allowed to interact with an item via an inventory action (e.g picking up, dropping, transferring inventories, etc). Note that this is for an item table, not an item entity. This is called after CanPlayerDropItem and CanPlayerTakeItem."
+		"description": "Whether or not a player can interact with an item."
 	},
-
-	"MODULE:CanPlayerJoinClass": {
-		"prefix": "MODULE:CanPlayerJoinClass", 
+	"MODULE:CanPlayerPickupItem": {
+		"prefix": "MODULE:CanPlayerPickupItem",
 		"body": [
-			"function MODULE:CanPlayerJoinClass(client, class, info)\n\t$0\nend"
+			"function MODULE:CanPlayerPickupItem(client, item)\n\t$0\nend"
 		],
-		"description": "Whether or not a player is allowed to join a class."
+		"description": "Whether or not a player can pick up an item."
 	},
-	
-	"MODULE:CanPlayerSpawnStorage": {
-		"prefix": "MODULE:CanPlayerSpawnStorage", 
-		"body": [
-			"function MODULE:CanPlayerSpawnStorage(client, entity, data)\n\t$0\nend"
-		],
-		"description": "Whether or not a player is allowed to spawn a container entity."
-	},
-
-	"MODULE:CanPlayerTakeItem": {
-		"prefix": "MODULE:CanPlayerTakeItem", 
-		"body": [
-			"function MODULE:CanPlayerTakeItem(client, item)\n\t$0\nend"
-		],
-		"description": "Whether or not a player is allowed to take an item and put it in their inventory."
-	},
-	
-	"MODULE:CanPlayerThrowPunch": {
-		"prefix": "MODULE:CanPlayerThrowPunch", 
-		"body": [
-			"function MODULE:CanPlayerThrowPunch(client)\n\t$0\nend"
-		],
-		"description": "Whether or not the player is allowed to punch with the hands SWEP."
-	},
-
-	"MODULE:CanPlayerTradeWithVendor": {
-		"prefix": "MODULE:CanPlayerTradeWithVendor",
-		"body": [
-			"function MODULE:CanPlayerTradeWithVendor(client, entity, uniqueID, isSellingToVendor)\n\t$0\nend"
-		],
-		"description": "Whether or not a player can trade with a vendor."
-	},
-
 	"MODULE:CanPlayerUnequipItem": {
 		"prefix": "MODULE:CanPlayerUnequipItem",
 		"body": [
@@ -182,84 +106,102 @@
 		],
 		"description": "Whether or not a player can unequip an item."
 	},
-
-	"MODULE:CanPlayerUseChar": {
-		"prefix": "MODULE:CanPlayerUseChar",
+	"MODULE:InitializedConfig": {
+		"prefix": "MODULE:InitializedConfig",
 		"body": [
-			"function MODULE:CanPlayerUnequipItem(client, character)\n\t$0\nend"
+			"function MODULE:InitializedConfig()\n\t$0\nend"
 		],
-		"description": "Determines whether a player is allowed to use a specific character. This hook can be used to implement custom checks to determine if a player is allowed to use a particular character."
+		"description": "Called when the config has been initialized."
 	},
-	
-	"MODULE:CanPlayerUseDoor": {
-		"prefix": "MODULE:CanPlayerUseDoor",
+	"MODULE:InitializedModules": {
+		"prefix": "MODULE:InitializedModules",
 		"body": [
-			"function MODULE:CanPlayerUseDoor(client, entity)\n\t$0\nend"
+			"function MODULE:InitializedModules()\n\t$0\nend"
 		],
-		"description": "Determines whether a player is allowed to use a door entity. This hook can be used to implement custom checks to determine if a player is allowed to use a specific door entity."
+		"description": "Called when the modules have been initialized."
 	},
-
-	"MODULE:CanPlayerViewInventory": {
-		"prefix": "MODULE:CanPlayerViewInventory",
+	"MODULE:InitializedSchema": {
+		"prefix": "MODULE:InitializedSchema",
 		"body": [
-			"function MODULE:CanPlayerViewInventory()\n\t$0\nend"
+			"function MODULE:InitializedSchema()\n\t$0\nend"
 		],
-		"description": "Determines whether a player is allowed to view their inventory."
+		"description": "Called when the schema has been initialized."
 	},
-	
-	"MODULE:CharDeleted": {
-		"prefix": "MODULE:CharDeleted",
+	"MODULE:LoadData": {
+		"prefix": "MODULE:LoadData",
 		"body": [
-			"function MODULE:CharDeleted(client, character)\n\t$0\nend"
+			"function MODULE:LoadData()\n\t$0\nend"
 		],
-		"description": "Called after a character is deleted."
+		"description": "Called when the data has been loaded."
 	},
-
-	"MODULE:CharHasFlags": {
-		"prefix": "MODULE:CharHasFlags",
+	"MODULE:LoadFonts": {
+		"prefix": "MODULE:LoadFonts",
 		"body": [
-			"function MODULE:CharHasFlags(character, flags)\n\t$0\nend"
+			"function MODULE:LoadFonts(font, genericFont)\n\t$0\nend"
 		],
-		"description": "Determines if a character has the given flag(s)."
+		"description": "Called when the fonts have been loaded."
 	},
-
-	"MODULE:CharLoaded": {
-		"prefix": "MODULE:CharLoaded",
+	"MODULE:ModuleLoaded": {
+		"prefix": "MODULE:ModuleLoaded",
 		"body": [
-			"function MODULE:CharLoaded(character)\n\t$0\nend"
+			"function MODULE:ModuleLoaded()\n\t$0\nend"
 		],
-		"description": "Called when a character is loaded. This function is called after a character has been successfully loaded."
+		"description": "Called when the module has been loaded."
 	},
-
-	"MODULE:CharPostSave": {
-		"prefix": "MODULE:CharPostSave",
+	"MODULE:OnItemSpawned": {
+		"prefix": "MODULE:OnItemSpawned",
 		"body": [
-			"function MODULE:CharPostSave(character)\n\t$0\nend"
+			"function MODULE:OnItemSpawned(entity)\n\t$0\nend"
 		],
-		"description": "Called after a character has been saved. This function is called after a character has been successfully saved."
+		"description": "Called whenever an item entity has spawned in the world. You can access the entity's item table with entity:getItemTable()"
 	},
-
-	"MODULE:CharPreSave": {
-		"prefix": "MODULE:CharPreSave",
+	"MODULE:OnPickupMoney":{
+		"prefix": "MODULE:OnPickupMoney",
 		"body": [
-			"function MODULE:CharPreSave(character)\n\t$0\nend"
+			"function MODULE:OnPickupMoney(client, moneyEntity)\n\t$0\nend"
 		],
-		"description": "Called before a character is saved. This function is called before a character is about to be saved."
+		"description": "Called when a player picks up money. This function is called when a player picks up money from the groun"
 	},
-
-	"MODULE:CharRecognize": {
-		"prefix": "MODULE:CharRecognize",
+	"MODULE:PlayerModelChanged": {
+		"prefix": "MODULE:PlayerModelChanged",
 		"body": [
-			"function MODULE:CharRecognize(level, name)\n\t$0\nend"
+			"function MODULE:PlayerModelChanged(client, model)\n\t$0\nend"
 		],
-		"description": "Initiates character recognition process."
+		"description": "Called when a player's model has changed."
 	},
-
-	"MODULE:CharacterVendorTraded": {
-		"prefix": "MODULE:CharacterVendorTraded",
+	"MODULE:PostLoadData": {
+		"prefix": "MODULE:PostLoadData",
 		"body": [
-			"function MODULE:CharacterVendorTraded(client, entity, uniqueID, isSellingToVendor)\n\t$0\nend"
+			"function MODULE:PostLoadData()\n\t$0\nend"
 		],
-		"description": "Called when a character trades with a vendor entity. This function can be used to perform additional actions when a character trades with a vendor entity."
+		"description": "Called after the data has been loaded."
+	},
+	"MODULE:SaveData": {
+		"prefix": "MODULE:SaveData",
+		"body": [
+			"function MODULE:SaveData()\n\t$0\nend"
+		],
+		"description": "Called when the data has been saved."
+	},
+	"MODULE:ScreenResolutionChanged": {
+		"prefix": "MODULE:ScreenResolutionChanged",
+		"body": [
+			"function MODULE:ScreenResolutionChanged(oldWidth, oldHeight, width, height)\n\t$0\nend"
+		],
+		"description": "Called when the screen resolution has changed."
+	},
+	"MODULE:ShouldClientDrown": {
+		"prefix": "MODULE:ShouldClientDrown",
+		"body": [
+			"function MODULE:ShouldClientDrown(client)\n\t$0\nend"
+		],
+		"description": "Whether or not a player should drown."
+	},
+	"MODULE:ShouldDataBeSaved": {
+		"prefix": "MODULE:ShouldDataBeSaved",
+		"body": [
+			"function MODULE:ShouldDataBeSaved()\n\t$0\nend"
+		],
+		"description": "Whether or not the data should be saved."
 	}
 }
