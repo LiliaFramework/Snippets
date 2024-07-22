@@ -1,19 +1,29 @@
 {
     "Lilia Module": {
-        "prefix": "lilia.module",
+        "prefix": "lia.module",
         "body": [
             "local MODULE = MODULE",
             "",
             "MODULE.name = \"NAME\"",
             "MODULE.desc = \"DESCRIPTION\"",
+            "MODULE.discord = \"DISCORDUSER\"",
             "MODULE.author = \"AUTHOR\"",
-            "MODULE.schema = \"SCHEMA\""
+            "MODULE.schema = \"SCHEMA\"",
+            "",
+            "MDOULE.WorkshopContent = {\"WORKSHOPID\"}",
+            "MODULE.CAMIPRIVILEGES = {",
+            "   {",
+            "       Name = \"PRIVILEGENAME\"",
+            "       MinAccess = \"superadmin\"",
+            "       Description = \"PRIVILEGEDESCRIPTION\"", 
+            "   },",
+            "}"
         ],
         "description": "Create a new module"
     },
 
     "Lilia Item": {
-        "prefix": "lilia.item",
+        "prefix": "lia.item",
         "body": [
           "ITEM.name = \"NAME\"",
           "ITEM.desc = \"DESCRIPTION\"",
@@ -51,7 +61,7 @@
     },
 
     "Lilia Outfit Item": {
-        "prefix": "lilia.item.outfit",
+        "prefix": "lia.item.outfit",
         "body": [
             "ITEM.name = \"NAME\"",
             "ITEM.desc = \"DESCRIPTION\"",
@@ -69,7 +79,7 @@
     },
 
     "Lilia PAC Outfit Item": {
-        "prefix": "lilia.item.pacoutfit",
+        "prefix": "lia.item.pacoutfit",
         "body": [
             "ITEM.name = \"NAME\"",
             "ITEM.desc = \"DESCRIPTION\"",
@@ -83,7 +93,7 @@
     },
 
     "Lilia Bag Item": {
-        "prefix": "lilia.item.bag",
+        "prefix": "lia.item.bag",
         "body": [
             "ITEM.name = \"NAME\"",
             "ITEM.desc = \"DESCRIPTION\"",
@@ -97,7 +107,7 @@
     },
 
     "Lilia Ammo Item": {
-        "prefix": "lilia.item.ammo",
+        "prefix": "lia.item.ammo",
         "body": [
             "ITEM.name = \"NAME\"",
             "ITEM.desc = \"DESCRIPTION\"",
@@ -111,7 +121,7 @@
     },
 
     "Lilia Weapon Item": {
-        "prefix": "lilia.item.weapon",
+        "prefix": "lia.item.weapon",
         "body": [
             "ITEM.name = \"NAME\"",
             "ITEM.desc = \"DESCRIPTION\"",
@@ -125,7 +135,7 @@
     },
 
     "Lilia Class": {
-        "prefix": "lilia.class",
+        "prefix": "lia.class",
         "body": [
             "CLASS.name = \"NAME\"",
             "CLASS.faction = FACTION_NAME",
@@ -142,7 +152,7 @@
     },
 
     "Lilia Faction": {
-        "prefix": "lilia.faction",
+        "prefix": "lia.faction",
         "body": [
             "FACTION.name = \"NAME\"",
             "FACTION.desc = \"DESCRIPTION\"",
@@ -160,7 +170,7 @@
         "description": "Create a new faction with default values for a Lilia gamemode"
     },
     "Lilia Command": {
-        "prefix": "lilia.command",
+        "prefix": "lia.command",
         "body": [
             "lia.command.add(\"COMMAND\", {",
             "adminOnly = true,",
