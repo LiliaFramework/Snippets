@@ -7,7 +7,16 @@
             "MODULE.name = \"NAME\"",
             "MODULE.desc = \"DESCRIPTION\"",
             "MODULE.author = \"AUTHOR\"",
-            "MODULE.schema = \"SCHEMA\""
+            "MODULE.schema = \"SCHEMA\"",
+            "",
+            "MDOULE.WorkshopContent = {\"WORKSHOPID\"}",
+            "MODULE.CAMIPRIVILEGES = {",
+            "   {",
+            "       Name = \"PRIVILEGENAME\"",
+            "       MinAccess = \"superadmin\"",
+            "       Description = \"PRIVILEGEDESCRIPTION\"", 
+            "   },",
+            "}"
         ],
         "description": "Create a new module"
     },
