@@ -6,6 +6,7 @@
             "",
             "MODULE.name = \"NAME\"",
             "MODULE.desc = \"DESCRIPTION\"",
+            "MODULE.discord = \"DISCORDUSER\"",
             "MODULE.author = \"AUTHOR\"",
             "MODULE.schema = \"SCHEMA\"",
             "",
