@@ -158,5 +158,17 @@
             "\nFACTION_NAME = FACTION.index"
         ],
         "description": "Create a new faction with default values for a Lilia gamemode"
+    },
+    "Lilia Command": {
+        "prefix": "lilia.command",
+        "body": [
+            "lia.command.add(\"COMMAND\", {",
+            "adminOnly = true,",
+            "privilege = \"PRIVILEGE\",",
+            "syntax = \"SYNTAX\",",
+            "onRun = function(client, arguments)\nend",
+            "})"
+        ],
+        "description": "Create a new command with default values for a Lilia gamemode"
     }
 }
