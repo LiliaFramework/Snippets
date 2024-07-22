@@ -55,14 +55,6 @@
       {
         "language": "lua",
         "path": "./snippets/libraries.json"
-      },
-      {
-        "language": "glua",
-        "path": "./snippets/panels.json"
-      },
-      {
-        "language": "lua",
-        "path": "./snippets/panels.json"
       }
     ],
     "commands": [
