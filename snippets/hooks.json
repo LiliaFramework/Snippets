@@ -434,5 +434,390 @@
 			"function MODULE:PostDrawInventory(panel)\n\t$0\nend"
 		],
 		"description": "Called after the inventory has been drawn."
+	},
+	"MODULE:OnSavedItemLoaded": {
+		"prefix": "MODULE:OnSavedItemLoaded",
+		"body": [
+			"function MODULE:OnSavedItemLoaded(loadedItems)\n\t$0\nend"
+		],
+		"description": "Called when a saved item has been loaded."
+	},
+	"MODULE:ShouldDeleteSavedItems": {
+		"prefix": "MODULE:ShouldDeleteSavedItems",
+		"body": [
+			"function MODULE:ShouldDeleteSavedItems()\n\t$0\nend"
+		],
+		"description": "Whether or not saved items should be deleted."
+	},
+	"MODULE:CharRecognize": {
+		"prefix": "MODULE:CharRecognize",
+		"body": [
+			"function MODULE:CharRecognize(level, name)\n\t$0\nend"
+		],
+		"description": "Initiates character recognition process."
+	},
+	"MODULE:GetDisplayedDescription": {
+		"prefix": "MODULE:GetDisplayedDescription",
+		"body": [
+			"function MODULE:GetDisplayedDescription(entity, isHUD)\n\t$0\nend"
+		],
+		"description": "Retrieves the displayed description of an entity."
+	},
+	"MODULE:GetDisplayedName": {
+		"prefix": "MODULE:GetDisplayedName",
+		"body": [
+			"function MODULE:GetDisplayedName(client, chatType)\n\t$0\nend"
+		],
+		"description": "Retrieves the displayed name of a client."
+	},
+	"MODULE:OnCharRecognized": {
+		"prefix": "MODULE:OnCharRecognized",
+		"body": [
+			"function MODULE:OnCharRecognized(client, id)\n\t$0\nend"
+		],
+		"description": "Called when a character has been recognized."
+	},
+	"MODULE:isCharFakeRecognized": {
+		"prefix": "MODULE:isCharFakeRecognized",
+		"body": [
+			"function MODULE:isCharFakeRecognized(client, id)\n\t$0\nend"
+		],
+		"description": "Whether or not a character is fake recognized."
+	},
+	"MODULE:isCharRecognized": {
+		"prefix": "MODULE:isCharRecognized",
+		"body": [
+			"function MODULE:isCharRecognized(client, id)\n\t$0\nend"
+		],
+		"description": "Whether or not a character is recognized."
+	},
+	"MODULE:isFakeNameExistant": {
+		"prefix": "MODULE:isFakeNameExistant",
+		"body": [
+			"function MODULE:isFakeNameExistant(name, nameList)\n\t$0\nend"
+		],
+		"description": "Whether or not a fake name exists."
+	},
+	"MODULE:isRecognizedChatType": {
+		"prefix": "MODULE:isRecognizedChatType",
+		"body": [
+			"function MODULE:isRecognizedChatType(chatType)\n\t$0\nend"
+		],
+		"description": "Whether or not a chat type is recognized."
+	},
+	"MODULE:CanPlayerEarnSalary": {
+		"prefix": "MODULE:CanPlayerEarnSalary",
+		"body": [
+			"function MODULE:CanPlayerEarnSalary(client, faction, class)\n\t$0\nend"
+		],
+		"description": "Whether or not a player can earn a salary."
+	},
+	"MODULE:CreateSalaryTimer": {
+		"prefix": "MODULE:CreateSalaryTimer",
+		"body": [
+			"function MODULE:CreateSalaryTimer(client)\n\t$0\nend"
+		],
+		"description": "Create the salary timer."
+	},
+	"MODULE:GetSalaryAmount": {
+		"prefix": "MODULE:GetSalaryAmount",
+		"body": [
+			"function MODULE:GetSalaryAmount(client, faction, class)\n\t$0\nend"
+		],
+		"description": "Retrieves the salary amount."
+	},
+	"MODULE:GetSalaryLimit": {
+		"prefix": "MODULE:GetSalaryLimit",
+		"body": [
+			"function MODULE:GetSalaryLimit(client, faction, class)\n\t$0\nend"
+		],
+		"description": "Retrieves the salary limit."
+	},
+	"MODULE:ShouldAllowScoreboardOverride": {
+		"prefix": "MODULE:ShouldAllowScoreboardOverride",
+		"body": [
+			"function MODULE:ShouldAllowScoreboardOverride(client, var)\n\t$0\nend"
+		],
+		"description": "Determines whether a scoreboard value should be overridden."
+	},
+	"MODULE:ShouldShowPlayerOnScoreboard": {
+		"prefix": "MODULE:ShouldShowPlayerOnScoreboard",
+		"body": [
+			"function MODULE:ShouldShowPlayerOnScoreboard(client)\n\t$0\nend"
+		],
+		"description": "Determines whether a player should be shown on the scoreboard."
+	},
+	"MODULE:ShowPlayerOptions": {
+		"prefix": "MODULE:ShowPlayerOptions",
+		"body": [
+			"function MODULE:ShowPlayerOptions(client, options)\n\t$0\nend"
+		],
+		"description": "Shows player options."
+	},
+	"MODULE:CanPlayerCreateChar": {
+		"prefix": "MODULE:CanPlayerCreateChar",
+		"body": [
+			"function MODULE:CanPlayerCreateChar(client)\n\t$0\nend"
+		],
+		"description": "Whether or not a player can create a character."
+	},
+	"MODULE:CanPlayerJoinClass": {
+		"prefix": "MODULE:CanPlayerJoinClass",
+		"body": [
+			"function MODULE:CanPlayerJoinClass(client, class, info)\n\t$0\nend"
+		],
+		"description": "Whether or not a player can join a class."
+	},
+	"MODULE:CanPlayerUseChar": {
+		"prefix": "MODULE:CanPlayerUseChar",
+		"body": [
+			"function MODULE:CanPlayerUseChar(client, character)\n\t$0\nend"
+		],
+		"description": "Whether or not a player can use a character."
+	},
+	"MODULE:CharDeleted": {
+		"prefix": "MODULE:CharDeleted",
+		"body": [
+			"function MODULE:CharDeleted(client, character)\n\t$0\nend"
+		],
+		"description": "Called when a character has been deleted."
+	},
+	"MODULE:CharHasFlags": {
+		"prefix": "MODULE:CharHasFlags",
+		"body": [
+			"function MODULE:CharHasFlags(character, flags)\n\t$0\nend"
+		],
+		"description": "Whether or not a character has flags."
+	},
+	"MODULE:CharLoaded": {
+		"prefix": "MODULE:CharLoaded",
+		"body": [
+			"function MODULE:CharLoaded (character)\n\t$0\nend"
+		],
+		"description": "Called when a character has been loaded."
+	},
+	"MODULE:CharPostSave": {
+		"prefix": "MODULE:CharPostSave",
+		"body": [
+			"function MODULE:CharPostSave(character)\n\t$0\nend"
+		],
+		"description": "Called after a character has been saved."
+	},
+	"MODULE:CharPreSave": {
+		"prefix": "MODULE:CharPreSave",
+		"body": [
+			"function MODULE:CharPreSave(character)\n\t$0\nend"
+		],
+		"description": "Called before a character has been saved."
+	},
+	"MODULE:ClassOnLoadout": {
+		"prefix": "MODULE:ClassOnLoadout",
+		"body": [
+			"function MODULE:ClassOnLoadout(client)\n\t$0\nend"
+		],
+		"description": "Called when a class has been loaded out."
+	},
+	"MODULE:ClassPostLoadout": {
+		"prefix": "MODULE:ClassPostLoadout",
+		"body": [
+			"function MODULE:ClassPostLoadout(client)\n\t$0\nend"
+		],
+		"description": "Called after a class has been loaded out."
+	},
+	"MODULE:FactionOnLoadout": {
+		"prefix": "MODULE:FactionOnLoadout",
+		"body": [
+			"function MODULE:FactionOnLoadout(client)\n\t$0\nend"
+		],
+		"description": "Called when a faction has been loaded out."
+	},
+	"MODULE:FactionPostLoadout": {
+		"prefix": "MODULE:FactionPostLoadout",
+		"body": [
+			"function MODULE:FactionPostLoadout(client)\n\t$0\nend"
+		],
+		"description": "Called after a faction has been loaded out."
+	},
+	"MODULE:GetMaxPlayerChar": {
+		"prefix": "MODULE:GetMaxPlayerChar",
+		"body": [
+			"function MODULE:GetMaxPlayerChar(client)\n\t$0\nend"
+		],
+		"description": "Retrieves the maximum player characters."
+	},
+	"MODULE:PlayerLoadedChar": {
+		"prefix": "MODULE:PlayerLoadedChar",
+		"body": [
+			"function MODULE:PlayerLoadedChar(client, character, curCharacter)\n\t$0\nend"
+		],
+		"description": "Called when a player has loaded a character."
+	},
+	"MODULE:PostCharDelete": {
+		"prefix": "MODULE:PostCharDelete",
+		"body": [
+			"function MODULE:PostCharDelete(client, character)\n\t$0\nend"
+		],
+		"description": "Called after a character has been deleted."
+	},
+	"MODULE:PostPlayerLoadedChar": {
+		"prefix": "MODULE:PostPlayerLoadedChar",
+		"body": [
+			"function MODULE:PostPlayerLoadedChar(client, character, curCharacter)\n\t$0\nend"
+		],
+		"description": "Called after a player has loaded a character."
+	},
+	"MODULE:PostPlayerLoadout": {
+		"prefix": "MODULE:PostPlayerLoadout",
+		"body": [
+			"function MODULE:PostPlayerLoadout(client)\n\t$0\nend"
+		],
+		"description": "Called after a player has loaded out."
+	},
+	"MODULE:PrePlayerLoadedChar": {
+		"prefix": "MODULE:PrePlayerLoadedChar",
+		"body": [
+			"function MODULE:PrePlayerLoadedChar(client, character, curCharacter)\n\t$0\nend"
+		],
+		"description": "Called before a player has loaded a character."
+	},
+	"MODULE:CanPlayerSpawnStorage": {
+		"prefix": "MODULE:CanPlayerSpawnStorage",
+		"body": [
+			"function MODULE:CanPlayerSpawnStorage(client, entity, data)\n\t$0\nend"
+		],
+		"description": "Whether or not a player can spawn storage."
+	},
+	"MODULE:CanSaveData":{
+		"prefix": "MODULE:CanSaveData",
+		"body": [
+			"function MODULE:CanSaveData(entity, inventory)\n\t$0\nend"
+		],
+		"description": "Whether or not data can be saved."
+	},
+	"MODULE:OnCreateStoragePanel": {
+		"prefix": "MODULE:OnCreateStoragePanel",
+		"body": [
+			"function MODULE:OnCreateStoragePanel(localInvPanel, storageInvPanel, storage)\n\t$0\nend"
+		],
+		"description": "Called when a storage panel has been created."
+	},
+	"MODULE:StorageCanTransferItem": {
+		"prefix": "MODULE:StorageCanTransferItem",
+		"body": [
+			"function MODULE:StorageCanTransferItem(client, storage, item)\n\t$0\nend"
+		],
+		"description": "Whether or not an item can be transferred to storage."
+	},
+	"MODULE:StorageEntityRemoved": {
+		"prefix": "MODULE:StorageEntityRemoved",
+		"body": [
+			"function MODULE:StorageEntityRemoved(entity, inventory)\n\t$0\nend"
+		],
+		"description": "Called when a storage entity has been removed."
+	},
+	"MODULE:StorageInventorySet": {
+		"prefix": "MODULE:StorageInventorySet",
+		"body": [
+			"function MODULE:StorageInventorySet(entity, inventory, isInitial)\n\t$0\nend"
+		],
+		"description": "Called when a storage inventory has been set."
+	},
+	"MODULE:StorageOpen":{
+		"prefix": "MODULE:StorageOpen",
+		"body": [
+			"function MODULE:StorageOpen(entity, isCar)\n\t$0\nend"
+		],
+		"description": "Called when a storage has been opened."
+	},
+	"MODULE:StorageRestored": {
+		"prefix": "MODULE:StorageRestored",
+		"body": [
+			"function MODULE:StorageRestored(entity, inventory)\n\t$0\nend"
+		],
+		"description": "Called when a storage has been restored."
+	},
+	"MODULE:StorageUnlockPrompt": {
+		"prefix": "MODULE:StorageUnlockPrompt",
+		"body": [
+			"function MODULE:StorageUnlockPrompt(entity)\n\t$0\nend"
+		],
+		"description": "Called when a storage unlock prompt is displayed."
+	},
+	"MODULE:isSuitableForTrunk": {
+		"prefix": "MODULE:isSuitableForTrunk",
+		"body": [
+			"function MODULE:isSuitableForTrunk(entity)\n\t$0\nend"
+		],
+		"description": "Whether or not a player is suitable for a trunk."
+	},
+	"MODULE:ShouldDisableThirdPerson": {
+		"prefix": "MODULE:ShouldDisableThirdPerson",
+		"body": [
+			"function MODULE:ShouldDisableThirdPerson(client)\n\t$0\nend"
+		],
+		"description": "Whether or not third person should be disabled."
+	},
+	"MODULE:thirdPersonToggled": {
+		"prefix": "MODULE:thirdPersonToggled",
+		"body": [
+			"function MODULE:thirdPersonToggled(state)\n\t$0\nend"
+		],
+		"description": "Called when third person has been toggled."
+	},
+	"MODULE:CanPlayerAccessVendor": {
+		"prefix": "MODULE:CanPlayerAccessVendor",
+		"body": [
+			"function MODULE:CanPlayerAccessVendor(client, vendor)\n\t$0\nend"
+		],
+		"description": "Whether or not a player can access a vendor."
+	},
+	"MODULE:OnCharTradeVendor": {
+		"prefix": "MODULE:OnCharTradeVendor",
+		"body": [
+			"function MODULE:OnCharTradeVendor(client, vendor, item, isSellingToVendor, character)\n\t$0\nend"
+		],
+		"description": "Called when a character trades with a vendor."
+	},
+	"MODULE:OnOpenVendorMneu":{
+		"prefix": "MODULE:OnOpenVendorMneu",
+		"body": [
+			"function MODULE:OnOpenVendorMneu(self)\n\t$0\nend"
+		],
+		"description": "Called when a vendor menu has been opened."
+	},
+	"MODULE:PlayerAccessVendor": {
+		"prefix": "MODULE:PlayerAccessVendor",
+		"body": [
+			"function MODULE:PlayerAccessVendor(activator, self)\n\t$0\nend"
+		],
+		"description": "Called when a player accesses a vendor."
+	},
+	"MODULE:VendorExited": {
+		"prefix": "MODULE:VendorExited",
+		"body": [
+			"function MODULE:VendorExited()\n\t$0\nend"
+		],
+		"description": "Called when a player exits a vendor."
+	},
+	"MODULE:VendorOpened": {
+		"prefix": "MODULE:VendorOpened",
+		"body": [
+			"function MODULE:VendorOpened(vendor)\n\t$0\nend"
+		],
+		"description": "Called when a player opens a vendor."
+	},
+	"MODULE:VendorSynchronized": {
+		"prefix": "MODULE:VendorSynchronized",
+		"body": [
+			"function MODULE:VendorSynchronized(vendor)\n\t$0\nend"
+		],
+		"description": "Called when a vendor is synchronized."
+	},
+	"MODULE:getPriceOverride": {
+		"prefix": "MODULE:getPriceOverride",
+		"body": [
+			"function MODULE:getPriceOverride(self, uniqueID, price, isSellingToVendor)\n\t$0\nend"
+		],
+		"description": "Retrieves the price override."
 	}
 }
