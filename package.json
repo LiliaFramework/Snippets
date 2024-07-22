@@ -55,6 +55,14 @@
       {
         "language": "lua",
         "path": "./snippets/libraries.json"
+      },
+      {
+        "language": "glua",
+        "path": "./snippets/meta.json"
+      },
+      {
+        "language": "lua",
+        "path": "./snippets/meta.json"
       }
     ],
     "commands": [

@@ -1,0 +1,1255 @@
+{
+    "WhitelistAllClasses": {
+        "prefix": "WhitelistAllClasses",
+        "body": [
+            ":WhitelistAllClasses()"   
+        ],
+        "description": "Whitelists all classes for the character."
+    },
+    "WhitelistAllFactions": {
+        "prefix": "WhitelistAllFactions",
+        "body": [
+            ":WhitelistAllFactions()"   
+        ],
+        "description": "Whitelists all factions for the character."
+    },
+    "WhitelistEverything": {
+        "prefix": "WhitelistEverything",
+        "body": [
+            ":WhitelistEverything()"   
+        ],
+        "description": "Whitelists everything (all classes and factions) for the character."
+    },
+    "addBoost": {
+        "prefix": "addBoost",
+        "body": [
+            ":addBoost(boostID, attribID, boostAmount)"
+        ],
+        "description": "Adds a boost to the character."
+    },  
+    "ban": {
+        "prefix": "ban",
+        "body": [
+            ":ban(time)"
+        ],
+        "description": "Bans the character."
+    },
+    "classUnWhitelist": {
+        "prefix": "classUnWhitelist",
+        "body": [
+            ":classUnWhitelist(class)"
+        ],
+        "description": "Unwhitelists a class for the character."
+    },
+    "classWhitelist": {
+        "prefix": "classWhitelist",
+        "body": [
+            ":classWhitelist(class)"
+        ],
+        "description": "Whitelists a class for the character."
+    },
+    "delete": {
+        "prefix": "delete",
+        "body": [
+            ":delete()"
+        ],
+        "description": "Deletes the character from the character database and removes it from memory."
+    },
+    "destroy": {
+        "prefix": "destroy",
+        "body": [
+            ":destroy()"
+        ],
+        "description": "Destroys the character, removing it from memory and notifying clients to remove it."
+    },
+    "getAttrib": {
+        "prefix": "getAttrib",
+        "body": [
+            ":getAttrib(key, default)"
+        ],
+        "description": "Returns the value of an attribute."
+    },
+    "getBoost": {
+        "prefix": "getBoost",
+        "body": [
+            ":getBoost (attribID)"
+        ],
+        "description": "Retrieves the boost value for a specific attribute."
+    },
+    "getBoosts": {
+        "prefix": "getBoosts",
+        "body": [
+            ":getBoosts()"
+        ],
+        "description": "Returns the boosts for the character."
+    },
+    "getFlags": {
+        "prefix": "getFlags",
+        "body": [
+            ":getFlags()"
+        ],
+        "description": "Returns the flags for the character."
+    },
+    "getID": {
+        "prefix": "getID",
+        "body": [
+            ":getID()"
+        ],
+        "description": "Returns the character's ID."
+    },
+    "getItemWeapon": {
+        "prefix": "getItemWeapon",
+        "body": [
+            ":getItemWeapon()"
+        ],
+        "description": "Returns the character's weapon item."
+    },
+    "getPlayer": {
+        "prefix": "getPlayer",
+        "body": [
+            ":getPlayer()"
+        ],
+        "description": "Returns the character's player."
+    },
+    "giveFlags": {
+        "prefix": "giveFlags",
+        "body": [
+            ":giveFlags(flags)"
+        ],
+        "description": "Gives the character flags."
+    },
+    "giveMoney": {
+        "prefix": "giveMoney",
+        "body": [
+            ":giveMoney(amount, takingMoney)"
+        ],
+        "description": "Gives the character money."
+    },
+    "hasClassWhitelist": {
+        "prefix": "hasClassWhitelist",
+        "body": [
+            ":hasClassWhitelist(class)"
+        ],
+        "description": "Checks if the character has a class whitelisted"
+    },
+    "hasFlags": {
+        "prefix": "hasFlags",
+        "body": [
+            ":hasFlags(flags)"
+        ],
+        "description": "Checks if the character has flags."
+    },
+    "hasMoney": {
+        "prefix": "hasMoney",
+        "body": [
+            ":hasMoney(amount)"
+        ],
+        "description": "Checks if the character has enough money."
+    },
+    "isClass": {
+        "prefix": "isClass",
+        "body": [
+            ":isClass(class)"
+        ],
+        "description": "Checks if the character is a specific class."
+    },
+    "isFaction": {
+        "prefix": "isFaction",
+        "body": [
+            ":isFaction(faction)"
+        ],
+        "description": "Checks if the character is a specific faction."
+    },
+    "joinClass": {
+        "prefix": "joinClass",
+        "body": [
+            ":joinClass(class, isForced)"
+        ],
+        "description": "Sets the character's class to the specified class."
+    },
+    "kick": {
+        "prefix": "kick",
+        "body": [
+            ":kick()"
+        ],
+        "description": "Forces a player off their current character, and sends them to the character menu to select a character."
+    },
+    "kickClass": {
+        "prefix": "kickClass",
+        "body": [
+            ":kickClass()"
+        ],
+        "description": "Kicks the character from their current class."
+    },
+    "removeBoost": {
+        "prefix": "removeBoost",
+        "body": [
+            ":removeBoost(boostID, attribID)"
+        ],
+        "description": "Removes a boost from the character."
+    },
+    "save": {
+        "prefix": "save",
+        "body": [
+            ":save(callback)"
+        ],
+        "description": "Saves this character's info to the database."
+    },
+    "setAttrib": {
+        "prefix": "setAttrib",
+        "body": [
+            ":setAttrib(key, value)"
+        ],
+        "description": "Sets the value of an attribute."
+    },
+    "setFlags": {
+        "prefix": "setFlags",
+        "body": [
+            ":setFlags(flags)"
+        ],
+        "description": "Sets the flags for the character."
+    },
+    "takeFlags": {
+        "prefix": "takeFlags",
+        "body": [
+            ":takeFlags(flags)"
+        ],
+        "description": "Takes flags from the character."
+    },
+    "updateAttrib": {
+        "prefix": "updateAttrib",
+        "body": [
+            ":updateAttrib(key, value)"
+        ],
+        "description": "Updates the value of an attribute."
+    },
+    "assignCreator": {
+        "prefix": "assignCreator",
+        "body": [
+            ":assignCreator(client)"
+        ],
+        "description": "Assigns a creator to the entity."
+    },
+    "canSeeEntity": {
+        "prefix": "canSeeEntity",
+        "body": [
+            ":canSeeEntity(entity)"
+        ],
+        "description": "Checks if the entity can see another entity."
+    },
+    "getDoorPartner": {
+        "prefix": "getDoorPartner",
+        "body": [
+            ":getDoorPartner()"
+        ],
+        "description": "Returns the door's partner. There is both a server and client version"
+    },
+    "getEntItemDropPos": {
+        "prefix": "getEntItemDropPos",
+        "body": [
+            ":getEntItemDropPos()"
+        ],
+        "description": "Retrieves the drop position for an item associated with the entity."
+    },
+    "getNetVar": {
+        "prefix": "getNetVar",
+        "body": [
+            ":getNetVar(key, default)"
+        ],
+        "description": "Returns the value of a networked variable. There is a client and Server version"
+    },
+    "getViewAngle": {
+        "prefix": "getViewAngle",
+        "body": [
+            ":getViewAngle(pos)"
+        ],
+        "description": "Gets the view angle between the entity and a specified position."
+    },
+    "inFOV":{
+        "prefix": "inFOV",
+        "body": [
+            ":inFOV(entity, fov)"
+        ],
+        "description": "Checks if the entity is in the field of view of another entity."
+    },
+    "inTrace": {
+        "prefix": "inTrace",
+        "body": [
+            ":inTrace(entity)"
+        ],
+        "description": "Checks if the entity is in the trace of another"
+    },
+    "isChair": {
+        "prefix": "isChair",
+        "body": [
+            ":isChair()"
+        ],
+        "description": "Checks if the entity is a chair."
+    },
+    "isDoor": {
+        "prefix": "isDoor",
+        "body": [
+            ":isDoor()"
+        ],
+        "description": "Checks if the entity is a door. There is both a client and server side"
+    },
+    "isDoorLocked": {
+        "prefix": "isDoorLocked",
+        "body": [
+            ":isDoorLocked()"
+        ],
+        "description": "Checks if the door is locked."
+    },
+    "isInRoom": {
+        "prefix": "isInRoom",
+        "body": [
+            ":isInRoom(target)"
+        ],
+        "description": "Checks if the entity is inside a room (i.e., not blocked by world geometry) with another target entity."
+    },
+    "isItem": {
+        "prefix": "isItem",
+        "body": [
+            ":isItem()"
+        ],
+        "description": "Checks if the entity is an item."
+    },
+    "isMoney": {
+        "prefix": "isMoney",
+        "body": [
+            ":isMoney()"
+        ],
+        "description": "Checks if the entity is money."
+    },
+    "isProp": {
+        "prefix": "isProp",
+        "body": [
+            ":isProp()"
+        ],
+        "description": "Checks if the entity is a prop."
+    },
+    "isScreenVisible": {
+        "prefix": "isScreenVisible",
+        "body": [
+            ":isScreenVisible(entity, maxDist, fov)"
+        ],
+        "description": "Checks if the entity has a clear line of sight to another entity and is within a specified distance and field of view angle."
+    },
+    "isSimfphysCar": {
+        "prefix": "isSimfphysCar",
+        "body": [
+            ":isSimfphysCar()"
+        ],
+        "description": "Checks if the entity is a simfphys car."
+    },
+    "nearEntity": {
+        "prefix": "nearEntity",
+        "body": [
+            ":nearEntity(radius)"
+        ],
+        "description": "Checks if there is an entity near the current entity within a specified radius."
+    },
+    "setNetVar": {
+        "prefix": "setNetVar",
+        "body": [
+            ":setNetVar(key, value, receiver)"
+        ],
+        "description": "Sets the value of a networked variable."
+    },
+    "addAccessRule": {
+        "prefix": "addAccessRule",
+        "body": [
+            ":addAccessRule(rule, priority)"
+        ],
+        "description": "Adds an access rule to the inventory."
+    },
+    "addDataProxy": {
+        "prefix": "addDataProxy",
+        "body": [
+            ":addDataProxy(key, onChange)"
+        ],
+        "description": "Adds a data proxy to the inventory for a specified key."
+    },
+    "addItem": {
+        "prefix": "addItem",
+        "body": [
+            ":addItem(itemID, amount)"
+        ],
+        "description": "Adds an item to the inventory."
+    },
+    "canAccess": {
+        "prefix": "canAccess",
+        "body": [
+            ":canAccess(action, context)"
+        ],
+        "description": "Checks if a certain action is permitted for the inventory."
+    },
+    "configure": {
+        "prefix": "configure",
+        "body": [
+            ":configure()"
+        ],
+        "description": "Configures the inventory."
+    },
+    "extend": {
+        "prefix": "extend",
+        "body": [
+            ":extend(className)"
+        ],
+        "description": "Extends the inventory to create a subclass with a specified class name."
+    },
+    "getData": {
+        "prefix": "getData",
+        "body": [
+            ":getData(key, default)"
+        ],
+        "description": "Retrieves data associated with a specified key from the inventory."
+    },
+    "getFirstItemOfType": {
+        "prefix": "getFirstItemOfType",
+        "body": [
+            ":getFirstItemOfType(itemType)"
+        ],
+        "description": "Retrieves the first item of a specified type from the inventory."
+    },
+    "getItemCount": {
+        "prefix": "getItemCount",
+        "body": [
+            ":getItemCount(itemType)"
+        ],
+        "description": "Retrieves the count of a specified item in the inventory."
+    },
+    "getItems": {
+        "prefix": "getItems",
+        "body": [
+            ":getItems()"
+        ],
+        "description": "Retrieves all items in the inventory."
+    },
+    "getItemsByUniqueID": {
+        "prefix": "getItemsByUniqueID",
+        "body": [
+            ":getItemsByUniqueID(uniqueID, onlyMain)"
+        ],
+        "description": "Retrieves items with a specified unique ID from the inventory."
+    },
+    "getItemsOfType": {
+        "prefix": "getItemsOfType",
+        "body": [
+            ":getItemsOfType(itemType)"
+        ],
+        "description": "Retrieves items of a specified type from the inventory."
+    },
+    "getRecipients": {
+        "prefix": "getRecipients",
+        "body": [
+            ":getRecipients()"
+        ],
+        "description": "Retrieves the recipients for synchronization."
+    },
+    "getType": {
+        "prefix": "getType",
+        "body": [
+            ":getType()"
+        ],
+        "description": "Retrieves the type of the inventory."
+    },
+    "hasItem": {
+        "prefix": "hasItem",
+        "body": [
+            ":hasItem(itemID)"
+        ],
+        "description": "Checks if the inventory has a specified item."
+    },
+    "initializeStorage": {
+        "prefix": "initializeStorage",
+        "body": [
+            ":initializeStorage()"
+        ],
+        "description": "Initializes the storage for the inventory."
+    },
+    "instance": {
+        "prefix": "instance",
+        "body": [
+            ":instance()"
+        ],
+        "description": "Creates an instance of the inventory."
+    },
+    "loadItems": {
+        "prefix": "loadItems",
+        "body": [
+            ":loadItems(items)"
+        ],
+        "description": "Loads items from the database into the inventory."
+    },
+    "new": {
+        "prefix": "new",
+        "body": [
+            ":new()"
+        ],
+        "description": "Creates a new instance of the inventory."
+    },
+    "onDataChanged": {
+        "prefix": "onDataChanged",
+        "body": [
+            ":onDataChanged(key, oldValue, newValue)"
+        ],
+        "description": "Callback function called when data associated with a key changes."
+    },
+    "onInstanced": {
+        "prefix": "OnInstanced",
+        "body": [
+            ":OnInstanced()"
+        ],
+        "description": "Initializes an instance of the inventory."
+    },
+    "onLoaded": {
+        "prefix": "OnLoaded",
+        "body": [
+            ":OnLoaded()"
+        ],
+        "description": "Callback function called when the inventory is loaded."
+    },
+    "register": {
+        "prefix": "register",
+        "body": [
+            ":register(typeID)"
+        ],
+        "description": "Registers the inventory with a specified type ID."
+    },
+    "remove": {
+        "prefix": "remove",
+        "body": [
+            ":remove(itemID)"
+        ],
+        "description": "Removes an item from the inventory."
+    },
+    "removeAccessRule": {
+        "prefix": "removeAccessRule",
+        "body": [
+            ":removeAccessRule(rule)"
+        ],
+        "description": "Removes an access rule from the inventory."
+    },
+    "removeItem": {
+        "prefix": "removeItem",
+        "body": [
+            ":removeItem(itemID, preserveItem)"
+        ],
+        "description": "Removes an item from the inventory."
+    },
+    "setData": {
+        "prefix": "setData",
+        "body": [
+            ":setData(key, value)"
+        ],
+        "description": "Sets data associated with a specified key in the inventory."
+    },
+    "show": {
+        "prefix": "show",
+        "body": [
+            ":show(parent)"
+        ],
+        "description": "Displays the inventory UI to the specified parent element."
+    },
+    "sync": {
+        "prefix": "sync",
+        "body": [
+            ":sync(recipients)"
+        ],
+        "description": "Synchronizes the inventory with clients."
+    },
+    "synData": {
+        "prefix": "synData",
+        "body": [
+            ":synData(key, recipients)"
+        ],
+        "description": "Synchronizes data changes with clients."
+    },
+    "syncItemAdded": {
+        "prefix": "syncItemAdded",
+        "body": [
+            ":syncItemAdded(item)"
+        ],
+        "description": "Synchronizes the addition of an item with clients."
+    },
+    "addQuantity": {
+        "prefix": "addQuantity",
+        "body": [
+            ":addQuantity(quantity, receivers, noCheckEntity)"
+        ],
+        "description": "Adds a specified quantity to the item's current quantity."
+    },
+    "call": {
+        "prefix": "call",
+        "body": [
+            ":call(method, client, entity, ...)"
+        ],
+        "description": "Calls one of the item's methods."
+    },
+    "getDesc": {
+        "prefix": "getDesc",
+        "body": [
+            ":getDesc()"
+        ],
+        "description": "Retrieves the item's description."
+    },
+    "getEntity": {
+        "prefix": "getEntity",
+        "body": [
+            ":getEntity()"
+        ],
+        "description": "Retrieves the item's entity."
+    },
+    "getModel": {
+        "prefix": "getModel",
+        "body": [
+            ":getModel()"
+        ],
+        "description": "Retrieves the item's model."
+    },
+    "getName": {
+        "prefix": "getName",
+        "body": [
+            ":getName()"
+        ],
+        "description": "Retrieves the item's name."
+    },
+    "getOwner": {
+        "prefix": "getOwner",
+        "body": [
+            ":getOwner()"
+        ],
+        "description": "Retrieves the item's owner."
+    },
+    "getPrice": {
+        "prefix": "getPrice",
+        "body": [
+            ":getPrice()"
+        ],
+        "description": "Retrieves the item's price."
+    },
+    "getQuantity": {
+        "prefix": "getQuantity",
+        "body": [
+            ":getQuantity()"
+        ],
+        "description": "Retrieves the item's quantity."
+    },
+    "getSkin": {
+        "prefix": "getSkin",
+        "body": [
+            ":getSkin()"
+        ],
+        "description": "Retrieves the item's skin."
+    },
+    "hook": {
+        "prefix": "hook",
+        "body": [
+            ":hook(name, func)"
+        ],
+        "description": "Hooks a function to the item."
+    },
+    "interact": {
+        "prefix": "interact",
+        "body": [
+            ":interact(action, client, entity, data)"
+        ],
+        "description": "Interacts with the item."
+    },
+    "onDisposed": {
+        "prefix": "onDisposed",
+        "body": [
+            ":onDisposed()"
+        ],
+        "description": "Gets called upon destroying an item."
+    },
+    "onInstnaced": {
+        "prefix": "onInstanced",
+        "body": [
+            ":onInstanced()"
+        ],
+        "description": "Gets called upon creating an item."
+    },
+    "onRemoved": {
+        "prefix": "onRemoved",
+        "body": [
+            ":onRemoved()"
+        ],
+        "description": "Gets called upon removing an item."
+    },
+    "onResotred": {
+        "prefix": "onRestored",
+        "body": [
+            ":onRestored()"
+        ],
+        "description": "Gets called upon restoring an item."
+    },
+    "onSync": {
+        "prefix": "onSync",
+        "body": [
+            ":onSync()"
+        ],
+        "description": "Gets called upon synchronizing an item."
+    },
+    "postHook": {
+        "prefix": "postHook",
+        "body": [
+            ":postHook(name, func)"
+        ],
+        "description": "Hooks a function to the item after the original function."
+    },
+    "printDetails": {
+        "prefix": "printDetails",
+        "body": [
+            ":print(detail)"
+        ],
+        "description": "Prints the item's details."
+    },
+    "printData": {
+        "prefix": "printData",
+        "body": [
+            ":printData()"
+        ],
+        "description": "Prints the item's data."
+    },
+    "removeFromInventory": {
+        "prefix": "removeFromInventory",
+        "body": [
+            ":removeFromInventory(preserveItem)"
+        ],
+        "description": "Removes the item from the inventory."
+    },
+    "setQuantity": {
+        "prefix": "setQuantity",
+        "body": [
+            ":setQuantity(quantity, receivers, noCheckEntity)"
+        ],
+        "description": "Sets the quantity of the item to the specified value."
+    },
+    "spawn": {
+        "prefix": "spawn",
+        "body": [
+            ":spawn((position, angles))"
+        ],
+        "description": "Spawn an item entity based off the item table."
+    },
+    "transfer": {
+        "prefix": "transfer",
+        "body": [
+            ":transfer(newInventory, bBypass)"
+        ],
+        "description": "Transfers the item to another inventory."
+    },
+    "HasPrivilege": {
+        "prefix": "HasPrivilege",
+        "body": [
+            ":HasPrivilege(privilege)"
+        ],
+        "description": "Checks if the player has a specific privilege."
+    },
+    "Name": {
+        "prefix": "Name",
+        "body": [
+            ":Name()"
+        ],
+        "description": "Returns this player's current name."
+    },
+    "RequestString": {
+        "prefix": "RequestString",
+        "body": [
+            ":RequestString(title, subTitle, callback, default)"
+        ],
+        "description": "Requests a string input from the player."
+    },
+    "addFlagBlacklist": {
+        "prefix": "addFlagBlacklist",
+        "body": [
+            ":addFlagBlacklist(flags, blacklistInfo)"
+        ],
+        "description": "Adds a flag to the blacklist."
+    },
+    "canAfford": {
+        "prefix": "canAfford",
+        "body": [
+            ":canAfford(amount)"
+        ],
+        "description": "Checks if the player can afford a specified amount."
+    },
+    "addMoney": {
+        "prefix": "addMoney",
+        "body": [
+            ":addMoney(amount)"
+        ],
+        "description": "Adds money to the player."
+    },
+    "chatNotify": {
+        "prefix": "chatNotify",
+        "body": [
+            ":chatNotify(message)"
+        ],
+        "description": "Notifies the player in chat."
+    },
+    "chatNotifyLocalized": {
+        "prefix": "chatNotifyLocalized",
+        "body": [
+            ":chatNotifyLocalized(message, ...)"
+        ],
+        "description": "Notifies the player in chat with a localized message."
+    },
+    "createRagdoll": {
+        "prefix": "createRagdoll",
+        "body": [
+            ":createRagdoll(freeze)"
+        ],
+        "description": "Creates a ragdoll for the player."
+    },
+    "createServerRagdoll": {
+        "prefix": "createServerRagdoll",
+        "body": [
+            ":createServerRagdoll(dontSetPlayer)"
+        ],
+        "description": "Creates a ragdoll entity for the player on the server."
+    },
+    "distanceFromEnt": {
+        "prefix": "distanceFromEnt",
+        "body": [
+            ":distanceFromEnt(ent)"
+        ],
+        "description": "Calculates the distance between the player and another entity."
+    },
+    "doStartedAction": {
+        "prefix": "doStartedAction",
+        "body": [
+            ":doStartedAction(entity, callback, time, onCancel, distance)"
+        ],
+        "description": "Performs a stared action towards an entity for a certain duration."
+    },
+    "entitiesNearPlayer": {
+        "prefix": "entitiesNearPlayer",
+        "body": [
+            ":entitiesNearPlayer(radius, playerOnly)"
+        ],
+        "description": "Retrieves entities near the player within a specified radius."
+    },
+    "getChar": {
+        "prefix": "getChar",
+        "body": [
+            ":getChar()"
+        ],
+        "description": "Retrieves the player's character."
+    },
+    "getClass": {
+        "prefix": "getClass",
+        "body": [
+            ":getClass()"
+        ],
+        "description": "Retrieves the player's class."
+    },
+    "getClassData": {
+        "prefix": "getClassData",
+        "body": [
+            ":getClassData()"
+        ],
+        "description": "Retrieves the player's class data."
+    },
+    "getEyeEnt": {
+        "prefix": "getEyeEnt",
+        "body": [
+            ":getEyeEnt()"
+        ],
+        "description": "Retrieves the entity within the player's line of sight."
+    },
+    "getCurrentVehicle": {
+        "prefix": "getCurrentVehicle",
+        "body": [
+            ":getCurrentVehicle()"
+        ],
+        "description": "Retrieves the player's current vehicle."
+    },
+    "getFlagBlacklist": {
+        "prefix": "getFlagBlacklist",
+        "body": [
+            ":getFlagBlacklist()"
+        ],
+        "description": "Retrieves the player's flag blacklist."
+    },
+    "getItemDropPos": {
+        "prefix": "getItemDropPos",
+        "body": [
+            ":getItemDropPos()"
+        ],
+        "description": "Retrieves the drop position for an item associated with the player."
+    },
+    "getLiliaData": {
+        "prefix": "getLiliaData",
+        "body": [
+            ":getLiliaData(key, default)"
+        ],
+        "description": "Retrieves a value from the local Lilia data."
+    },
+    "getMoney": {
+        "prefix": "getMoney",
+        "body": [
+            ":getMoney()"
+        ],
+        "description": "Retrieves the player's money."
+    },
+    "getPermFlags": {
+        "prefix": "getPermFlags",
+        "body": [
+            ":getPermFlags()"
+        ],
+        "description": "Retrieves the player's permanent flags."
+    },
+    "getPlayTime": {
+        "prefix": "getPlayTime",
+        "body": [
+            ":getPlayTime()"
+        ],
+        "description": "Retrieves the player's play time."
+    },
+    "getRagdoll" : {
+        "prefix": "getRagdoll",
+        "body": [
+            ":getRagdoll()"
+        ],
+        "description": "Retrieves the player's ragdoll."
+    },
+    "getTrace": {
+        "prefix": "getTrace",
+        "body": [
+            ":getTrace()"
+        ],
+        "description": "Retrieves the player's trace."
+    },
+    "getTracedEntity": {
+        "prefix": "getTracedEntity",
+        "body": [
+            ":getTracedEntity()"
+        ],
+        "description": "Retrieves the entity traced by the player."
+    },
+    "givePermFlags": {
+        "prefix": "givePermFlags",
+        "body": [
+            ":givePermFlags(flags)"
+        ],
+        "description": "Gives the player permanent flags."
+    },
+    "hasAnyFlagBlacklist": {
+        "prefix": "hasAnyFlagBlacklist",
+        "body": [
+            ":hasAnyFlagBlacklist(flags)"
+        ],
+        "description": "Checks if the player has any flags in the blacklist."
+    },
+    "hasFlagBlacklist": {
+        "prefix": "hasFlagBlacklist",
+        "body": [
+            ":hasFlagBlacklist(flags)"
+        ],
+        "description": "Checks if the player has a specific flag in the blacklist."
+    },
+    "hasPermFlag": {
+        "prefix": "hasPermFlag",
+        "body": [
+            ":hasPermFlag(flag)"
+        ],
+        "description": "Checks if the player has a permanent flag."
+    },
+    "hasRagdoll": {
+        "prefix": "hasRagdoll",
+        "body": [
+            ":hasRagdoll()"
+        ],
+        "description": "Checks if the player has a ragdoll."
+    },
+    "hasSkillLevel" : {
+        "prefix": "hasSkillLevel",
+        "body": [
+            ":hasSkillLevel(skill, level)"
+        ],
+        "description": "Checks if the player has a specific skill level."
+    },
+    "hasValidVehicle": {
+        "prefix": "hasValidVehicle",
+        "body": [
+            ":hasValidVehicle()"
+        ],
+        "description": "Checks if the player has a valid vehicle."
+    },
+    "hasWhitelist": {
+        "prefix": "hasWhitelist",
+        "body": [
+            ":hasWhitelist(faction)"
+        ],
+        "description": "Checks if the player has whitelisted access to a faction."
+    },
+    "isFemale": {
+        "prefix": "isFemale",
+        "body": [
+            ":isFemale()"
+        ],
+        "description": "Checks if the player's character is female based on the model."
+    },
+    "isMoving": {
+        "prefix": "isMoving",
+        "body": [
+            ":isMoving()"
+        ],
+        "description": "Checks if the player is moving."
+    },
+    "isNearPlayer": {
+        "prefix": "isNearPlayer",
+        "body": [
+            ":isNearPlayer(radius, entity)"
+        ],
+        "description": "Checks if an entity is near the player within a specified radius."
+    },
+    "isNoClipping": {
+        "prefix": "isNoClipping",
+        "body": [
+            ":isNoClipping()"
+        ],
+        "description": "Checks if the player is no-clipping."
+    },
+    "isObserving": {
+        "prefix": "isObserving",
+        "body": [
+            ":isObserving()"
+        ],
+        "description": "Checks if the player is observing."
+    },
+    "isOutside": {
+        "prefix": "isOutside",
+        "body": [
+            ":isOutside()"
+        ],
+        "description": "Checks if the player is outside."
+    },
+    "isRunning": {
+        "prefix": "isRunning",
+        "body": [
+            ":isRunning()"
+        ],
+        "description": "Checks if the player is running."
+    },
+    "isStaff": {
+        "prefix": "isStaff",
+        "body": [
+            ":isStaff()"
+        ],
+        "description": "Checks if the player is staff."
+    },
+    "isStaffOnDuty": {
+        "prefix": "isStaffOnDuty",
+        "body": [
+            ":isStaffOnDuty()"
+        ],
+        "description": "Checks if the player is staff on duty."
+    },
+    "isStuck": {
+        "prefix": "isStuck",
+        "body": [
+            ":isStuck()"
+        ],
+        "description": "Checks if the player is stuck."
+    },
+    "isUser": {
+        "prefix": "isUser",
+        "body": [
+            ":isUser()"
+        ],
+        "description": "Checks if the player is a user."
+    },
+    "isVIP": {
+        "prefix": "isVIP",
+        "body": [
+            ":isVIP()"
+        ],
+        "description": "Checks if the player is a VIP."
+    },
+    "loadLiliaData": {
+        "prefix": "loadLiliaData",
+        "body": [
+            ":loadLiliaData()"
+        ],
+        "description": "Loads the player's local Lilia data."
+    },
+    "meetsRequiredSkills": {
+        "prefix": "meetsRequiredSkills",
+        "body": [
+            ":meetsRequiredSkills(requiredSkillLevels)"
+        ],
+        "description": "Checks if the player meets the required skills."
+    },
+    "notify": {
+        "prefix": "notify",
+        "body": [
+            ":notify(message)"
+        ],
+        "description": "Notifies the player."
+    },
+    "notifyLocalizd": {
+        "prefix": "notifyLocalized",
+        "body": [
+            ":notifyLocalized(message, ...)"
+        ],
+        "description": "Notifies the player with a localized message."
+    },
+    "notifyP": {
+        "prefix": "notifyP",
+        "body": [
+            ":notifyP(message)"
+        ],
+        "description": "Notifies the player in chat."
+    },
+    "openPage": {
+        "prefix": "openPage",
+        "body": [
+            ":openPage(url)"
+        ],
+        "description": "Opens a webpage for the player."
+    },
+    "openUI": {
+        "prefix": "openUI",
+        "body": [
+            ":openUI(ui)"
+        ],
+        "description": "Opens a UI for the player."
+    },
+    "playSound": {
+        "prefix": "playSound",
+        "body": [
+            ":playSound(sound, pitch)"
+        ],
+        "description": "Plays a sound for the player."
+    },
+    "removeFlagBlacklist": {
+        "prefix": "removeFlagBlacklist",
+        "body": [
+            ":removeFlagBlacklist(flags)"
+        ],
+        "description": "Removes a flag from the blacklist."
+    },
+    "requestString": {
+        "prefix": "requestString",
+        "body": [
+            ":requestString(title, subTitle, callback, default)"
+        ],
+        "description": "Requests a string input from the player."
+    },
+    "saveLiliaData": {
+        "prefix": "saveLiliaData",
+        "body": [
+            ":saveLiliaData()"
+        ],
+        "description": "Saves the player's local Lilia data."
+    },
+    "sendMessage": {
+        "prefix": "sendMessage",
+        "body": [
+            ":sendMessage(...)"
+        ],
+        "description": "Sends a message to the player."
+    },
+    "sendPrint": {
+        "prefix": "sendPrint",
+        "body": [
+            ":sendPrint(message)"
+        ],
+        "description": "Sends a print message to the player."
+    },
+    "setAction": {
+        "prefix": "setAction",
+        "body": [
+            ":setAction(text, time, callback, startTime, finishTime)"
+        ],
+        "description": "Sets an action for the player."
+    },
+    "setFlagBlacklist": {
+        "prefix": "setFlagBlacklist",
+        "body": [
+            ":setFlagBlacklist(flags)"
+        ],
+        "description": "Sets the flag blacklist for the player."
+    },
+    "setLiliaData": {
+        "prefix": "setLiliaData",
+        "body": [
+            ":setLiliaData(key, value, noNetworking)"
+        ],
+        "description": "Sets a value in the local Lilia data."
+    },
+    "setLocalVar": {
+        "prefix": "setLocalVar",
+        "body": [
+            ":setLocalVar(key, value)"
+        ],
+        "description": "Sets a local variable for the player."
+    },
+    "setPermFlags": {
+        "prefix": "setPermFlags",
+        "body": [
+            ":setPermFlags(flags)"
+        ],
+        "description": "Sets the player's permanent flags."
+    },
+    "setRagdoll": {
+        "prefix": "setRagdoll",
+        "body": [
+            ":setRagdoll(entity)"
+        ],
+        "description": "Sets the player's ragdoll."
+    },
+    "setRagdolled": {
+        "prefix": "setRagdolled",
+        "body": [
+            ":setRagdolled(state, time, getUpGrace, getUpMessage)"
+        ],
+        "description": "Sets the player's ragdolled state."
+    },
+    "setWeighPoint": {
+        "prefix": "setWeighPoint",
+        "body": [
+            ":setWeighPoint(name, vector, onReach)"
+        ],
+        "description": "Sets the player's weight point."
+    },
+    "setWhitelisteed": {
+        "prefix": "setWhitelisted",
+        "body": [
+            ":setWhitelisted(faction, whitelisted)"
+        ],
+        "description": "Sets the player's whitelisted state for a faction."
+    },
+    "squaredDistanceFromEnt": {
+        "prefix": "squaredDistanceFromEnt",
+        "body": [
+            ":squaredDistanceFromEnt(ent)"
+        ],
+        "description": "Calculates the squared distance between the player and another entity."
+    },
+    "stopAction": {
+        "prefix": "stopAction",
+        "body": [
+            ":stopAction()"
+        ],
+        "description": "Stops the player's current action."
+    },
+    "takeMoney": {
+        "prefix": "takeMoney",
+        "body": [
+            ":takeMoney(amount)"
+        ],
+        "description": "Takes money from the player."
+    },
+    "takePermFlags": {
+        "prefix": "takePermFlags",
+        "body": [
+            ":takePermFlags(flags)"
+        ],
+        "description": "Takes permanent flags from the player."
+    }
+}
