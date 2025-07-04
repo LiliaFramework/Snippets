@@ -1,189 +1,100 @@
-<h1 align="center">Lilia - Snippets Extension</h1>
+<p align="center">
+  <strong>Official skeleton schema for the Lilia roleplay framework.</strong><br/>
+  A minimal foundation to build your own roleplay experience.<br/><br/>
+  <img src="https://github.com/LiliaFramework/Lilia/blob/main/logo.png?raw=true" alt="Lilia Logo" width="200" />
+</p>
 
 <p align="center">
-  <img src="https://i.imgur.com/yY3wT30.png" alt="Lilia Icon">
+  <a href="https://github.com/LiliaFramework/Skeleton/stargazers">
+    <img src="https://img.shields.io/github/stars/LiliaFramework/Skeleton?style=social" alt="GitHub Stars" />
+  </a>
+  <a href="https://www.gnu.org/licenses/gpl-3.0">
+    <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License GPL v3" />
+  </a>
+  <a href="https://discord.gg/esCRH5ckbQ">
+    <img src="https://img.shields.io/badge/Discord-Join%20Chat-blue?logo=discord&logoColor=white" alt="Discord Chat" />
+  </a>
+  <a href="https://discord.gg/esCRH5ckbQ">
+    <img
+      src="https://img.shields.io/badge/dynamic/json?url=https://discord.com/api/guilds/1094398664434274454/widget.json&label=Online&query=$.presence_count&logo=discord&logoColor=white&color=7289DA&style=social"
+      alt="Discord Members Online"
+    />
+  </a>
 </p>
- 
-## Overview
 
-The Lilia Snippets extension provides a set of code snippets for the Lilia programming language. Easily insert common code patterns and improve your development efficiency with this Visual Studio Code extension.
+<h1 align="center">Lilia Skeleton</h1>
 
-## Features
+<h2 align="center">🚀 Getting Started</h2>
 
-- **Snippet Library:** A collection of useful snippets for Lilia development.
-- **Easy Insertion:** Quickly insert code snippets with just a few keystrokes.
-- **Visual Studio Code Integration:** Seamlessly integrates with Visual Studio Code for a smooth coding experience.
+<p align="center">
+  Follow our step-by-step <a href="https://liliaframework.github.io/information/installing_the_gamemode/">installation tutorial</a> to set up this skeleton on your server.
+</p>
 
-## Usage
+<h2 align="center">✨ Core Features</h2>
 
-1. Install the Lilia Snippets extension from the Visual Studio Code Marketplace.
-2. Open a LUA file.
-3. Type the snippet prefix and press `Tab` to insert the snippet.
+<div align="center">
 
-## Contributors
+  **Basic Layout**
+  Ready for customization.
 
-1. Fedox (Creator of the Helix version)
-2. Samael (Re-did & implemented most hooks)
-3. B0zy (Fixed several hooks & added new ones)
+  **Example Factions**
+  Demonstrates faction setup.
 
-## Snippet Examples
+  **Database Configuration**
+  Supports SQLite and MySQL.
 
-### lilia.module
+  **Module Support**
+  Works with official Lilia modules.
 
-```lua
-local MODULE = MODULE
+  **GPL Licensed**
+  Free to modify and learn from.
 
-MODULE.name = "NAME"
-MODULE.desc = "DESCRIPTION"
-MODULE.author = "AUTHOR"
-MODULE.schema = "SCHEMA"
-```
+</div>
 
-### lilia.item
+<h2 align="center">📚 Documentation</h2>
 
-```lua
-ITEM.name = "NAME"
-ITEM.desc = "DESCRIPTION"
-ITEM.model = "MODEL"
-ITEM.width = 1
-ITEM.height = 1
-ITEM.price = 1
-ITEM.category = "CategoryName"
+<p align="center">
+  Explore the complete wiki for in-depth guides on configuring and extending this skeleton and the underlying Lilia framework:<br/>
+  <a href="https://liliaframework.github.io">https://liliaframework.github.io</a>
+</p>
 
-ITEM.iconCam = {pos = Vector(0, 0, 0), ang = Angle(0, 0, 0), fov = 70}
+<h2 align="center">📦 Workshop Content</h2>
 
-ITEM.functions.Option = {
-    name = "OptionName",
-    onClick = function(item)
-        -- onClick functionality here
-    end,
-    onRun = function(item)
-        -- onRun functionality here
-        return false
-    end,
-    onCanRun = function(item)
-        -- onCanRun checks here
-    end,
-}
+<p align="center">
+  Subscribe to our essential <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2959728255">Steam Workshop collection</a> for the assets you’ll need to run this skeleton optimally.
+</p>
 
-function ITEM:getName()
-    return self.name
-end
+<h2 align="center">💬 Community Support</h2>
 
-function ITEM:getDesc()
-    return self.desc
-end
-```
+<p align="center">
+  Connect with other server owners and get real-time help on our Discord:<br/>
+  <a href="https://discord.gg/esCRH5ckbQ">https://discord.gg/esCRH5ckbQ</a>
+</p>
 
-### lilia.item.outfit
+<h2 align="center">💡 Contributing</h2>
 
-```lua
-ITEM.name = "NAME"
-ITEM.desc = "DESCRIPTION"
-ITEM.model = "MODEL"
-ITEM.width = 1
-ITEM.height = 1
-ITEM.outfitCategory = "CATEGORY"
-ITEM.newSkin = 1
-ITEM.bodyGroups = {
-    ["BODYGROUPNAME"] = 1,
-}
-ITEM.replacements = "MODEL"
-```
+<p align="center">
+  We welcome pull requests and wiki improvements. To submit one, follow the following steps:
+</p>
 
-### lilia.item.pacoutfit
+<div align="center">
 
-```lua
-ITEM.name = "NAME"
-ITEM.desc = "DESCRIPTION"
-ITEM.model = "MODEL"
-ITEM.width = 1
-ITEM.height = 1
-ITEM.outfitCategory = "CATEGORY"
-ITEM.pacData = {}
-```
+  Fork the repo  
 
-### lilia.item.bag
+  Create a feature branch  
 
-```lua
-ITEM.name = "NAME"
-ITEM.desc = "DESCRIPTION"
-ITEM.model = "MODEL"
-ITEM.width = 1
-ITEM.height = 1
-ITEM.invWidth = 1
-ITEM.invHeight = 1
-```
+  Submit a pull request  
 
-### lilia.item.ammo
+</div>
 
-```lua
-ITEM.name = "NAME"
-ITEM.desc = "DESCRIPTION"
-ITEM.model = "MODEL"
-ITEM.width = 1
-ITEM.height = 1
-ITEM.ammo = "AMMO"
-ITEM.ammoAmount = 1
-```
+<p align="center">
+  Please review our <a href="./Code_Of_Conduct.md">Code of Conduct</a> before contributing.
+</p>
 
-### lilia.item.weapon
+<h2 align="center">🎓 Learning & Adaptation</h2>
 
-```lua
-ITEM.name = "NAME"
-ITEM.desc = "DESCRIPTION"
-ITEM.model = "MODEL"
-ITEM.width = 1
-ITEM.height = 1
-ITEM.class = "WEAPONCLASS"
-ITEM.weaponCategory = "CATEGORY"
-```
-
-### lilia.class
-
-```lua
-CLASS.name = "NAME"
-CLASS.faction = FACTION_NAME
-CLASS.isDefault = true
-
-function CLASS:OnCanBe(client)
-end
-
-if (SERVER) then
-    function CLASS:OnLeave(client)
-    end
-
-    function CLASS:OnSet(client)
-    end
-
-    function CLASS:OnSpawn(client)
-    end
-end
-
-CLASS_NAME = CLASS.index
-```
-
-### lilia.faction
-
-```lua
-FACTION.name = "NAME"
-FACTION.desc = "DESCRIPTION"
-FACTION.color = Color(255, 255, 255, 255)
-FACTION.isDefault = true
-FACTION.models = {
-	"MODEL",
-}
-
-function FACTION:OnGetDefaultName(client)
-end
-
-if (SERVER) then
-    function FACTION:OnCharCreated(client, character)
-    end
-
-    function FACTION:OnSpawn(client)
-    end
-end
-
-FACTION_NAME = FACTION.index
-```
+<p align="center">
+  <strong>Skeleton</strong> is open source under the <strong>GNU General Public License v3.0</strong> and built on top of Lilia. See the <a href="./License">License</a> file for details. You are free to study, modify and adapt it for your own server. Commercial resale is discouraged, but educational use is encouraged.<br/>
+  Official modules for Lilia can be found here:<br/>
+  <a href="https://github.com/LiliaFramework/Modules">https://github.com/LiliaFramework/Modules</a>
+</p>
