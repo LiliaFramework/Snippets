@@ -27,3 +27,19 @@ Use `npm run compile` to watch and rebuild on changes. The source TypeScript can
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).
+
+## Contributors
+
+- Fedox - Creator of the Helix version
+- Samael - Re-did & implemented most hooks
+- B0zy - Fixed several hooks & added new ones
+
+## Snippet Example
+
+```lua
+local MODULE = MODULE
+
+MODULE.name = "NAME"
+MODULE.desc = "DESCRIPTION"
+MODULE.schema = "SCHEMA"
+```
